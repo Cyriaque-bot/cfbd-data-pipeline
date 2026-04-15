@@ -1,0 +1,43 @@
+                ┌────────────────────────────┐
+                │        CFBD API            │
+                │ (toutes les données brutes)│
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                    ┌──────────────────┐
+                    │  Client CFBD     │
+                    │ cfbd_client.py   │
+                    │ (parle à l’API)  │
+                    └───────┬──────────┘
+                            │ JSON
+                            ▼
+                ┌────────────────────────────┐
+                │          Pipeline           │
+                │  /pipeline                  │
+                └──────────────┬─────────────┘
+                               │
+        ┌──────────────────────┼────────────────────────┐
+        ▼                            ▼                               ▼
+┌──────────────┐      ┌────────────────┐       ┌─────────────────┐
+│  Scrapers     │      │    Utils       │       │             Config         │
+│ /scrapers     │      │ /utils         │       │           config.yaml      │
+│ matches.py    │      │ parsing.py     │       │        (années, chemins)│
+│ coaches.py    │      │ wikimedia.py   │               └─────────────────┘
+│ logos.py      │      │ http.py (optionnel)     │
+└──────┬────────┘      └───────────────┘         │
+       │                                          │
+       ▼                                          ▼
+   Données brutes                           Paramètres du pipeline
+       │                                          │
+       └──────────────────────┬───────────────────┘
+                                     ▼
+                         ┌────────────────┐
+                           │  main.py       │
+                           │ (orchestrateur)│
+                         └───────┬────────┘
+                                    │
+                                   ▼
+                    ┌──────────────────┐
+                    │   Stockage        │
+                    │ CSV / SQL / etc.  │
+                    └──────────────────┘
