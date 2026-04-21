@@ -33,6 +33,6 @@ def fetch_all_game_player_stats(year):
 if __name__ == "__main__":
     stats = fetch_all_game_player_stats(2023)
     print(f"Nombre total d'entrées récupérées : {len(stats)}")
-    print(stats[:6])
+    print(stats[0])
         
 
