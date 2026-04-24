@@ -1,0 +1,74 @@
+[
+  {
+    "id": 2005,
+    "school": "Alabama",
+    "mascot": "Crimson Tide",
+    "abbreviation": "ALA",
+    "alt_name1": null,
+    "alt_name2": null,
+    "alt_name3": null,
+    "conference": "SEC",
+    "division": "West",
+    "color": "9E1B32",
+    "alt_color": "FFFFFF",
+    "logos": [
+      "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
+    ],
+    "location": {
+      "city": "Tuscaloosa",
+      "state": "AL",
+      "zip": "35487",
+      "country": "USA",
+      "latitude": 33.2098,
+      "longitude": -87.5692
+    }
+  },
+  {
+    "id": 2132,
+    "school": "Ohio State",
+    "mascot": "Buckeyes",
+    "abbreviation": "OSU",
+    "alt_name1": null,
+    "alt_name2": null,
+    "alt_name3": null,
+    "conference": "Big Ten",
+    "division": "East",
+    "color": "BB0000",
+    "alt_color": "666666",
+    "logos": [
+      "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
+    ],
+    "location": {
+      "city": "Columbus",
+      "state": "OH",
+      "zip": "43210",
+      "country": "USA",
+      "latitude": 40.0142,
+      "longitude": -83.0309
+    }
+  },
+  {
+    "id": 2390,
+    "school": "USC",
+    "mascot": "Trojans",
+    "abbreviation": "USC",
+    "alt_name1": "Southern California",
+    "alt_name2": null,
+    "alt_name3": null,
+    "conference": "Pac-12",
+    "division": null,
+    "color": "990000",
+    "alt_color": "FFC72C",
+    "logos": [
+      "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
+    ],
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90089",
+      "country": "USA",
+      "latitude": 34.0224,
+      "longitude": -118.2851
+    }
+  }
+]

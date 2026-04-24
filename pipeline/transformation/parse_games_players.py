@@ -5,83 +5,46 @@ if project_root not in sys.path:
    sys.path.insert(0,project_root)
 
 
-
-def parse_games_players_stats(raws_value): 
-    vallitgame_id = []
-    valliteam = []
-    vallcategories = []
-    valltype = []
-    vallathlest = []
-    vallistfinal = []
+def parse_games_players_stats(raws_value, season, week): 
+    vallistefinal = []
+    game_id = raws_value["id"]
     
+    #loop on each teams
+    for team in raws_value["teams"]:
+        # print(team)
+        team_name = team["team"] 
+        conference = team["conference"]
+        home_away = team["homeAway"]
+        points = team["points"]
+        # loop on categories 
+        for category in team["categories"]: 
+            category_name = category["name"] 
+        # Loop on types
+            for state_type in category["types"]: 
+                state_type_name = state_type["name"]
+                # loop on athlete
+                for athlete in state_type["athletes"]: 
+                    rowdict = {
+                        "game_id": game_id,
+                        "team": team_name, 
+                        "conference":conference, 
+                        "home_away": home_away, 
+                        "points":points, 
+                        "category":category_name, 
+                        "stat_type":state_type_name,
+                        "player_id":athlete["id"], 
+                        "player_name":athlete["name"], 
+                        "stat_value": athlete["stat"], 
 
-    # loop on each match 
-    for key, val in raws_value.items():
-        if key == "id": 
-           vallitgame_id.append(val)
-    # print(vallitgame_id)
-    vallistfinal.append(vallitgame_id)
-
-    # loop on each teams 
-    for i in raws_value["teams"]: 
-        for keyi , vali in i.items(): 
-            if keyi not in "categories":
-  
-               valliteam.append(vali) 
-
-    vallistfinal.append(valliteam)
-    
-    # loop on categories 
-    for key, val in raws_value.items(): 
-        if key == "teams": 
-           for j in val : 
-               for keyj, valj in j.items():
-                   if  keyj == "categories":
-                    #    print(valj)
-                    for l in valj: 
-                        for keyl, vall, in l.items(): 
-                            if keyl == "name": 
-                               vallcategories.append(vall)
-    vallistfinal.append(vallcategories)
-
-    # loop  on  types 
-
-    for key, val in raws_value.items(): 
-        if key == "teams": 
-           for j in val : 
-               for keyj, valj in j.items():
-                   if  keyj == "categories":
-                    for l in valj: 
-                        for keyl, vall, in l.items(): 
-                            if keyl == "types": 
-                               for k in vall: 
-                                   for keyk, vallk in k.items() : 
-                                       if keyk == "name": 
-                                          valltype.append(vallk)
-    # print(valltype)
-    vallistfinal.append(valltype)
-
-    for key, val in raws_value.items(): 
-        if key == "teams": 
-           for j in val : 
-               for keyj, valj in j.items():
-                   if  keyj == "categories":
-                    for l in valj: 
-                        for keyl, vall, in l.items(): 
-                            if keyl == "types": 
-                               for k in vall: 
-                                   for keyk, vallk in k.items() : 
-                                       if keyk == "athletes": 
-                                          for m in vallk: 
-                                              for keym, vallm in m.items(): 
-                                                 vallathlest.append(vallm)
-    vallistfinal.append(vallathlest)
-
-
-
+                    }
+                    rowdict["season"] = season
+                    rowdict["week"] = week 
+                    vallistefinal.append(rowdict)
+    return vallistefinal
+        
 
 from pipeline.loaders.load_games_players_stats import load_games_players
 
 raw = load_games_players()
-parsed = parse_games_players_stats(raw)
-
+parsed = parse_games_players_stats(raw, season = 2023, week = 1)
+print(parsed)

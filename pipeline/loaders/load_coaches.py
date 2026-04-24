@@ -1,0 +1,13 @@
+import json 
+import sys 
+import os 
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+if project_root not in sys.path: 
+    sys.path.insert(0, project_root)
+
+def loads_coaches():    
+    with open("data/raw/coaches_sample.json", "r") as coachesjson:
+         valcoach = json.load(coachesjson)        
+    return valcoach
+

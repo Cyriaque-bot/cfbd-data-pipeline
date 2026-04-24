@@ -1,0 +1,41 @@
+[
+  {
+    "id": 12345,
+    "first_name": "Nick",
+    "last_name": "Saban",
+    "hire_date": "2007-01-03",
+    "seasons": [
+      {
+        "year": 2023,
+        "school": "Alabama",
+        "position": "Head Coach"
+      }
+    ]
+  },
+  {
+    "id": 67890,
+    "first_name": "Ryan",
+    "last_name": "Day",
+    "hire_date": "2019-12-17",
+    "seasons": [
+      {
+        "year": 2023,
+        "school": "Ohio State",
+        "position": "Head Coach"
+      }
+    ]
+  },
+  {
+    "id": 54321,
+    "first_name": "Lincoln",
+    "last_name": "Riley",
+    "hire_date": "2021-11-28",
+    "seasons": [
+      {
+        "year": 2023,
+        "school": "USC",
+        "position": "Head Coach"
+      }
+    ]
+  }
+]
