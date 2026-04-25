@@ -1,0 +1,44 @@
+[
+  {
+    "id": 101,
+    "first_name": "Jalen",
+    "last_name": "Milroe",
+    "team": "Alabama",
+    "position": "QB",
+    "jersey": 4,
+    "height": 74,
+    "weight": 220,
+    "year": "Sophomore",
+    "home_city": "Katy",
+    "home_state": "TX",
+    "home_country": "USA"
+  },
+  {
+    "id": 102,
+    "first_name": "Marvin",
+    "last_name": "Harrison Jr.",
+    "team": "Ohio State",
+    "position": "WR",
+    "jersey": 18,
+    "height": 76,
+    "weight": 205,
+    "year": "Junior",
+    "home_city": "Philadelphia",
+    "home_state": "PA",
+    "home_country": "USA"
+  },
+  {
+    "id": 103,
+    "first_name": "Caleb",
+    "last_name": "Williams",
+    "team": "USC",
+    "position": "QB",
+    "jersey": 13,
+    "height": 73,
+    "weight": 220,
+    "year": "Junior",
+    "home_city": "Washington",
+    "home_state": "DC",
+    "home_country": "USA"
+  }
+]

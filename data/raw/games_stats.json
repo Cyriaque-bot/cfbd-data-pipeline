@@ -1,0 +1,47 @@
+[
+  {
+    "id": 401282001,
+    "season": 2023,
+    "week": 1,
+    "team": "Alabama",
+    "home_away": "home",
+    "points": 42,
+    "categories": [
+      {
+        "name": "rushing",
+        "types": [
+          { "name": "attempts", "stat": 38 },
+          { "name": "yards", "stat": 215 },
+          { "name": "touchdowns", "stat": 3 }
+        ]
+      },
+      {
+        "name": "passing",
+        "types": [
+          { "name": "completions", "stat": 18 },
+          { "name": "attempts", "stat": 27 },
+          { "name": "yards", "stat": 245 },
+          { "name": "touchdowns", "stat": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 401282001,
+    "season": 2023,
+    "week": 1,
+    "team": "Texas",
+    "home_away": "away",
+    "points": 28,
+    "categories": [
+      {
+        "name": "rushing",
+        "types": [
+          { "name": "attempts", "stat": 32 },
+          { "name": "yards", "stat": 180 },
+          { "name": "touchdowns", "stat": 2 }
+        ]
+      }
+    ]
+  }
+]

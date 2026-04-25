@@ -1,0 +1,30 @@
+[
+  {
+    "id": 401282001,
+    "season": 2023,
+    "week": 1,
+    "season_type": "regular",
+    "start_date": "2023-09-02T19:00:00.000Z",
+    "neutral_site": false,
+    "conference_game": true,
+    "venue": "Bryant-Denny Stadium",
+    "home_team": "Alabama",
+    "home_points": 42,
+    "away_team": "Texas",
+    "away_points": 28
+  },
+  {
+    "id": 401282002,
+    "season": 2023,
+    "week": 1,
+    "season_type": "regular",
+    "start_date": "2023-09-02T22:30:00.000Z",
+    "neutral_site": false,
+    "conference_game": false,
+    "venue": "Michigan Stadium",
+    "home_team": "Michigan",
+    "home_points": 35,
+    "away_team": "East Carolina",
+    "away_points": 7
+  }
+]

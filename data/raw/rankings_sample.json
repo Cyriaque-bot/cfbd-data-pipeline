@@ -1,0 +1,46 @@
+[
+  {
+    "season": 2023,
+    "week": 1,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 1,
+        "school": "Georgia",
+        "conference": "SEC"
+      },
+      {
+        "rank": 2,
+        "school": "Michigan",
+        "conference": "Big Ten"
+      },
+      {
+        "rank": 3,
+        "school": "Ohio State",
+        "conference": "Big Ten"
+      }
+    ]
+  },
+  {
+    "season": 2023,
+    "week": 2,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 1,
+        "school": "Georgia",
+        "conference": "SEC"
+      },
+      {
+        "rank": 2,
+        "school": "Michigan",
+        "conference": "Big Ten"
+      },
+      {
+        "rank": 3,
+        "school": "Alabama",
+        "conference": "SEC"
+      }
+    ]
+  }
+]
