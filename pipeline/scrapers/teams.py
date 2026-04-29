@@ -1,6 +1,6 @@
 import sys 
 import os 
-# Ajout de la racine du projet au path 
+# added project_root to the root of sys.path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
@@ -14,7 +14,3 @@ def fetch_teams(year):
     # return get_teams(year)
     return loads_teams()
 
-# Test manuel
-
-
-print(fetch_teams(2023))

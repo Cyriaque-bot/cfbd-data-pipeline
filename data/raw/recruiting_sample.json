@@ -1,0 +1,37 @@
+[
+  {
+    "year": 2023,
+    "team": "Alabama",
+    "rank": 1,
+    "points": 310.5,
+    "commits": 28
+  },
+  {
+    "year": 2023,
+    "team": "Georgia",
+    "rank": 2,
+    "points": 305.2,
+    "commits": 25
+  },
+  {
+    "year": 2023,
+    "team": "Ohio State",
+    "rank": 3,
+    "points": 295.8,
+    "commits": 23
+  },
+  {
+    "year": 2023,
+    "team": "Texas",
+    "rank": 4,
+    "points": 289.4,
+    "commits": 26
+  },
+  {
+    "year": 2023,
+    "team": "Oregon",
+    "rank": 5,
+    "points": 281.1,
+    "commits": 22
+  }
+]

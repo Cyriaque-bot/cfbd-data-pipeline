@@ -1,6 +1,6 @@
 import sys 
 import os 
-# Afoute la racine du projet au PATH 
+# add project_root to the sys.path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
@@ -9,19 +9,19 @@ if project_root not in sys.path:
 from cfbd_client import get_calendar, get_game_player_stats
 
 def fetch_all_game_player_stats(year): 
-    # recupère toutes les stats de joueurs pour une saison complète.
-    # 1, recupération des semaines disponibles
+    # retrieve player's stat for one seans
+    # 1, retrieving available weeks 
     calendar = get_calendar(year)
     if not  calendar:
         print("Impossible de récupérer le calendrier")
         return []
     
-    # 2 _ Extraire les numeros de la semaine
+    # 2 _ Extraction week's number 
 
     weeks = sorted({entry["week"] for entry in calendar if "week" in entry})
     all_stars = []
 
-    # 3 Boucler sur chaque semaines 
+    # 3 loop on each weeks 
 
     for week in weeks: 
         print(f"Récupération des stats de joueurs pour la semaine {week} ...")

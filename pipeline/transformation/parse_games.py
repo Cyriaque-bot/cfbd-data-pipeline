@@ -26,6 +26,6 @@ def parse_games(gamesraws):
 
     return listgames
 
-from pipeline.scrapers.games import fecth_games
-valgames = fecth_games(2023)
-print(parse_games(valgames))
+# from pipeline.scrapers.games import fetch_games
+# valgames = fecth_games(2023)
+# print(parse_games(valgames))

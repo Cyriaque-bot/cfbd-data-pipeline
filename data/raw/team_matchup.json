@@ -1,0 +1,22 @@
+[
+  {
+    "season": 2023,
+    "week": 2,
+    "season_type": "regular",
+    "date": "2023-09-09T19:00:00.000Z",
+    "winner": "Texas",
+    "loser": "Alabama",
+    "winner_points": 34,
+    "loser_points": 24
+  },
+  {
+    "season": 2022,
+    "week": 1,
+    "season_type": "regular",
+    "date": "2022-09-10T19:00:00.000Z",
+    "winner": "Alabama",
+    "loser": "Texas",
+    "winner_points": 20,
+    "loser_points": 19
+  }
+]

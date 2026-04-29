@@ -6,7 +6,8 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 
+from pipeline.loaders.load_conference import load_conference
+def fetch_conference(year): 
+    return load_conference()
 
-from pipeline.loaders.load_games import load_games
-def fetch_games(year): 
-    return load_games()
+#print(fetch_conference(load_conference))
