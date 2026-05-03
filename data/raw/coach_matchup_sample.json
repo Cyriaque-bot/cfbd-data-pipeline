@@ -1,0 +1,39 @@
+[
+  {
+    "coach": "Nick Saban",
+    "team": "Alabama",
+    "season": 2023,
+    "games": [
+      {
+        "game_id": 401520234,
+        "week": 2,
+        "opponent": "Texas",
+        "opponent_conference": "Big 12",
+        "home_away": "home",
+        "result": "L",
+        "points_for": 24,
+        "points_against": 34
+      },
+      {
+        "game_id": 401520567,
+        "week": 5,
+        "opponent": "Ole Miss",
+        "opponent_conference": "SEC",
+        "home_away": "home",
+        "result": "W",
+        "points_for": 30,
+        "points_against": 17
+      },
+      {
+        "game_id": 401520890,
+        "week": 9,
+        "opponent": "LSU",
+        "opponent_conference": "SEC",
+        "home_away": "home",
+        "result": "W",
+        "points_for": 42,
+        "points_against": 28
+      }
+    ]
+  }
+]
