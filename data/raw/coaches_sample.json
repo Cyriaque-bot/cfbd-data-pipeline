@@ -4,38 +4,55 @@
     "first_name": "Nick",
     "last_name": "Saban",
     "hire_date": "2007-01-03",
-    "seasons": [
-      {
-        "year": 2023,
-        "school": "Alabama",
-        "position": "Head Coach"
-      }
-    ]
+    "school": "Alabama",
+    "season": 2023
   },
   {
     "id": 67890,
     "first_name": "Ryan",
     "last_name": "Day",
     "hire_date": "2019-12-17",
-    "seasons": [
-      {
-        "year": 2023,
-        "school": "Ohio State",
-        "position": "Head Coach"
-      }
-    ]
+    "school": "Ohio State",
+    "season": 2023
   },
   {
     "id": 54321,
     "first_name": "Lincoln",
     "last_name": "Riley",
     "hire_date": "2021-11-28",
-    "seasons": [
-      {
-        "year": 2023,
-        "school": "USC",
-        "position": "Head Coach"
-      }
-    ]
-  }
+    "school": "USC",
+    "season": 2023
+  }, 
+  {
+    "id": 999001,
+    "first_name": "Tom",
+    "last_name": "Allen",
+    "hire_date": "2021-01-01",
+    "school": "Indiana State",
+    "season": 2023
+}, 
+{
+    "id": 999002,
+    "first_name": "Mike",
+    "last_name": "Gundy",
+    "hire_date": "2005-01-01",
+    "school": "Oklahoma State",
+    "season": 2023
+}, 
+{
+   "id": 999003,
+   "first_name": "Clark",
+   "last_name": "Lea",
+   "hire_date": "2021-01-01",
+   "school": "Vanderbilt",
+   "season": 2023
+}, 
+{
+  "id": 999004,
+  "first_name": "Andy",
+  "last_name": "Avalos",
+  "hire_date": "2021-01-01",
+  "school": "Boise State",
+  "season": 2023
+}
 ]

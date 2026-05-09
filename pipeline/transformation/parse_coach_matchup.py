@@ -19,14 +19,17 @@ def parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf):
         fullname = coach["first_name"] + " " + coach["last_name"]
 
         # On retrieving first season  teams coach 
-        team = coach["seasons"][0]["school"]
+        team = coach["school"]
+        season = coach["season"]
+    
 
         coach_index[fullname] =  {
             "team": team, 
             "hire_date": coach["hire_date"], 
-            "seasons": {s["year"]: [] for s in coach["seasons"]}
+            "season":season,
+            "games": []
         }
-    #3 route of matches
+    #3 route of games
     for g in rawmachupgames: 
         home = g["home_team"]
         away = g["away_team"]
@@ -38,9 +41,10 @@ def parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf):
             "week": g["week"],
             "opponent": away,
             "opponent_conference": conf_index.get(away),
-            "result": "w" if g["home_points"] > g["away_points"] else "L", 
+            "result": "W" if g["home_points"] > g["away_points"] else "L", 
             "points_for": g["home_points"],
-            "ponts_against": g["away_points"]
+            "points_against": g["away_points"], 
+            "location": "home"
         }
 
         # away side 
@@ -52,42 +56,46 @@ def parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf):
             "opponent_conference": conf_index.get(home),
             "result": "w" if g["away_points"] > g["home_points"] else "L", 
             "points_for": g["away_points"],
-            "ponts_against": g["home_points"]
+            "points_against": g["home_points"], 
+            "location": "away"
         }
 
     #4 assign the good coach to the good game  
         for coach_name, info in coach_index.items(): 
 
-        # if the coach lead the home team 
-            if info["team"] == home and season in info["season"]:
-               info["seasons"][season].append(match_home)
+        # The coach can only coach his own season.
+            if season != info["season"]:
+                continue
 
         # if the coach lead the home team 
-            if info["team"] == away and season in info["season"]:
-               info["seasons"][season].append(match_away)
+            if info["team"] == home:
+               info["games"].append(match_home)
+
+        # if the coach lead the home team 
+            if info["team"] == away:
+               info["games"].append(match_away)
 
     #5) Construire la sortie finale 
     output = []
     for coach_name, info in coach_index.items(): 
-        for season, games in info["seasons"].items():
+       
             output.append({
                 "coach": coach_name, 
                 "team": info["team"], 
                 "hire_date": info["hire_date"], 
-                "season": season, 
-                "games": games
+                "season": info["season"], 
+                "games": info["games"]
             })
 
 
     return output
 
-from pipeline.scrapers.coaches import fetch_coaches
-from pipeline.scrapers.games import fetch_games
-from pipeline.scrapers.conference import fetch_conference
-valcachmatchupcoach = fetch_coaches(2023)
-valcachmatchupgames = fetch_games(2023)
-valcachmatchupconf = fetch_conference(2023)
+# from pipeline.scrapers.coaches import fetch_coaches
+# from pipeline.scrapers.games import fetch_games
+# from pipeline.scrapers.conference import fetch_conference
+# valcachmatchupcoach = fetch_coaches(2023)
+# valcachmatchupgames = fetch_games(2023)
+# valcachmatchupconf = fetch_conference(2023)
+# print(parse_coach_matchup(valcachmatchupcoach, valcachmatchupgames, valcachmatchupconf))
 
-print(parse_coach_matchup(valcachmatchupcoach, valcachmatchupgames, valcachmatchupconf))
-# print(valcachmatchupgames[0])
 

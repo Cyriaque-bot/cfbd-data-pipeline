@@ -5,5 +5,21 @@
         "Ohio State": "Big Ten", 
         "Oregon": "Pac-12",
         "Clemson": "ACC",
-        "Georgia": "SEC"
+        "Georgia": "SEC", 
+        "USC": "Pac-12", 
+        "East Carolina": "AAC",
+        "Michigan": "Big Ten", 
+        "Oklahoma": "BIG 12(2023)", 
+        "LSU": "SEC", 
+        "Indiana": "Big Ten", 
+        "Notre Dame": "Independent", 
+        "Maryland": "Big Ten", 
+        "Vanderbilt": "SEC", 
+        "Kentucky": "SEC", 
+        "Boise State": "Mountain West", 
+        "Nevada": "Mountain West",
+        "Washington": "Pac-12", 
+        "Tulsa": "AAC", 
+        "Indiana State": "Missouri Valley(FCS)", 
+        "Oklahoma State": "Big 12"
     }
