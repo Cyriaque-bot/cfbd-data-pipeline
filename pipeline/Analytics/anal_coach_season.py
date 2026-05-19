@@ -90,14 +90,14 @@ def analyze_coach_season(coach_season_data):
         "opponents_summary": opponents_summary
 
     }
-from pipeline.loaders.load_coaches import loads_coaches
-from pipeline.loaders.load_games import load_games
-from pipeline.loaders.load_conference import load_conference
-rawmachupcoach = loads_coaches()
-rawmachupgames = load_games()
-rawmachupconf = load_conference()
-from pipeline.transformation.parse_coach_matchup import parse_coach_matchup
-parsed = parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf)
-# print(parsed)
-for season_data in parsed : 
-    print(analyze_coach_season(season_data))
+# from pipeline.loaders.load_coaches import loads_coaches
+# from pipeline.loaders.load_games import load_games
+# from pipeline.loaders.load_conference import load_conference
+# rawmachupcoach = loads_coaches()
+# rawmachupgames = load_games()
+# rawmachupconf = load_conference()
+# from pipeline.transformation.parse_coach_matchup import parse_coach_matchup
+# parsed = parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf)
+# # print(parsed)
+# for season_data in parsed : 
+#     print(analyze_coach_season(season_data))
