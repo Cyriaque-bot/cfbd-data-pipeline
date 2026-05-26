@@ -1,0 +1,10 @@
+{
+    "epa_offense": 0.25, 
+    "epa_defense": 0.25, 
+    "success_rate": 0.15, 
+    "explosiveness": 0.10, 
+    "havoc_rate": 0.10, 
+    "finishing_drives": 0.10, 
+    "field_position": 0.05, 
+    "returning_production": 0.05 
+}

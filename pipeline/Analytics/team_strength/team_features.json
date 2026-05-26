@@ -1,0 +1,10 @@
+{
+    "epa_offense": true, 
+    "epa_defense": true, 
+    "success_rate": true, 
+    "explosiveness": true, 
+    "havoc_rate": true, 
+    "finishing_drives": true, 
+    "field_position": true, 
+    "returning_production": true 
+}
