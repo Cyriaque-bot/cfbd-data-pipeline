@@ -54,7 +54,7 @@ def parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf):
             "week": g["week"],
             "opponent": home,
             "opponent_conference": conf_index.get(home),
-            "result": "w" if g["away_points"] > g["home_points"] else "L", 
+            "result": "W" if g["away_points"] > g["home_points"] else "L", 
             "points_for": g["away_points"],
             "points_against": g["home_points"], 
             "location": "away"
