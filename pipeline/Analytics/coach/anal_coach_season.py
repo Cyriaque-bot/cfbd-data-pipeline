@@ -1,103 +1,112 @@
-import os 
-import sys 
+import pandas as pd 
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path: 
-   sys.path.insert(0,project_root) 
+# Fonction principal 
 
+def analyze_coach_season(row: dict)-> dict: 
+    # Analyse complète d'un coach sur une saison données.
+    # row = une ligne du dataset final (team + season + stats) 
 
-def analyze_coach_season(coach_season_data): 
-    games = coach_season_data["games"]
-                         
-# Overall summary 
+    # Véreifiacation minimale 
+    required = [
+        "team", 
+        "season", 
+        "conference", 
+        "head_coach", 
+        "win_rate", 
+        "conference_win_rate", 
+        "top25_win_rate", 
+        "offensive_strength", 
+        "defensive_strength", 
+        "coaching_stability", 
+        "experience_score"
+    ]  
 
-    wins = sum(1 for g in games if g["result"] == "W")
-    losses = sum(1 for g in games if g["result"] == "L")
-    games_played = len(games)
+    for col in required: 
+        if col not in row : 
+            raise ValueError(f"Missing column in analyze_coach_season: {col}")
+        
 
-    points_for_totals = sum(g["points_for"] for g in games)
-    points_against_totals = sum(g["points_against"] for g in games)
+    # 2 extraction des infos
+    team = row["team"]
+    season = row["season"]
+    coach = row["head_coach"]
 
-    points_for_avg = points_for_totals/games_played if games_played else 0
-    points_against_avg = points_against_totals/games_played if games_played else 0
-    points_diff_avg = points_for_avg - points_against_avg
+    win_rate = row["win_rate"]
+    conf_rate = row["conference_win_rate"]
+    top25_rate = row["top25_win_rate"]
 
-    # Home / Away 
-    record_home = {"W": 0, "L": 0}
-    record_away = {"W": 0, "L": 0}
+    off = row["offensive_strength"]
+    deff = row["defensive_strength"]
 
-    for g in games: 
-        if g["location"] == "home":
-            record_home[g["result"]] =  record_home[g["result"]] + 1
-        else: 
-            record_away[g["result"]] = record_away[g["result"]] + 1
+    stability = row["coaching_stability"]
+    experience = row["experience_score"]
 
-    # Conference 
-    record_by_conference = {}
-    for g in games : 
-        conf = g["opponent_conference"]
-        if conf not in record_by_conference: 
-            record_by_conference[conf] = {"W": 0, "L": 0}
-        record_by_conference[conf][g["result"]] = record_by_conference[conf][g["result"]] + 1
+    # 3. points forts 
+    strengths = []
+    if win_rate > 0.65: 
+        strengths.append("Excellent Win Rate")
 
-    # Biggest win / loss
-    biggest_win = None 
-    biggest_loss = None 
-    for g in games: 
-        diff = g["points_for"] - g["points_against"]
-
-        if diff > 0 : 
-            if biggest_win is None or diff > biggest_win["diff"]: 
-               biggest_win = {**g, "diff": diff}
-           
-        if diff < 0: 
-            if biggest_loss is None or diff < biggest_loss["diff"]: 
-                biggest_loss = {**g, "diff": diff}
-     
-
-    # opponent summary 
-    opponents_summary = {}
-    for g in games: 
-        opp = g["opponent"]
-        if opp not in opponents_summary: 
-           opponents_summary[opp] = {"W": 0, "L": 0}
-        opponents_summary[opp][g["result"]] = opponents_summary[opp][g["result"]] + 1
+    if conf_rate > 0.65:
+        strengths.append("Strong conference performance")
     
+    if top25_rate > 0.40:
+        strengths.append("Competitive vs Top 25 Teams")
+
+    if off > 0: 
+        strengths.append("Positive offensive EPA")
+
+    if deff > 0: 
+        strengths.append("Positive defensive EPA")
+    
+    if stability > 3: 
+        strengths.append("Stable coaching staff")
+
+    # 4. Points faibles 
+    weaknesses = []
+
+    if win_rate < 0.40: 
+        weaknesses.append("Low Win Rate")
+
+    if conf_rate < 0.40:
+        weaknesses.append("weak conference performance")
+    
+    if top25_rate < 0.20:
+        weaknesses.append("Struggles vs Top 25 Teams")
+
+    if off < 0: 
+        weaknesses.append("Negative offensive EPA")
+
+    if deff > 0: 
+        weaknesses.append("Negative defensive EPA")
+    
+    if stability < 1: 
+        weaknesses.append("Unstable coaching staff")
+
+    # 5. Résume 
+    summary = (
+        f"{coach} coached {team} in {season}. "
+        f"The team had a win rate of {win_rate:.2f}, "
+        f"a conference win rate of {conf_rate:.2f}, "
+        f"and a top 25 win rate of {top25_rate:.2f}. "
+        f"offensive EPA: {off:.2f}, Defensive EPA: {deff:.2f}. "
+        f"Coaching stability score: {stability:.1f}."
+    )
+
+    #6. Rapport final 
+
     return {
-        "coach": coach_season_data["coach"], 
-        "team": coach_season_data["team"], 
-        "season": coach_season_data["season"], 
-
-        "games_played": games_played, 
-        "wins": wins, 
-        "losses": losses, 
-        "win_rate": wins/games_played if games_played else 0, 
-
-        "points_for_totals": points_for_totals, 
-        "points_against_totals": points_against_totals, 
-        "points_for_avg": points_for_avg, 
-        "points_against_avg": points_against_avg, 
-        "points_diff_avg": points_diff_avg, 
-
-        "record_home": record_home, 
-        "record_away": record_away, 
-
-        "record_by_conference": record_by_conference, 
-
-        "biggest_win": biggest_win, 
-        "biggest_loss": biggest_loss, 
-
-        "opponents_summary": opponents_summary
-
+        "team" : team, 
+        "season": season, 
+        "summary": summary, 
+        "strengths": strengths, 
+        "weaknesses": weaknesses, 
+        "metrics":{
+            "win_rate":win_rate, 
+            "conference_win_rate":conf_rate, 
+            "top25_win_rate": top25_rate, 
+            "offensive_strength": off, 
+            "defensive_strength": deff, 
+            "coaching_stability": stability, 
+            "experience_score": experience
+        }
     }
-# from pipeline.loaders.load_coaches import loads_coaches
-# from pipeline.loaders.load_games import load_games
-# from pipeline.loaders.load_conference import load_conference
-# rawmachupcoach = loads_coaches()
-# rawmachupgames = load_games()
-# rawmachupconf = load_conference()
-# from pipeline.transformation.parse_coach_matchup import parse_coach_matchup
-# parsed = parse_coach_matchup(rawmachupcoach, rawmachupgames, rawmachupconf)
-# # print(parsed)
-# for season_data in parsed : 
-#     print(analyze_coach_season(season_data))

@@ -154,7 +154,7 @@ def structure_coach_season(df: pd.DataFrame)->pd.DataFrame:
         raise ValueError(f"colonnes manquantes pour structure_coach_season : {missing}")
    
     # 2. Créer un identifant unique team-season 
-    df["team_season_id"] = df["team"]+ "_" + df["season"].astype(str)
+    df["team_season_id"] = df["team"] + "_" + df["season"].astype(str)
 
     # 3. Regrouper par équipe + saison 
     grouped = df.groupby(["team", "season", "conference"], as_index = False).agg({
