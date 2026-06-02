@@ -1,72 +1,41 @@
 [
   {
-    "team": "Alabama",
     "season": 2023,
-    "conference": "SEC",
-
-    "overall_record": {
-      "wins": 11,
-      "losses": 2
-    },
-
-    "conference_record": {
-      "wins": 7,
-      "losses": 1
-    },
-
-    "home_record": {
-      "wins": 6,
-      "losses": 0
-    },
-
-    "away_record": {
-      "wins": 4,
-      "losses": 2
-    },
-
-    "points": {
-      "for": 480,
-      "against": 260,
-      "home_for": 280,
-      "home_against": 120,
-      "away_for": 200,
-      "away_against": 140
-    },
-
-    "epa": {
-      "offense": 0.18,
-      "defense": -0.05,
-      "home_offense": 0.22,
-      "home_defense": -0.03,
-      "away_offense": 0.14,
-      "away_defense": -0.07
-    },
-
-    "games": [
-      {
-        "game_id": 401520234,
-        "week": 2,
-        "opponent": "Texas",
-        "opponent_conference": "Big 12",
-        "home_away": "home",
-        "result": "L",
-        "points_for": 24,
-        "points_against": 34,
-        "offense_epa": 0.12,
-        "defense_epa": -0.18
-      },
-      {
-        "game_id": 401520567,
-        "week": 5,
-        "opponent": "Ole Miss",
-        "opponent_conference": "SEC",
-        "home_away": "home",
-        "result": "W",
-        "points_for": 30,
-        "points_against": 17,
-        "offense_epa": 0.25,
-        "defense_epa": -0.05
-      }
-    ]
+    "week": 2,
+    "season_type": "regular",
+    "date": "2023-09-09T19:00:00.000Z",
+    "winner": "Texas",
+    "loser": "Alabama",
+    "winner_points": 34,
+    "loser_points": 24,
+    "winner_conference": "Big 12",
+    "loser_conference": "SEC",
+    "neutral_site": false
+  },
+  {
+    "season": 2023,
+    "week": 5,
+    "season_type": "regular",
+    "date": "2023-09-30T19:00:00.000Z",
+    "winner": "Alabama",
+    "loser": "Ole Miss",
+    "winner_points": 30,
+    "loser_points": 17,
+    "winner_conference": "SEC",
+    "loser_conference": "SEC",
+    "neutral_site": false
+  },
+  {
+    "season": 2022,
+    "week": 1,
+    "season_type": "regular",
+    "date": "2022-09-10T19:00:00.000Z",
+    "winner": "Alabama",
+    "loser": "Texas",
+    "winner_points": 20,
+    "loser_points": 19,
+    "winner_conference": "SEC",
+    "loser_conference": "Big 12",
+    "neutral_site": false
   }
 ]
