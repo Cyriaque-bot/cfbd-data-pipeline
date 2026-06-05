@@ -1,9 +1,14 @@
+import sys 
+from pathlib import Path
 import json 
 import datetime
 import pandas as pd 
 import os 
+# Ajout de mon dossier dans sys.path
+root_project = Path(__file__).resolve().parents[3]
+sys.path.append(str(root_project))
 
-
+from pipeline.analytics.context.momentum import compute_streaks, compute_recent_margin, normalize_column_features, compute_momentum_score,  compute_momentum_differential
 
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
@@ -11,13 +16,8 @@ def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> lis
         data = json.load(f)
     return data
 
-
-# if __name__ == "__main__":
-#     raw = load_raw_team_matchup()
-#     print(raw[0])
-
 def normalize_team_name(name: str)->str: 
-    # normalise le nom d'équpe strip espace, title case, retire les variation inutiles 
+    # normalise le nom d'équipe strip espace, title case, retire les variation inutiles 
     if not isinstance(name, str): 
         return None 
     name = name.strip().title()
@@ -31,6 +31,7 @@ def normalize_team_name(name: str)->str:
         name = name.replace(old, new)
 
     return name
+
 
 def parse_date(date_str: str):
     # convertit une date brute en objet datetime.date, si la date est invalide retoune None
@@ -60,7 +61,7 @@ def clean_team_matchup(raw_data: list)-> list:
 
         # 2 Conversion numérique sécurisée
         try: 
-            week = int(entry.get("winner", 0))
+            week = int(entry.get("week", 0))
         except: 
             week = None
        
@@ -75,10 +76,13 @@ def clean_team_matchup(raw_data: list)-> list:
 
         # 4. Nettoyage du type de saison 
         season_type = entry.get("season_type", "").lower().strip()
-    
+
         # 5. Construction de l'entrée nettoyée 
         cleaned.append({
             "season": entry.get("season"), 
+            "winner_conference": entry.get("winner_conference"), 
+            "loser_conference": entry.get("loser_conference"), 
+            "neutral_site": entry.get("neutral_site"), 
             "week": week, 
             "season_type": season_type, 
             "date": date,
@@ -86,10 +90,9 @@ def clean_team_matchup(raw_data: list)-> list:
             "loser": loser, 
             "winner_points": winner_points, 
             "loser_points": loser_points, 
-            "point_diff": winner_points - loser_points
+            "point_diff": winner_points - loser_points, 
         })
     return cleaned
-
 
 def structure_team_matchup(cleaned_data: list)->list:
     # transforme les données nettotyées en un format structuré: 
@@ -100,7 +103,7 @@ def structure_team_matchup(cleaned_data: list)->list:
     for entry in cleaned_data:
         season = entry["season"]
         week = entry["week"]
-        date = entry["Date"]
+        date = entry["date"]
         season_type = entry["season_type"]
 
         winner = entry["winner"]
@@ -154,6 +157,8 @@ def structure_team_matchup(cleaned_data: list)->list:
 
     return structured
 
+
+
 def compute_team_matchup_stats(structured_data: list)->pd.DataFrame:
     # Calcule les statistiques de matchup pour chaque équipe 
     # Retourne un DataFrame
@@ -195,6 +200,8 @@ def compute_team_matchup_stats(structured_data: list)->pd.DataFrame:
     # remet "team" comme colonne
     stats = stats.reset_index()
     return stats
+    
+
 
 def add_opponent_strength(structured_df: pd.DataFrame, stats: pd.DataFrame)-> pd.DataFrame:
     # Ajouter les statistique de l'adversaire(opponent strength) à chaque ligne du datasetstructuré.
@@ -211,7 +218,7 @@ def add_opponent_strength(structured_df: pd.DataFrame, stats: pd.DataFrame)-> pd
         "points_for": "opponent_points_for",
         "points_against": "opponent_points_against",
         "avg_points_for": "opponent_avg_points_for", 
-        "avg_points_against": "apponent_avg_points_against"
+        "avg_points_against": "opponent_avg_points_against"
     })
 
     # Fusion: ajoute les stats de l'adversaire à chaque ligne
@@ -222,6 +229,7 @@ def add_opponent_strength(structured_df: pd.DataFrame, stats: pd.DataFrame)-> pd
     )
 
     return merged
+
 
 
 def compute_conference_strength(structure_df: pd.DataFrame)->pd.DataFrame: 
@@ -254,21 +262,34 @@ def add_conference_strength(structure_df: pd.DataFrame, conference_strength_df: 
     "conference_avg_opponent_margin": "team_conference_strength_margin"
     })
 
-# Force de la conference de l'adversaire 
+    # Force de la conference de l'adversaire 
     merged = merged.merge(
        conference_strength_df, 
        left_on = "opponent_conference", 
        right_on = "conference", 
-       how = "left", 
-       suffixes = ("", "_opp_conf")
+       how = "left"
     ).drop(columns = ["conference"])
     
     merged = merged.rename(columns = {
-        "conference_avg_opponent_win_rate_opp_conf": "opponent_conference_strength_win_rate", 
-        "conference_avg_opponent_margin_opp_conf": "opponent_conference_strength_margin"
+        "conference_avg_opponent_win_rate": "opponent_conference_strength_win_rate", 
+        "conference_avg_opponent_margin": "opponent_conference_strength_margin"
     })
  
     return merged
+raw = load_raw_team_matchup()
+clean = clean_team_matchup(raw)
+structured = structure_team_matchup(clean)
+stats = compute_team_matchup_stats(structured)
+with_opponent = add_opponent_strength(pd.DataFrame(structured), stats)
+conf_strength = compute_conference_strength(with_opponent)
+final = add_conference_strength(with_opponent, conf_strength)
+finalcs = compute_streaks(final)
+finalcrm = compute_recent_margin(finalcs)
+finalncf = normalize_column_features(finalcrm)
+finalcms = compute_momentum_score(finalncf)
+# print(compute_momentum_score(finalncf))
+
+print(compute_momentum_differential(finalcms))
 
 
 def  build_team_matchup_dataset(raw_path:str , output_path: str)-> pd.DataFrame:
@@ -306,3 +327,6 @@ def  build_team_matchup_dataset(raw_path:str , output_path: str)-> pd.DataFrame:
     stats.to_csv(output_path, index = False)
 
     return stats
+
+# tester chacune de mes fonctions 
+
