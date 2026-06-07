@@ -8,7 +8,8 @@ import os
 root_project = Path(__file__).resolve().parents[3]
 sys.path.append(str(root_project))
 
-from pipeline.analytics.context.momentum import compute_streaks, compute_recent_margin, normalize_column_features, compute_momentum_score,  compute_momentum_differential
+from pipeline.analytics.context.momentum import compute_streaks, compute_recent_margin, normalize_column_features, compute_momentum_score, compute_momentum_differential
+from pipeline.analytics.context.schedule_difficulty import compute_schedule_difficulty, compute_schedule_difficulty_rolling
 
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
@@ -287,9 +288,10 @@ finalcs = compute_streaks(final)
 finalcrm = compute_recent_margin(finalcs)
 finalncf = normalize_column_features(finalcrm)
 finalcms = compute_momentum_score(finalncf)
-# print(compute_momentum_score(finalncf))
-
-print(compute_momentum_differential(finalcms))
+finalcmd = compute_momentum_differential(finalcms)
+finalcsd = compute_schedule_difficulty(finalcmd)
+print(compute_schedule_difficulty_rolling(finalcsd))
+print(list(finalcsd.columns))
 
 
 def  build_team_matchup_dataset(raw_path:str , output_path: str)-> pd.DataFrame:
