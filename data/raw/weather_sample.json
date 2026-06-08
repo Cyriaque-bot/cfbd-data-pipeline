@@ -1,0 +1,59 @@
+[   
+{
+  "id": 401520127,
+  "season": 2023,
+  "week": 2,
+  "seasonType": "regular",
+  "startDate": "2023-09-09T23:00:00.000Z",
+  "venue": "Bryant-Denny Stadium",
+  "homeTeam": "Alabama",
+  "awayTeam": "Texas",
+  "temperature": 84,
+  "dewPoint": 72,
+  "humidity": 68,
+  "precipitation": 0,
+  "windSpeed": 8,
+  "windDirection": "NE",
+  "pressure": 29.92,
+  "condition": "Partly Cloudy"
+}, 
+
+{
+  "id": 401520233,
+  "season": 2023,
+  "week": 4,
+  "seasonType": "regular",
+  "startDate": "2023-09-23T19:30:00.000Z",
+  "venue": "Vaught-Hemingway Stadium",
+  "homeTeam": "Ole Miss",
+  "awayTeam": "LSU",
+  "temperature": 77,
+  "dewPoint": 73,
+  "humidity": 88,
+  "precipitation": 4,
+  "windSpeed": 12,
+  "windDirection": "SW",
+  "pressure": 29.70,
+  "condition": "Rain"
+}, 
+
+{
+  "id": 401110723,
+  "season": 2019,
+  "week": 1,
+  "seasonType": "regular",
+  "startDate": "2019-08-31T23:30:00.000Z",
+  "venue": "Camping World Stadium",
+  "homeTeam": "Florida",
+  "awayTeam": "Miami",
+  "temperature": 82,
+  "dewPoint": 73,
+  "humidity": 78,
+  "precipitation": 0,
+  "windSpeed": 7,
+  "windDirection": "E",
+  "pressure": 29.98,
+  "condition": "Partly Cloudy"
+}
+
+]

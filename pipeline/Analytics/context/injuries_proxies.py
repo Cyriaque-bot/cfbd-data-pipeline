@@ -1,6 +1,6 @@
 
 def compute_offense_drop(df): 
-    df["offense_drop"] = df["recent_point_for"] - df["points_for"]
+    df["offense_drop"] = df["recent_points_for"] - df["points_for"]
     return df
 
 

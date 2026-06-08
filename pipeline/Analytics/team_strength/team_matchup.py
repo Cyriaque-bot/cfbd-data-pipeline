@@ -10,7 +10,8 @@ sys.path.append(str(root_project))
 
 from pipeline.analytics.context.momentum import compute_streaks, compute_recent_margin, normalize_column_features, compute_momentum_score, compute_momentum_differential
 from pipeline.analytics.context.schedule_difficulty import compute_schedule_difficulty, compute_schedule_difficulty_rolling
-
+from pipeline.analytics.context.recent_offense_defense import compute_recent_offense_defense
+from pipeline.analytics.context.injuries_proxies import compute_injuries_proxies
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
     with open(path, "r" , encoding ="utf-8") as f : 
@@ -290,7 +291,9 @@ finalncf = normalize_column_features(finalcrm)
 finalcms = compute_momentum_score(finalncf)
 finalcmd = compute_momentum_differential(finalcms)
 finalcsd = compute_schedule_difficulty(finalcmd)
-print(compute_schedule_difficulty_rolling(finalcsd))
+finalcsdr = compute_schedule_difficulty_rolling(finalcsd)
+finalcrod = compute_recent_offense_defense(finalcsdr)
+print(compute_injuries_proxies(finalcrod))
 print(list(finalcsd.columns))
 
 

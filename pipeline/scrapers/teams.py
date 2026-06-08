@@ -14,3 +14,4 @@ def fetch_teams(year):
     # return get_teams(year)
     return loads_teams()
 
+print(fetch_teams(2023))
