@@ -12,4 +12,4 @@ def fetch_weather(season):
 
 
 
-print(fetch_weather(2023))
+# print(fetch_weather(2023))

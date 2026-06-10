@@ -23,9 +23,10 @@ def parse_games(gamesraws):
                     "away_points": i["away_points"]
               }
         listgames.append(gamedict)
-
+ 
     return listgames
+    
 
 # from pipeline.scrapers.games import fetch_games
-# valgames = fecth_games(2023)
+# valgames = fetch_games(2023)
 # print(parse_games(valgames))

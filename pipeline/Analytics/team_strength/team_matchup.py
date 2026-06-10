@@ -12,6 +12,11 @@ from pipeline.analytics.context.momentum import compute_streaks, compute_recent_
 from pipeline.analytics.context.schedule_difficulty import compute_schedule_difficulty, compute_schedule_difficulty_rolling
 from pipeline.analytics.context.recent_offense_defense import compute_recent_offense_defense
 from pipeline.analytics.context.injuries_proxies import compute_injuries_proxies
+from pipeline.transformation.parse_games import parse_games
+from pipeline.scrapers.games import fetch_games
+from pipeline.transformation.parse_weathers import parse_weathers
+from pipeline.scrapers.weather import fetch_weather 
+
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
     with open(path, "r" , encoding ="utf-8") as f : 
@@ -157,6 +162,7 @@ def structure_team_matchup(cleaned_data: list)->list:
               "is_neutral": 1 if entry["neutral_site"] else 0
         })
 
+    
     return structured
 
 
@@ -199,10 +205,10 @@ def compute_team_matchup_stats(structured_data: list)->pd.DataFrame:
     # Win rate 
     stats["win_rate"] = stats["wins"] / stats["total_games"]
 
-    # remet "team" comme colonne
     stats = stats.reset_index()
+
     return stats
-    
+
 
 
 def add_opponent_strength(structured_df: pd.DataFrame, stats: pd.DataFrame)-> pd.DataFrame:
@@ -278,6 +284,47 @@ def add_conference_strength(structure_df: pd.DataFrame, conference_strength_df: 
     })
  
     return merged
+
+valgames = fetch_games(all)
+vallgames = parse_games(valgames)
+games_df = pd.DataFrame(vallgames)
+
+valweather = fetch_weather(all)
+vallweather = parse_weathers(valweather)
+weathers_df = pd.DataFrame(vallweather)
+   
+def merge_team_matchup_with_games(structure_df: pd.DataFrame, games_df: pd.DataFrame)->pd.DataFrame: 
+
+    merge1 = structure_df.merge(
+        games_df[["season", "week", "home_team", "away_team", "game_id"]], 
+        left_on = ["season", "week", "team", "opponent"], 
+        right_on = ["season", "week", "home_team", "away_team"], 
+        how = "left"
+    )
+    
+    merge2 = structure_df.merge(
+        games_df[["season", "week", "home_team", "away_team", "game_id"]], 
+        left_on = ["season", "week", "team", "opponent"], 
+        right_on = ["season", "week", "away_team", "home_team"], 
+        how = "left"
+    )
+
+    df_games_merged = merge1.combine_first(merge2)
+    df_games_merged["game_id"] = df_games_merged["game_id"].astype("Int64")
+
+    return df_games_merged
+
+
+def merge_team_matchup_with_weather(structure_df: pd.DataFrame, weathers_df: pd.DataFrame)->pd.DataFrame: 
+    mergeweather = structure_df.merge(
+        weathers_df[["game_id","temperature", "humidity", "precipitation", "wind_speed", "wind_direction", "pressure", "condition"]], 
+        left_on = ["game_id"], 
+        right_on = ["game_id"], 
+        how = "left"
+    )
+    return mergeweather
+
+
 raw = load_raw_team_matchup()
 clean = clean_team_matchup(raw)
 structured = structure_team_matchup(clean)
@@ -293,7 +340,12 @@ finalcmd = compute_momentum_differential(finalcms)
 finalcsd = compute_schedule_difficulty(finalcmd)
 finalcsdr = compute_schedule_difficulty_rolling(finalcsd)
 finalcrod = compute_recent_offense_defense(finalcsdr)
-print(compute_injuries_proxies(finalcrod))
+finalcip = compute_injuries_proxies(finalcrod)
+finalmtmwg = merge_team_matchup_with_games(finalcip, games_df)
+print(merge_team_matchup_with_weather(finalmtmwg, weathers_df))
+# finalmega = merge_games(finalcip, vallgames_df)
+
+# print(compute_injuries_proxies(finalcrod))
 print(list(finalcsd.columns))
 
 
