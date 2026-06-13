@@ -32,7 +32,7 @@ def compute_weather_features(df):
 
     )
   
-   # Normalized score
+   # Normalized score soi score de difficulté météo 
     df["weather_score_norm"] =  (
         df["weather_score_raw"] -  df["weather_score_raw"].min()
    ) / (df["weather_score_raw"].max() - df["weather_score_raw"].min())

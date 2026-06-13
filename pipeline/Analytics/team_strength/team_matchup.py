@@ -15,7 +15,8 @@ from pipeline.analytics.context.injuries_proxies import compute_injuries_proxies
 from pipeline.transformation.parse_games import parse_games
 from pipeline.scrapers.games import fetch_games
 from pipeline.transformation.parse_weathers import parse_weathers
-from pipeline.scrapers.weather import fetch_weather 
+from pipeline.scrapers.weather import fetch_weather
+from pipeline.analytics.context.weather_impact import compute_weather_features 
 
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
@@ -136,10 +137,9 @@ def structure_team_matchup(cleaned_data: list)->list:
               "points_for": wp, 
               "points_against": lp, 
               "point_diff": wp - lp, 
-              "location": "neutral" if entry ["neutral_site"] else "away", 
-              "is_home": 0, 
-              "is_away": 1 if not entry["neutral_site"] else 0, 
-              "is_neutral": 1 if entry["neutral_site"] else 0
+              "is_home": None, 
+              "is_away": None, 
+              "is_neutral": None
         })
         # --- Ligne pour le perdant  --- #
 
@@ -156,10 +156,9 @@ def structure_team_matchup(cleaned_data: list)->list:
               "points_for": lp, 
               "points_against": wp, 
               "point_diff": lp - wp, 
-              "location": "neutral" if entry["neutral_site"] else "away", 
-              "is_home": 0, 
-              "is_away": 1 if not entry["neutral_site"] else 0, 
-              "is_neutral": 1 if entry["neutral_site"] else 0
+              "is_home": None, 
+              "is_away": None, 
+              "is_neutral": None
         })
 
     
@@ -308,9 +307,20 @@ def merge_team_matchup_with_games(structure_df: pd.DataFrame, games_df: pd.DataF
         right_on = ["season", "week", "away_team", "home_team"], 
         how = "left"
     )
-
+    
     df_games_merged = merge1.combine_first(merge2)
     df_games_merged["game_id"] = df_games_merged["game_id"].astype("Int64")
+    # to regive good value to my is_home, is_away, is_neutral values 
+    df_games_merged["is_home"] = (df_games_merged["team"] == df_games_merged["home_team"]).astype(int)
+    df_games_merged["is_away"] = (df_games_merged["team"] == df_games_merged["away_team"]).astype(int)
+    df_games_merged["is_neutral"] = (df_games_merged["home_team"] == 0) & (df_games_merged["away_team"] == 0).astype(int)
+
+    df_games_merged["location"] = df_games_merged.apply(
+        lambda row : "home" if row["is_home"] == 1
+        else "away" if row["is_away"] == 1
+        else "neutral", 
+        axis = 1
+    )
 
     return df_games_merged
 
@@ -342,7 +352,8 @@ finalcsdr = compute_schedule_difficulty_rolling(finalcsd)
 finalcrod = compute_recent_offense_defense(finalcsdr)
 finalcip = compute_injuries_proxies(finalcrod)
 finalmtmwg = merge_team_matchup_with_games(finalcip, games_df)
-print(merge_team_matchup_with_weather(finalmtmwg, weathers_df))
+finalmtmww = merge_team_matchup_with_weather(finalmtmwg, weathers_df)
+print(compute_weather_features(finalmtmww))
 # finalmega = merge_games(finalcip, vallgames_df)
 
 # print(compute_injuries_proxies(finalcrod))
