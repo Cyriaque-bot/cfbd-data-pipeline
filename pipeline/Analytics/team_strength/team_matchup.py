@@ -17,6 +17,10 @@ from pipeline.scrapers.games import fetch_games
 from pipeline.transformation.parse_weathers import parse_weathers
 from pipeline.scrapers.weather import fetch_weather
 from pipeline.analytics.context.weather_impact import compute_weather_features 
+from pipeline.analytics.context.weather_features import compute_weather_schock, compute_weather_familiarity, compute_weather_resilience,compute_weather_advantage,  compute_weather_performance_index
+from pipeline.analytics.team_strength.compute_team_strength import compute_team_strength
+
+
 
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
@@ -353,11 +357,23 @@ finalcrod = compute_recent_offense_defense(finalcsdr)
 finalcip = compute_injuries_proxies(finalcrod)
 finalmtmwg = merge_team_matchup_with_games(finalcip, games_df)
 finalmtmww = merge_team_matchup_with_weather(finalmtmwg, weathers_df)
-print(compute_weather_features(finalmtmww))
+finalcwf = compute_weather_features(finalmtmww)
+finalcws = compute_weather_schock(finalcwf)
+finalcwfa = compute_weather_familiarity(finalcws)
+finalcwr = compute_weather_resilience(finalcwfa)
+finalcwa = compute_weather_advantage(finalcwr)
+finalcwpi = compute_weather_performance_index(finalcwa)
+
+# print(compute_team_strength(finalcwpi, 
+#                             Path("pipeline/config/team_features.json"), 
+#                             Path("pipeline/config/team_features.json") 
+#                         )
+# )
+# print(compute_weather_performance_index(finalcwf))
 # finalmega = merge_games(finalcip, vallgames_df)
 
 # print(compute_injuries_proxies(finalcrod))
-print(list(finalcsd.columns))
+print(list(finalcwpi.columns))
 
 
 def  build_team_matchup_dataset(raw_path:str , output_path: str)-> pd.DataFrame:

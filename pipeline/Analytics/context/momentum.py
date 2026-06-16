@@ -90,3 +90,10 @@ def compute_momentum_differential(df):
     df["momentum_differential"] = df["momentum_score"] -  df ["opponent_momentum_score"]
 
     return df
+
+
+# Nouvelle version de notre momentum avec le facteur météo 
+
+def adjust_momentum_with_wpi(df): 
+    df["momentum_weather_adj"] =  df["momentum_score"] * (0.5 + 0.5 * df["WPI"])
+    return df 

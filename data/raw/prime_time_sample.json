@@ -1,0 +1,26 @@
+{
+  "games": [
+    {
+      "id": 401520000,
+      "season": 2023,
+      "week": 1,
+      "home_team": "Alabama",
+      "away_team": "Texas",
+      "start_date": "2023-09-02T19:30:00Z",
+      "media": [
+        { "network": "ESPN" }
+      ]
+    },
+    {
+      "id": 401520001,
+      "season": 2023,
+      "week": 1,
+      "home_team": "Georgia",
+      "away_team": "UT Martin",
+      "start_date": "2023-09-02T15:00:00Z",
+      "media": [
+        { "network": "SEC Network" }
+      ]
+    }
+  ]
+}

@@ -32,3 +32,6 @@ def compute_team_strength(team_df, features_path, weights_path):
     )
 
     return team_df[["team", "conference", "team_strength_norm"]]
+
+def adjust_team_strength_with_wpi(df): 
+    df["team_strength_weather_adj"] = df["team_strength"] * (0.5 + 0.5 * df["WPI"])

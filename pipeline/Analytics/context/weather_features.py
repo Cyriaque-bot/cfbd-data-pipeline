@@ -1,4 +1,4 @@
-
+# from pipeline.analytics.context.weather_impact import compute_weather_features
 def compute_weather_schock(df):
     # Trier par équipe et chronologie
     df = df.sort_values(["team", "season", "week"]) 
@@ -47,7 +47,7 @@ def compute_weather_advantage(df):
     df = df.merge(away, on = "game_id", how = "left")
 
     # Calcul de l'avantage Meteo
-    df["weather_adavantage"] = df["resilience_away"] - df["resilience_home"]
+    df["weather_advantage"] = df["resilience_away"] - df["resilience_home"]
 
     return df
 
@@ -58,7 +58,7 @@ def compute_weather_performance_index(df):
         0.40 * df["weather_resilience"]
         + 0.20 * (1 - df["weather_score_norm"])
         + 0.20 * (1 - df["weather_shock"])
-        + 0.20 * (1 +  df["weather_adavantage"] )
+        + 0.20 * (1 +  df["weather_advantage"] )
     )
     df ["WPI"] = df ["WPI"].clip(0, 1)
 
