@@ -326,5 +326,33 @@
     "home_points": 24,
     "away_team": "Texas",
     "away_points": 34
-  }
+  }, 
+  {
+  "id": 401520777,
+  "season": 2023,
+  "week": 13,
+  "season_type": "regular",
+  "start_date": "2023-11-25T20:00:00.000Z",
+  "neutral_site": false,
+  "conference_game": true,
+  "venue": "Bryant-Denny Stadium",
+  "home_team": "Alabama",
+  "home_points": 38,
+  "away_team": "Auburn",
+  "away_points": 17
+}, 
+{
+  "id": 401520778,
+  "season": 2023,
+  "week": 6,
+  "season_type": "regular",
+  "start_date": "2023-10-07T19:00:00.000Z",
+  "neutral_site": true,
+  "conference_game": false,
+  "venue": "Cotton Bowl",
+  "home_team": "Texas",
+  "home_points": 31,
+  "away_team": "Oklahoma",
+  "away_points": 28
+}
 ]

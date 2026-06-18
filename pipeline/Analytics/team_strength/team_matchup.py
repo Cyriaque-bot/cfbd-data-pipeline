@@ -19,8 +19,13 @@ from pipeline.scrapers.weather import fetch_weather
 from pipeline.analytics.context.weather_impact import compute_weather_features 
 from pipeline.analytics.context.weather_features import compute_weather_schock, compute_weather_familiarity, compute_weather_resilience,compute_weather_advantage,  compute_weather_performance_index
 from pipeline.analytics.team_strength.compute_team_strength import compute_team_strength
-
-
+from pipeline.analytics.context.pressure_proxies import  compute_pressure_proxies
+from pipeline.scrapers.prime_time import fetch_prime_time
+from pipeline.scrapers.rankings import fetch_rankings
+from pipeline.scrapers.rivalries import fetch_rivalries
+from pipeline.transformation.parse_prime_time import parse_prime_time
+from pipeline.transformation.parse_rankings import parse_rankings
+from pipeline.transformation.parse_rivalries import parse_rivalries
 
 def load_raw_team_matchup(path: str = "data/raw/team_matchup_sample.json")-> list: 
 
@@ -363,6 +368,18 @@ finalcwfa = compute_weather_familiarity(finalcws)
 finalcwr = compute_weather_resilience(finalcwfa)
 finalcwa = compute_weather_advantage(finalcwr)
 finalcwpi = compute_weather_performance_index(finalcwa)
+
+valrivalries = fetch_rivalries()
+rivalries_df = parse_rivalries(valrivalries) 
+
+valrankings = fetch_rankings(all)
+rankings_df = parse_rankings(valrankings)
+
+valprime = fetch_prime_time() 
+prime_time_df = parse_prime_time(valprime)
+
+finalcpp = compute_pressure_proxies(finalcwpi, rivalries_df, prime_time_df, rankings_df)
+print( compute_pressure_proxies(finalcwpi, rivalries_df, prime_time_df, rankings_df))
 
 # print(compute_team_strength(finalcwpi, 
 #                             Path("pipeline/config/team_features.json"), 

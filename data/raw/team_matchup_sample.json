@@ -76,6 +76,36 @@
     "winner_conference": "Big 12",
     "loser_conference": "SEC",
     "neutral_site": false
+  },
+
+
+  {
+    "season": 2023,
+    "week": 13,
+    "season_type": "regular",
+    "date": "2023-11-25T20:00:00.000Z",
+    "winner": "Alabama",
+    "loser": "Auburn",
+    "winner_points": 38,
+    "loser_points": 17,
+    "winner_conference": "SEC",
+    "loser_conference": "SEC",
+    "neutral_site": false,
+    "game_id": 401520000
+  },
+
+  {
+    "season": 2023,
+    "week": 6,
+    "season_type": "regular",
+    "date": "2023-10-07T18:00:00.000Z",
+    "winner": "Texas",
+    "loser": "Oklahoma",
+    "winner_points": 31,
+    "loser_points": 28,
+    "winner_conference": "Big 12",
+    "loser_conference": "Big 12",
+    "neutral_site": true,
+    "game_id": 401520777
   }
 ]
-

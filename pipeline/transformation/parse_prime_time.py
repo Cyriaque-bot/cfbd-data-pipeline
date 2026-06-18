@@ -16,7 +16,8 @@ def parse_prime_time(raw_data_prime):
 
             raw_data_prime_dict =  {
                 "game_id" : i["id"], 
-                "is_prime_time" : 1 if(startdate <= datetime.fromisoformat(i["start_date"].replace("Z", "+00:00")).time()<= enddate)  else 0                                                  
+                "is_prime_time" : 1 if(startdate <= datetime.fromisoformat(i["start_date"].replace("Z", "+00:00")).time()<= enddate
+                 and i["media"][0]["network"] in ("ESPN", "ABC", "FOX", "CBS", "NBC", "ESPN2")) else 0                                      
             }
     
             raw_data_prime_list.append(raw_data_prime_dict)

@@ -21,6 +21,32 @@
       "media": [
         { "network": "SEC Network" }
       ]
+    },
+
+
+    {
+      "id": 401520777,
+      "season": 2023,
+      "week": 13,
+      "home_team": "Alabama",
+      "away_team": "Auburn",
+      "start_date": "2023-11-25T20:00:00Z",
+      "media": [
+        { "network": "ESPN" }
+      ]
+    },
+
+
+    {
+      "id": 401520778,
+      "season": 2023,
+      "week": 6,
+      "home_team": "Texas",
+      "away_team": "Oklahoma",
+      "start_date": "2023-10-07T19:00:00Z",
+      "media": [
+        { "network": "ABC" }
+      ]
     }
   ]
 }
