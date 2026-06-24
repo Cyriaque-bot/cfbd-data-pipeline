@@ -1,5 +1,5 @@
 import pandas as pd
-from parse_coach_matchup import build_coach_dataset
+from pipeline.transformation.parse_coach_matchup import build_coach_dataset
 from anal_coach_season import analyze_coach_season
 from anal_coach_vs_coach import analyze_coach_vs_coach
 

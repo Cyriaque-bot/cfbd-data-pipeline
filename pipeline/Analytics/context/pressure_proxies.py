@@ -98,7 +98,7 @@ def compute_stakes_pressure(df):
     return df
     
 def compute_media_pressure(df): 
-    # Pression liées à la médiatisation , prime time, Tv national , gros mtch(top 25) 
+    # Pression liées à la médiatisation , prime time, Tv national , gros match(top 25) 
     df["media_pressure"] = 0
 
     # Si nous avons une colonne "is_prime_time" otu "tv_audience", nous pouvons l'utiliser 
@@ -114,6 +114,8 @@ def compute_psychological_shock(df):
     # pression psychologique basées sur le match précédent : 
     # Grosse victoire -> pression de confirmer 
     # Grosse défaite  -> pressionde Rebondir 
+    # On prends la valeurs absolue du margin précédent  que l'on divise par le plus gros margin absolu de la saison 
+    # biensure on obtient un résulat entre 0 et 1
 
     df = df.sort_values(["team", "date"]).reset_index(drop = True)
     df["prev_margin"] = df.groupby("team")["point_diff"].shift(1)
@@ -128,6 +130,9 @@ def compute_psychological_shock(df):
     return df
 
 def compute_pressure_index(df, w_rivalry = 0.25, w_stakes = 0.25, w_media = 0.25, w_shock = 0.25): 
+    # Ici je fais une normalisation coneptuelle pas mathématique 
+    # je mets toute les variable au même niveau d'importance  et je garantie que jle score finale reste dans une 
+    # echelle cohérente j'empêche une variable dominante de dominer les autres 
     # Score final deoression (0 à 1)
     df["pressure_index"] = (
         w_rivalry * df["rivalry_pressure"] + 
