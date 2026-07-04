@@ -38,7 +38,7 @@ def parse_prime_time(raw_data_prime):
 
 
 
-from pipeline.scrapers.prime_time import fetch_prime_time
+# from pipeline.scrapers.prime_time import fetch_prime_time
 
-valfetchprime = fetch_prime_time()
-print(parse_prime_time(valfetchprime))
+# valfetchprime = fetch_prime_time()
+# print(parse_prime_time(valfetchprime))

@@ -57,21 +57,21 @@ def normalize_column_features (df):
     return df
 
 
-def compute_momentum_score(df, w_streak = 0.4, w_magin = 0.3, w_loss = 0.3):
+def compute_momentum_score(df, w_streak = 0.4, w_margin = 0.3, w_loss = 0.3):
     # Combine win_streak, loss_streak et reent_margin en un score unique de momentum
 
     df["momentum_score"] = (
         w_streak * df["win_streak_norm"]
-        + w_magin * df["recent_margin_norm"]
+        + w_margin * df["recent_margin_norm"]
         - w_loss * df["loss_streak_norm"]
     )
 
     return df
 
-# pute_momentum_differential()
+# compute_momentum_differential()
 
 def compute_momentum_differential(df): 
-
+    # notre objectif ici est de monter qu'une équipe arrive dans le match avec une meilleure dynamique que les autres.
     # On crée un df avec team -> momentum_score 
     opp = df[["team", "season", "week", "momentum_score"]].copy()
     opp = opp.rename(columns = {
@@ -87,7 +87,7 @@ def compute_momentum_differential(df):
     )
 
     # On calcule le différentiel 
-    df["momentum_differential"] = df["momentum_score"] -  df ["opponent_momentum_score"]
+    df["momentum_differential"] = (df["momentum_score"] -  df ["opponent_momentum_score"]).fillna(0)
 
     return df
 
@@ -95,5 +95,5 @@ def compute_momentum_differential(df):
 # Nouvelle version de notre momentum avec le facteur météo 
 
 def adjust_momentum_with_wpi(df): 
-    df["momentum_weather_adj"] =  df["momentum_score"] * (0.5 + 0.5 * df["WPI"])
+    df["momentum_weather_adj"] =  df["momentum_score"] * (0.5 + 0.5 * df["WPI"].fillna(0))
     return df 

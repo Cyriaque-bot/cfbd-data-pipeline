@@ -47,7 +47,8 @@ def compute_weather_advantage(df):
     df = df.merge(away, on = "game_id", how = "left")
 
     # Calcul de l'avantage Meteo
-    df["weather_advantage"] = df["resilience_away"] - df["resilience_home"]
+    df["weather_advantage"] = df["resilience_away"].fillna(0) - df["resilience_home"].fillna(0)
+
 
     return df
 

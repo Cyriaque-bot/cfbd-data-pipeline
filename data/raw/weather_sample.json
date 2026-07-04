@@ -163,6 +163,24 @@
     "windDirection": "NE",
     "pressure": 29.92,
     "condition": "Partly Cloudy"
+  }, 
+    {
+    "id": 401520234,
+    "season": 2023,
+    "week": 2,
+    "seasonType": "regular",
+    "startDate": "2023-09-09T23:00:00.000Z",
+    "venue": "Bryant-Denny Stadium",
+    "homeTeam": "Alabama",
+    "awayTeam": "Texas",
+    "temperature": 84,
+    "dewPoint": 72,
+    "humidity": 68,
+    "precipitation": 0,
+    "windSpeed": 8,
+    "windDirection": "NE",
+    "pressure": 29.92,
+    "condition": "Partly Cloudy"
   }
 ]
 

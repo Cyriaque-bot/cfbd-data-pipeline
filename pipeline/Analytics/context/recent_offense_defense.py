@@ -1,3 +1,6 @@
+import pandas as pd 
+
+# recent point for
 def compute_recent_points_for(df, window = 3): 
     df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
 
@@ -7,6 +10,7 @@ def compute_recent_points_for(df, window = 3):
     )
     return df
 
+# recent points againts 
 def compute_recent_points_against(df, window = 3): 
     df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
 
@@ -16,11 +20,30 @@ def compute_recent_points_against(df, window = 3):
     )
     return df 
 
+# recent margin 
+
+def compute_recent_margin(df, window = 3): 
+    df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
+    df["margin"] = df["points_for"] - df["points_against"]
+    df["recent_margin"] = (
+        df.groupby("team")["margin"]
+          .transform(lambda x:x.rolling(window, min_periods = 1).mean())
+    )
+
+    return df
+
+# momentum score 
+def compute_momentum_score(df):
+    # Momentum = points_for - points_against (normalisé)
+    df["momentum_score"] = df["points_for"] - df["points_against"]
+    return df
 
 def compute_recent_offense_defense(df , window = 3): 
     df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
 
     df = compute_recent_points_for(df, window = window)
     df = compute_recent_points_against(df, window = window)
+    df = compute_recent_margin(df, window = window)
+    df = compute_momentum_score(df)
 
     return df 

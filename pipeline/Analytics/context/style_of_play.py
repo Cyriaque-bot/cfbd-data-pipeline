@@ -29,8 +29,16 @@ def compute_style_of_play(df_team_stats):
 
     df = df_team_stats.copy()
     # Ratios run / pass
-    df["run_ratio"] = df["yardsRushing"] / df["yardsTotal"]
-    df["pass_ratio"] = df["passingYards"] / df["yardsTotal"]
+    #Si yardsTotal == 0 (cas réel pour certaines équipes FCS ou blowouts)
+
+    df["run_ratio"] = df.apply(lambda row: row["yardsRushing"] /row["yardsTotal"] if row["yardsTotal"] > 0 else 0, 
+                               axis = 1
+              ) 
+
+
+    df["pass_ratio"] = df.apply(lambda row : row["passingYards"] / row["yardsTotal"] if row["yardsTotal"] > 0 else 0, 
+                                axis = 1
+    ) 
 
     # Classification simple
     df["run_heavy"] = (df["run_ratio"] > 0.55).astype(int)
@@ -43,24 +51,28 @@ def compute_style_of_play(df_team_stats):
     def compute_pct(x):
         if isinstance(x, dict) and x.get("attempts", 0) > 0: 
             return x["made"] / x["attempts"]
-        return None
+        return 0
+    df["thirdDownPct"] = df["thirdDown"].apply(compute_pct) if "thirdDown" in df.columns else 0
+    df["fourthDownPct"] = df["fourthDown"].apply(compute_pct) if "fourthDown" in df.columns else 0
 
-    df["thirdDownPct"] = df["thirdDown"].apply(compute_pct) if "thirdDown" in df.columns else None
-    df["fourthDownPct"] = df["fourthDown"].apply(compute_pct) if "fourthDown" in df.columns else None
+    df["thirdDownPct"] = df["thirdDownPct"].fillna(0)
+    df["fourthDownPct"] = df["fourthDownPct"].fillna(0)
+
+    return df
     # Colonne Finale 
 
-    cols = [
-        "gameId", "teamId", "team", "conference", "run_ratio", "pass_ratio", 
-        "run_heavy", "pass_heavy", "balanced", "thirdDownPct", "fourthDownPct"
-    ]
-    cols = [c for c in cols if c in df.columns]
+    # cols = [
+    #     "game_id", "team_id", "team", "conference", "run_ratio", "pass_ratio", 
+    #     "run_heavy", "pass_heavy", "balanced", "thirdDownPct", "fourthDownPct"
+    # ]
+    # cols = [c for c in cols if c in df.columns]
 
-    return df[cols]
+    # return df[cols]
 
 
-from pipeline.scrapers.teams_stat import fetch_teams_stat
-from pipeline.transformation.parse_team_stats import parse_team_stats
-raw = fetch_teams_stat(all)
-rawparse = parse_team_stats(raw)
-valdatafra = pd.DataFrame(rawparse)
-print(compute_style_of_play(valdatafra))
+# from pipeline.scrapers.teams_stat import fetch_teams_stat
+# from pipeline.transformation.parse_team_stats import parse_team_stats
+# raw = fetch_teams_stat(all)
+# rawparse = parse_team_stats(raw)
+# valdatafra = pd.DataFrame(rawparse)
+# print(compute_style_of_play(valdatafra))

@@ -1,38 +1,63 @@
+import pandas as pd
+
+# Offense Drop
 
 def compute_offense_drop(df): 
-    df["offense_drop"] = df["recent_points_for"] - df["points_for"]
+    raw = df["recent_points_for"] - df["points_for"]
+
+    # Normalisation par la valeurs absolue max 
+    max_abs = raw.abs().max()
+    if pd.isna(max_abs) or max_abs == 0: 
+       df["defense_collapse"] = 0
+    else: 
+       df["defense_collapse"] =  raw.abs()/ max_abs
     return df
 
-
+# defense collapse
 def compute_defense_collapse(df): 
-    df["defense_collapse"] = df["points_against"] - df["recent_points_against"]
+    raw = df["points_against"] - df["recent_points_against"]
+    max_abs = raw.abs().max()
+    if pd.isna(max_abs) or max_abs == 0: 
+        df["defense_collapse"] = 0
+    else: 
+        df["defense_collapse"] =  raw.abs() / max_abs
     return df 
 
-
+# margin shock
 def compute_margin_shock(df): 
-    df["margin_shock"] = df["recent_margin"] - df["margin"]
+    raw = df["recent_margin"] - df["margin"]
+    max_abs = raw.abs().max()
+    if pd.isna(max_abs) or max_abs == 0: 
+        df["margin_shock"] = 0
+    else: 
+        df["margin_shock"] = raw.abs() /  max_abs
     return df 
 
+# momentum shock
 def compute_momentum_shock(df): 
     df = df.sort_values( by = ["team", "season", "week"])
     
     df["momentum_prev"] = df.groupby("team")["momentum_score"].shift(1)
 
-    df["momentum_shock"] = df["momentum_score"] - df["momentum_prev"]
+    raw = df["momentum_score"] - df["momentum_prev"]
 
-    # remplacer les NaN du premier match par 0
-    df["momentum_shock"] = df["momentum_shock"].fillna(0)
+    raw  =  raw.fillna(0)
 
+    max_abs = raw.abs().max()
+    if pd.isna(max_abs) or max_abs == 0: 
+        df["momentum_shock"]  = 0
+    else: 
+        df["momentum_shock"] = raw.abs() / max_abs
     return df 
+
 
 def compute_injury_proxy_score(df): 
     df["injury_proxy_raw"] = (
-        0.4 * df["offense_drop"] + 
+        0.3 * df["offense_drop"] + 
         0.3 * df["defense_collapse"] + 
         0.2 * df["margin_shock"] + 
-        0.1 * df["momentum_shock"]
+        0.2 * df["momentum_shock"]
     )
-
     return df
 
 
@@ -40,9 +65,10 @@ def normalize_injury_proxy(df):
     min_val = df["injury_proxy_raw"].min()
     max_val = df["injury_proxy_raw"].max()
 
-    df["injury_proxy_norm"] = (
-      (df["injury_proxy_raw"] - min_val) / (max_val - min_val)
-    )
+    if min_val == max_val: 
+         df["injury_proxy_norm"] = 0
+    else: 
+         df["injury_proxy_norm"] = (df["injury_proxy_raw"] - min_val) / (max_val - min_val)
 
     return df 
 
@@ -58,9 +84,10 @@ def compute_injuries_proxies(df):
     df = compute_defense_collapse(df)
     # 3) margin shock
     df = compute_margin_shock(df)
-    # 4) Mementum Schock 
+    # 4) mementum schock 
     df = compute_momentum_shock(df)
-    # 5) Score global pondéré
+
+    # 5) score global pondéré
     df = compute_injury_proxy_score(df)
     # 6) Normalisation 
     df = normalize_injury_proxy(df)

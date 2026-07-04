@@ -33,25 +33,45 @@ sys.path.append(str(project_root))
 
 
 
-def merge_rivalries(df, rivalries_df): 
+def merge_rivalries(df, rivalries_json): 
     # Convertir en DataFrame
-    riv = pd.DataFrame(rivalries_df)
+    riv = pd.DataFrame(rivalries_json["rivalries"]).copy()
+
+    # Normalisation lower case 
+    riv["team"] = riv["team"].str.lower()
+    riv["opponent"] = riv["opponent"].str.lower()
+
+    # Definition d'une intensité par défaut
+    major = ["Iron Bowl", "Red River", "The Game", "Army-Navy "]
+    medium = ["Jeweled Shillelagh", "Civil War", "Sunshine Showdown"]
+    minor = ["Egg Bowl", "Palmetto Bowl"]
+
+    riv["intensity"] = 0.0 # default value
+
+    riv.loc[riv["name"].isin(major), "intensity"] = 1.0
+    riv.loc[riv["name"].isin(medium), "intensity"] = 0.7
+    riv.loc[riv["name"].isin(minor), "intensity"] = 0.4
+
+    # Normalisation des équipes dans df
+    df["team_lower"] = df["team"].str.lower()
+    df["team_opponent"] = df["opponent"].str.lower()
+
     # Merge direct (team vs opponent)
     df = df.merge(
-        riv[["team", "opponent"]].assign(rivalry_pressure = 1), 
-        on = ["team", "opponent"], 
+        riv.rename(columns = {"team": "team_lower", "opponent": "team_opponent", "intensity": "rivalry_pressure"}), 
+        on = ["team_lower", "team_opponent"], 
         how = "left"
     )
     # Merge inverse (opponent vs team)
-    rev_inv = riv.rename(columns = {"team": "opponent", "opponent": "team"})
+    rev_inv = riv.rename(columns = {"team": "team_opponent", "opponent": "team_lower", "intensity": "rivalry_pressure_inv"})
     df = df.merge(
-        rev_inv[["team", "opponent"]].assign(rivalry_pressure_inv = 1), 
-        on = ["team", "opponent"], 
+        rev_inv,
+        on = [ "team_lower","team_opponent"], 
         how = "left"
     )
 
     # Fusionner les deux colonnes 
-    df["rivalry_pressure"] = df[["rivalry_pressure", "rivalry_pressure_inv"]].max(axis = 1).fillna(0).astype(int)
+    df["rivalry_pressure"] = df[["rivalry_pressure", "rivalry_pressure_inv"]].max(axis = 1).fillna(0)
 
     # Nettoyage 
     df = df.drop(columns = ["rivalry_pressure_inv"], errors = "ignore")
@@ -59,7 +79,7 @@ def merge_rivalries(df, rivalries_df):
 
 
 def merge_prime_time(df, prime_df):
-    prime = pd.DataFrame(prime_df)
+    prime = pd.DataFrame(prime_df).copy()
     df = df.merge(
         prime, 
         on = 'game_id', 
@@ -70,7 +90,7 @@ def merge_prime_time(df, prime_df):
 
     # Merge ranking
 def merge_rankings(df, rankings_df): 
-    rank = pd.DataFrame(rankings_df)
+    rank = pd.DataFrame(rankings_df).copy()
     
     # Team Rank 
     df = df.merge(
@@ -84,26 +104,29 @@ def merge_rankings(df, rankings_df):
         on = ["season", "week", "opponent"],
         how = "left"
     )
+    df["team_rank"] = df["team_rank"].fillna(999)
+    df["opponent_rank"] = df["opponent_rank"].fillna(999)
     return df 
 
 def compute_stakes_pressure(df):
     # Pression liée à l'enjeu du match 
-    # bowl, playoffs, championship , rivalry week
+    # bowl, playoffs, championship 
 
     df["stakes_pressure"] = 0
     df.loc[df["season_type"].str.contains("championship", case = False, na = False), "stakes_pressure"] = 1
     df.loc[df["season_type"].str.contains("postseason", case = False, na = False), "stakes_pressure"] = 1
-    df.loc[df["week"] >= 12,"stakes_pressure"] = 1 # fin de saison enjeux plus élévés
+    df.loc[df["week"] >= 12,"stakes_pressure"] = 1 # fin de saison enjeux plus élévés c'est un peu osé mais je pose ça la pour l'instant
 
     return df
     
 def compute_media_pressure(df): 
     # Pression liées à la médiatisation , prime time, Tv national , gros match(top 25) 
+    # il peut avoir la valeurs 0 ou 1
     df["media_pressure"] = 0
 
     # Si nous avons une colonne "is_prime_time" otu "tv_audience", nous pouvons l'utiliser 
     if "is_prime_time" in df.columns: 
-        df["media_pressure"] =  df["media_pressure"] + df["is_prime_time"].fillna(0)
+        df["media_pressure"] =  df["media_pressure"] + df["is_prime_time"]
 
     # Si Proxy simple : match entre deux équipes 
     if "team_rank" in df.columns and "opponent_rank" in df.columns: 
@@ -118,13 +141,14 @@ def compute_psychological_shock(df):
     # biensure on obtient un résulat entre 0 et 1
 
     df = df.sort_values(["team", "date"]).reset_index(drop = True)
-    df["prev_margin"] = df.groupby("team")["point_diff"].shift(1)
-    max_abs = df["prev_margin"].abs().max()
-    if pd.isna(max_abs) or max_abs == 0: 
-        df["psychological_shock"] = 0
-    else: 
-        df["psychological_shock"] = df["prev_margin"].abs() / max_abs
 
+    # Marge du match précédent
+    df["prev_margin"] = df.groupby("team")["point_diff"].shift(1)
+    # max_abs = df["prev_margin"].abs().max()
+
+    df["psychological_shock"] = df.groupby("team")["prev_margin"].transform(lambda x: x.abs()/(x.abs().max() if x.abs().max()else 1))
+
+    # Remplacer le nan du premier match par 0
     df["psychological_shock"] = df["psychological_shock"].fillna(0)
 
     return df

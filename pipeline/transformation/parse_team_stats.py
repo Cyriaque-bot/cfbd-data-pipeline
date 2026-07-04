@@ -71,8 +71,8 @@ def parse_team_stats(raws_stats):
         # Chaque match contient 2 équipes 
         for team_entry in entry.get("teams", []): 
             base = {
-                    "gameId": game_id, 
-                    "teamId": team_entry.get("teamId"), 
+                    "game_id": game_id, 
+                    "team_id": team_entry.get("teamId"), 
                     "team": team_entry.get("team"),
                     "conference": team_entry.get("conference"), 
                     "homeAway": team_entry.get("homeAway"),
@@ -142,9 +142,9 @@ def parse_team_stats(raws_stats):
  # test manuel 
 
 # if __name__ == "__main__": 
-from pipeline.scrapers.teams_stat import fetch_teams_stat
-raw = fetch_teams_stat(all)
-print(parse_team_stats(raw))
+# from pipeline.scrapers.teams_stat import fetch_teams_stat
+# raw = fetch_teams_stat(all)
+# print(parse_team_stats(raw))
 # print(f"Entrées brutes : {len(raw)}")
 # print(f"Entrées transformées: {len(parsed)}")
 # print(parsed)
