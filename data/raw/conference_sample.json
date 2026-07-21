@@ -1,5 +1,6 @@
 
-    {
+    [ 
+        {
         "Alabama": "SEC", 
         "Texas": "Big 12", 
         "Ohio State": "Big Ten", 
@@ -23,3 +24,5 @@
         "Indiana State": "Missouri Valley(FCS)", 
         "Oklahoma State": "Big 12"
     }
+
+]

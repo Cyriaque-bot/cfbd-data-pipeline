@@ -20,8 +20,8 @@ def fetch_matches(year):
 
 
 # test manuel (Je peux le supprimer plus tard)
-if __name__ == "__main__":
-    print(fetch_matches(2023))
+# if __name__ == "__main__":
+#     print(fetch_matches(2023))
 
 
 # print("sys.path =")

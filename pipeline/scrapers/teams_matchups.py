@@ -8,7 +8,7 @@ if project_root not in sys.path:
 
 from pipeline.loaders.load_team_matchup import team_matchups
 
-def fetch_load_team(year): 
+def fetch_load_team(): 
     return team_matchups()
 
-# print(fetch_load_team(2023))
+# print(fetch_load_team()) 

@@ -45,6 +45,6 @@ def parse_games_players_stats(raws_value, season, week):
 
 from pipeline.loaders.load_games_players_stats import load_games_players
 
-raw = load_games_players()
-parsed = parse_games_players_stats(raw, season = 2023, week = 1)
-print(parsed)
+# raw = load_games_players()
+# parsed = parse_games_players_stats(raw, season = 2023, week = 1)
+# print(parsed)

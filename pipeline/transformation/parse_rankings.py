@@ -26,6 +26,6 @@ def parse_rankings(raws_ranking):
     
     return validctranking
 
-from pipeline.scrapers.rankings import fetch_rankings
-valrankings = fetch_rankings(2023)
-print(parse_rankings(valrankings))
+# from pipeline.scrapers.rankings import fetch_rankings
+# valrankings = fetch_rankings(2023)
+# print(parse_rankings(valrankings))

@@ -40,24 +40,24 @@ def parse_weathers(weathersraw):
   
   # convertir mon games en DataFrame
 
-valgames = fetch_games(all)
-vallgames = parse_games(valgames)
-vallgames_df = pd.DataFrame(vallgames)
+# valgames = fetch_games(all)
+# vallgames = parse_games(valgames)
+# vallgames_df = pd.DataFrame(vallgames)
 
-valweather = fetch_weather(all)
-vallweather = parse_weathers(valweather)
-listweather_df = pd.DataFrame(vallweather) 
+# valweather = fetch_weather(all)
+# vallweather = parse_weathers(valweather)
+# listweather_df = pd.DataFrame(vallweather) 
     
-# # merging vallgames_df
-def merge_weather_with_games(listweather_df: pd.DataFrame , vallgames_df: pd.DataFrame)->pd.DataFrame: 
-    merged = listweather_df.merge(
-         vallgames_df, 
-         left_on = "game_id", 
-         right_on = "game_id", 
-         how =  "left"
-    )
-    return merged
+# # # merging vallgames_df
+# def merge_weather_with_games(listweather_df: pd.DataFrame , vallgames_df: pd.DataFrame)->pd.DataFrame: 
+#     merged = listweather_df.merge(
+#          vallgames_df, 
+#          left_on = "game_id", 
+#          right_on = "game_id", 
+#          how =  "left"
+#     )
+#     return merged
 
 
 
-print(merge_weather_with_games(listweather_df , vallgames_df))
+# print(merge_weather_with_games(listweather_df , vallgames_df))

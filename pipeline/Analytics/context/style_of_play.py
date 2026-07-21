@@ -58,17 +58,22 @@ def compute_style_of_play(df_team_stats):
     df["thirdDownPct"] = df["thirdDownPct"].fillna(0)
     df["fourthDownPct"] = df["fourthDownPct"].fillna(0)
 
+    # -----------------------------
+    # Style score 
+    # -----------------------------
+
+    # Score simple, robuste , compatible avec build_context_features
+    # combinaison de run_ratio (style de jeu), pass_ratio (style de jeu) , thirdDownPct (efficacité)
+    df["style_score"] = (
+         df["run_ratio"] * 0.4 + 
+         df["pass_ratio"] * 0.4 + 
+         df["thirdDownPct"] * 0.2
+    )
+
     return df
     # Colonne Finale 
 
-    # cols = [
-    #     "game_id", "team_id", "team", "conference", "run_ratio", "pass_ratio", 
-    #     "run_heavy", "pass_heavy", "balanced", "thirdDownPct", "fourthDownPct"
-    # ]
-    # cols = [c for c in cols if c in df.columns]
-
-    # return df[cols]
-
+   
 
 # from pipeline.scrapers.teams_stat import fetch_teams_stat
 # from pipeline.transformation.parse_team_stats import parse_team_stats

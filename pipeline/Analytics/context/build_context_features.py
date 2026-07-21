@@ -32,7 +32,11 @@ def build_context_features(
 
     # style de jeu (run/pass/balanced + 3rd/4th  down)
     df_style = compute_style_of_play(df_style)
-
+    df = df.merge(
+                  df_style[["team_id", "style_score"]],
+                  on = "team_id", 
+                  how = "left"
+                  )
     # Meteo (weather_score_norm + impacts + WPI)
     df_weather_features =  compute_weather_features(df_weather, df_style, df_team_stats)
     df = df.merge(
@@ -52,6 +56,9 @@ def build_context_features(
     df = compute_weather_advantage(df)
     df = compute_weather_performance_index(df)
 
+    # print("=== APRES merge_weather ===")
+    # print(df.columns)
+
     # recent offense & defense 
     df = compute_recent_offense_defense(df)
 
@@ -60,6 +67,9 @@ def build_context_features(
 
     # pressure proxies
     df = compute_pressure_proxies(df, df_rivalries , df_prime_games, df_rankings)
+
+    # print("=== APRES compute_pressure_proxies ===")
+    # print(df.columns)
 
     # momentum
     df = compute_streaks(df)

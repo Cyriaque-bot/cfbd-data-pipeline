@@ -38,6 +38,13 @@ def compute_momentum_score(df):
     df["momentum_score"] = df["points_for"] - df["points_against"]
     return df
 
+def compute_offense_defense_shocks(df): 
+    df["offense_drop"] = df["recent_points_for"] - df["points_for"]
+    df["defense_collapse"] =  df["points_against"] - df["recent_points_against"]
+    df["magin_shock"] =  df["recent_margin"] - df["margin"]
+    df["momentum_shock"] = df["momentum_score"] -  df["recent_margin"]
+    return df
+
 def compute_recent_offense_defense(df , window = 3): 
     df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
 
@@ -45,5 +52,7 @@ def compute_recent_offense_defense(df , window = 3):
     df = compute_recent_points_against(df, window = window)
     df = compute_recent_margin(df, window = window)
     df = compute_momentum_score(df)
+
+    df = compute_offense_defense_shocks(df)
 
     return df 

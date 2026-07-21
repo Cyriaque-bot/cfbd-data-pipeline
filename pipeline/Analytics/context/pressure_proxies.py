@@ -1,8 +1,7 @@
 import pandas as pd 
-import numpy as np 
 from pathlib import Path 
 import sys
-import os 
+
 
 project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
@@ -33,9 +32,10 @@ sys.path.append(str(project_root))
 
 
 
-def merge_rivalries(df, rivalries_json): 
+def merge_rivalries(df, rivalries_list): 
     # Convertir en DataFrame
-    riv = pd.DataFrame(rivalries_json["rivalries"]).copy()
+    riv = pd.DataFrame(rivalries_list).copy()
+    # riv = rivalries_json.copy()
 
     # Normalisation lower case 
     riv["team"] = riv["team"].str.lower()
@@ -48,9 +48,9 @@ def merge_rivalries(df, rivalries_json):
 
     riv["intensity"] = 0.0 # default value
 
-    riv.loc[riv["name"].isin(major), "intensity"] = 1.0
-    riv.loc[riv["name"].isin(medium), "intensity"] = 0.7
-    riv.loc[riv["name"].isin(minor), "intensity"] = 0.4
+    riv.loc[riv["rivalrie_name"].isin(major), "intensity"] = 1.0
+    riv.loc[riv["rivalrie_name"].isin(medium), "intensity"] = 0.7
+    riv.loc[riv["rivalrie_name"].isin(minor), "intensity"] = 0.4
 
     # Normalisation des équipes dans df
     df["team_lower"] = df["team"].str.lower()
@@ -74,7 +74,14 @@ def merge_rivalries(df, rivalries_json):
     df["rivalry_pressure"] = df[["rivalry_pressure", "rivalry_pressure_inv"]].max(axis = 1).fillna(0)
 
     # Nettoyage 
-    df = df.drop(columns = ["rivalry_pressure_inv"], errors = "ignore")
+    df = df.drop(columns = [
+                             "rivalry_pressure_inv", 
+                             "team_lower", 
+                             "opponent_lower", 
+                             "rivalrie_name_x", 
+                             "rivalrie_name_y"
+                            ], 
+                            errors = "ignore")
     return df 
 
 
@@ -88,6 +95,8 @@ def merge_prime_time(df, prime_df):
     df["is_prime_time"] = df["is_prime_time"].fillna(0).astype(int)
     return df 
 
+# print("=== APRES merge_prime_time ===")
+# print(df.columns) 
     # Merge ranking
 def merge_rankings(df, rankings_df): 
     rank = pd.DataFrame(rankings_df).copy()
@@ -179,12 +188,12 @@ def compute_pressure_proxies(df, rivalries_df , prime_df, rankings_df ):
     return df
 
 # if __name__ == "__name__":
-# from pipeline.scrapers.prime_time import fetch_prime_time
-# from pipeline.scrapers.rankings import fetch_rankings
-# from pipeline.scrapers.rivalries import fetch_rivalries
-# from pipeline.transformation.parse_rankings import parse_rankings
-# from pipeline.transformation.parse_prime_time import parse_prime_time
-# from pipeline.transformation.parse_rivalries import parse_rivalries
+from pipeline.scrapers.prime_time import fetch_prime_time
+from pipeline.scrapers.rankings import fetch_rankings
+from pipeline.scrapers.rivalries import fetch_rivalries
+from pipeline.transformation.parse_rankings import parse_rankings
+from pipeline.transformation.parse_prime_time import parse_prime_time
+from pipeline.transformation.parse_rivalries import parse_rivalries
 
 # valrivalries = fetch_rivalries()
 # rivalries_df = parse_rivalries(valrivalries)

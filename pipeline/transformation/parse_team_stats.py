@@ -136,18 +136,6 @@ def parse_team_stats(raws_stats):
 
 
 
-
-# if category in COLUMN_RENAMES:
-#     category = COLUMN_RENAMES[category]
- # test manuel 
-
-# if __name__ == "__main__": 
 # from pipeline.scrapers.teams_stat import fetch_teams_stat
 # raw = fetch_teams_stat(all)
 # print(parse_team_stats(raw))
-# print(f"Entrées brutes : {len(raw)}")
-# print(f"Entrées transformées: {len(parsed)}")
-# print(parsed)
-
-#     #    print("Exemple brut :")
-#        print(raw[0].keys())

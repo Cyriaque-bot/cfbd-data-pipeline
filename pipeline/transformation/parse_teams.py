@@ -25,7 +25,7 @@ def parse_teams(rawteam):
 
     return listeam
 
-from pipeline.scrapers.teams import fetch_teams
-valteams = fetch_teams(2023)
-parsed = parse_teams(valteams)
-print(parsed)
+# from pipeline.scrapers.teams import fetch_teams
+# valteams = fetch_teams(2023)
+# parsed = parse_teams(valteams)
+# print(parsed)

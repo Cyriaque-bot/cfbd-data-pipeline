@@ -9,5 +9,4 @@ if project_root not in sys.path:
 from pipeline.loaders.load_conference import load_conference
 def fetch_conference(year): 
     return load_conference()
-
-#print(fetch_conference(load_conference))
+# print(fetch_conference(load_conference))

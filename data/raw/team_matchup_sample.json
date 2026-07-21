@@ -11,6 +11,7 @@
     "winner_conference": "SEC",
     "loser_conference": "Big 12",
     "neutral_site": false
+   
   },
   {
     "season": 2022,
@@ -23,7 +24,8 @@
     "loser_points": 17,
     "winner_conference": "SEC",
     "loser_conference": "SEC",
-    "neutral_site": false
+    "neutral_site": false 
+   
   },
   {
     "season": 2022,
@@ -37,6 +39,7 @@
     "winner_conference": "Big 12",
     "loser_conference": "SEC",
     "neutral_site": false
+    
   },
   {
     "season": 2022,
@@ -50,6 +53,7 @@
     "winner_conference": "SEC",
     "loser_conference": "Big 12",
     "neutral_site": false
+   
   },
   {
     "season": 2023,
@@ -63,6 +67,7 @@
     "winner_conference": "Big 12",
     "loser_conference": "SEC",
     "neutral_site": false
+  
   },
   {
     "season": 2023,
@@ -76,6 +81,7 @@
     "winner_conference": "Big 12",
     "loser_conference": "SEC",
     "neutral_site": false
+  
   },
 
 
@@ -90,8 +96,8 @@
     "loser_points": 17,
     "winner_conference": "SEC",
     "loser_conference": "SEC",
-    "neutral_site": false,
-    "game_id": 401520000
+    "neutral_site": false
+   
   },
 
   {
@@ -105,7 +111,7 @@
     "loser_points": 28,
     "winner_conference": "Big 12",
     "loser_conference": "Big 12",
-    "neutral_site": true,
-    "game_id": 401520777
+    "neutral_site": true
+   
   }
 ]
