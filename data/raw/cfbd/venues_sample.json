@@ -1,0 +1,41 @@
+[
+  {
+    "id": 3900,
+    "name": "Bryant-Denny Stadium",
+    "capacity": 100077,
+    "city": "Tuscaloosa",
+    "state": "AL",
+    "zip": "35401",
+    "country_code": "US",
+    "elevation": 226,
+    "year_constructed": 1929,
+    "grass": false,
+    "dome": false
+  },
+  {
+    "id": 3901,
+    "name": "Ohio Stadium",
+    "capacity": 102780,
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43210",
+    "country_code": "US",
+    "elevation": 264,
+    "year_constructed": 1922,
+    "grass": false,
+    "dome": false
+  },
+  {
+    "id": 3902,
+    "name": "Los Angeles Memorial Coliseum",
+    "capacity": 77500,
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90037",
+    "country_code": "US",
+    "elevation": 93,
+    "year_constructed": 1923,
+    "grass": true,
+    "dome": false
+  }
+]

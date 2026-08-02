@@ -1,0 +1,84 @@
+[
+  {
+    "season": 2023,
+    "week": 1,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 1,
+        "school": "Georgia",
+        "conference": "SEC"
+      },
+      {
+        "rank": 2,
+        "school": "Michigan",
+        "conference": "Big Ten"
+      },
+      {
+        "rank": 3,
+        "school": "Ohio State",
+        "conference": "Big Ten"
+      }
+    ]
+  },
+  {
+    "season": 2023,
+    "week": 2,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 1,
+        "school": "Georgia",
+        "conference": "SEC"
+      },
+      {
+        "rank": 2,
+        "school": "Michigan",
+        "conference": "Big Ten"
+      },
+      {
+        "rank": 3,
+        "school": "Alabama",
+        "conference": "SEC"
+      }
+    ]
+  },
+
+
+  {
+    "season": 2023,
+    "week": 6,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 3,
+        "school": "Texas",
+        "conference": "Big 12"
+      },
+      {
+        "rank": 12,
+        "school": "Oklahoma",
+        "conference": "Big 12"
+      }
+    ]
+  },
+
+
+  {
+    "season": 2023,
+    "week": 13,
+    "poll": "AP Top 25",
+    "ranks": [
+      {
+        "rank": 4,
+        "school": "Alabama",
+        "conference": "SEC"
+      },
+      {
+        "rank": 18,
+        "school": "Auburn",
+        "conference": "SEC"
+      }
+    ]
+  }
+]

@@ -188,12 +188,12 @@ def compute_pressure_proxies(df, rivalries_df , prime_df, rankings_df ):
     return df
 
 # if __name__ == "__name__":
-from pipeline.scrapers.prime_time import fetch_prime_time
-from pipeline.scrapers.rankings import fetch_rankings
-from pipeline.scrapers.rivalries import fetch_rivalries
-from pipeline.transformation.parse_rankings import parse_rankings
-from pipeline.transformation.parse_prime_time import parse_prime_time
-from pipeline.transformation.parse_rivalries import parse_rivalries
+from pipeline.scrapers.cfbd.prime_times import fetch_prime_time
+from pipeline.scrapers.cfbd.rankings import fetch_rankings
+from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
+from pipeline.transformation.cfbd.parse_rankings import parse_rankings
+from pipeline.transformation.cfbd.parse_prime_times import parse_prime_time
+from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
 
 # valrivalries = fetch_rivalries()
 # rivalries_df = parse_rivalries(valrivalries)
@@ -206,5 +206,3 @@ from pipeline.transformation.parse_rivalries import parse_rivalries
 
 # df_with_pressure = compute_pressure_proxies(df, rivalries_df, prime_df, rankings_df )
 # print(df_with_pressure.head())
-
-# print(df_with_pressure.columns)

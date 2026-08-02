@@ -1,0 +1,734 @@
+
+{"id": 401540244, "teams": [
+        {"team": "Idaho", "conference": "Big Sky", "homeAway": "away", "points": 42, "categories": [
+                {"name": "receiving", "types": [
+                        {"name": "YDS", "athletes": [
+                                {"id": "4698298", "name": "Jake Cox", "stat": "15"
+                                },
+                                {"id": "4571768", "name": "Alex Moore", "stat": "10"
+                                },
+                                {"id": "4832804", "name": "Jordan Dwyer", "stat": "5"
+                                },
+                                {"id": "5165130", "name": "Wayne Queen", "stat": "5"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "86"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "45"
+                                },
+                                {"id": "4570667", "name": "Terez Traynor", "stat": "35"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "23"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "14.3"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "45.0"
+                                },
+                                {"id": "4570667", "name": "Terez Traynor", "stat": "17.5"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "11.5"
+                                },
+                                {"id": "4698298", "name": "Jake Cox", "stat": "15.0"
+                                },
+                                {"id": "4571768", "name": "Alex Moore", "stat": "5.0"
+                                },
+                                {"id": "4832804", "name": "Jordan Dwyer", "stat": "5.0"
+                                },
+                                {"id": "5165130", "name": "Wayne Queen", "stat": "5.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "2"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "1"
+                                },
+                                {"id": "4570667", "name": "Terez Traynor", "stat": "0"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "0"
+                                },
+                                {"id": "4698298", "name": "Jake Cox", "stat": "1"
+                                },
+                                {"id": "4571768", "name": "Alex Moore", "stat": "0"
+                                },
+                                {"id": "4832804", "name": "Jordan Dwyer", "stat": "0"
+                                },
+                                {"id": "5165130", "name": "Wayne Queen", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "29"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "45"
+                                },
+                                {"id": "4570667", "name": "Terez Traynor", "stat": "26"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "19"
+                                },
+                                {"id": "4698298", "name": "Jake Cox", "stat": "15"
+                                },
+                                {"id": "4571768", "name": "Alex Moore", "stat": "6"
+                                },
+                                {"id": "4832804", "name": "Jordan Dwyer", "stat": "5"
+                                },
+                                {"id": "5165130", "name": "Wayne Queen", "stat": "5"
+                                }
+                            ]
+                        },
+                        {"name": "REC", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "6"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "1"
+                                },
+                                {"id": "4570667", "name": "Terez Traynor", "stat": "2"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "2"
+                                },
+                                {"id": "4698298", "name": "Jake Cox", "stat": "1"
+                                },
+                                {"id": "4571768", "name": "Alex Moore", "stat": "2"
+                                },
+                                {"id": "4832804", "name": "Jordan Dwyer", "stat": "1"
+                                },
+                                {"id": "5165130", "name": "Wayne Queen", "stat": "1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "fumbles", "types": [
+                        {"name": "FUM", "athletes": [
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "1"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "1"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "LOST", "athletes": [
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "1"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "0"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "REC", "athletes": [
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "0"
+                                },
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "0"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "interceptions", "types": [
+                        {"name": "INT", "athletes": [
+                                {"id": "4570469", "name": "Marcus Harris", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4570469", "name": "Marcus Harris", "stat": "13"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4570469", "name": "Marcus Harris", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "kickReturns", "types": [
+                        {"name": "NO", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "0.0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "puntReturns", "types": [
+                        {"name": "NO", "athletes": [
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "3"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "26"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "8.7"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "19"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4698301", "name": "Jermaine Jackson", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "kicking", "types": [
+                        {"name": "FG", "athletes": [
+                                {"id": "4379474", "name": "Logan Prescott", "stat": "0/0"
+                                },
+                                {"id": "5093375", "name": "Cameron Pope", "stat": "0/0"
+                                },
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "0/0"
+                                }
+                            ]
+                        },
+                        {"name": "PCT", "athletes": [
+                                {"id": "4379474", "name": "Logan Prescott", "stat": "0.0"
+                                },
+                                {"id": "5093375", "name": "Cameron Pope", "stat": "0.0"
+                                },
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "0.0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4379474", "name": "Logan Prescott", "stat": "0"
+                                },
+                                {"id": "5093375", "name": "Cameron Pope", "stat": "0"
+                                },
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "XP", "athletes": [
+                                {"id": "4379474", "name": "Logan Prescott", "stat": "2/2"
+                                },
+                                {"id": "5093375", "name": "Cameron Pope", "stat": "2/2"
+                                },
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "0/1"
+                                }
+                            ]
+                        },
+                        {"name": "PTS", "athletes": [
+                                {"id": "4379474", "name": "Logan Prescott", "stat": "2"
+                                },
+                                {"id": "5093375", "name": "Cameron Pope", "stat": "2"
+                                },
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "punting", "types": [
+                        {"name": "NO", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "2"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "56"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "28.0"
+                                }
+                            ]
+                        },
+                        {"name": "TB", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "In 20", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "5165140", "name": "Lj Harn", "stat": "36"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "passing", "types": [
+                        {"name": "C/ATT", "athletes": [
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "14/19"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "1/1"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "1/1"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "164"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "45"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "15"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "8.6"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "45.0"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "15.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "2"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "1"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "INT", "athletes": [
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "1"
+                                },
+                                {"id": "4571762", "name": "Hayden Hatten", "stat": "0"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "rushing", "types": [
+                        {"name": "CAR", "athletes": [
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "13"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "5"
+                                },
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "5"
+                                },
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "6"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "3"
+                                },
+                                {"id": "4578416", "name": "George Romero-Robinson", "stat": "4"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "138"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "41"
+                                },
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "41"
+                                },
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "23"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "18"
+                                },
+                                {"id": "4578416", "name": "George Romero-Robinson", "stat": "12"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "10.6"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "8.2"
+                                },
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "8.2"
+                                },
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "3.8"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "6.0"
+                                },
+                                {"id": "4578416", "name": "George Romero-Robinson", "stat": "3.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "2"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "0"
+                                },
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "0"
+                                },
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "0"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "0"
+                                },
+                                {"id": "4578416", "name": "George Romero-Robinson", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "5083175", "name": "Anthony Woods", "stat": "93"
+                                },
+                                {"id": "4571742", "name": "Nick Romano", "stat": "24"
+                                },
+                                {"id": "4887446", "name": "Gevani McCoy", "stat": "27"
+                                },
+                                {"id": "5165127", "name": "Carlos Matheney", "stat": "13"
+                                },
+                                {"id": "5083171", "name": "Jack Layne", "stat": "16"
+                                },
+                                {"id": "4578416", "name": "George Romero-Robinson", "stat": "8"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {"team": "Lamar", "conference": "Southland", "homeAway": "home", "points": 17, "categories": [
+                {"name": "passing", "types": [
+                        {"name": "C/ATT", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "15/24"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "119"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "5.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "INT", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "rushing", "types": [
+                        {"name": "CAR", "athletes": [
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "12"
+                                },
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "11"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "8"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "42"
+                                },
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "21"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "8"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "3.5"
+                                },
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "1.9"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "1.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "1"
+                                },
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "0"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "9"
+                                },
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "13"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "receiving", "types": [
+                        {"name": "REC", "athletes": [
+                                {"id": "5083589", "name": "Andre Dennis", "stat": "1"
+                                },
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "3"
+                                },
+                                {"id": "5154912", "name": "Vontravious Hall", "stat": "2"
+                                },
+                                {"id": "5165163", "name": "Jordan Wallace", "stat": "3"
+                                },
+                                {"id": "4696274", "name": "Devyn Gibbs", "stat": "2"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "1"
+                                },
+                                {"id": "4879447", "name": "Cameron George", "stat": "1"
+                                },
+                                {"id": "5083636", "name": "Izaha Jones", "stat": "1"
+                                },
+                                {"id": "5083630", "name": "Kyndon Fuselier", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "5083589", "name": "Andre Dennis", "stat": "34"
+                                },
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "20"
+                                },
+                                {"id": "5154912", "name": "Vontravious Hall", "stat": "19"
+                                },
+                                {"id": "5165163", "name": "Jordan Wallace", "stat": "17"
+                                },
+                                {"id": "4696274", "name": "Devyn Gibbs", "stat": "11"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "9"
+                                },
+                                {"id": "4879447", "name": "Cameron George", "stat": "5"
+                                },
+                                {"id": "5083636", "name": "Izaha Jones", "stat": "4"
+                                },
+                                {"id": "5083630", "name": "Kyndon Fuselier", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "5083589", "name": "Andre Dennis", "stat": "34.0"
+                                },
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "6.7"
+                                },
+                                {"id": "5154912", "name": "Vontravious Hall", "stat": "9.5"
+                                },
+                                {"id": "5165163", "name": "Jordan Wallace", "stat": "5.7"
+                                },
+                                {"id": "4696274", "name": "Devyn Gibbs", "stat": "5.5"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "9.0"
+                                },
+                                {"id": "4879447", "name": "Cameron George", "stat": "5.0"
+                                },
+                                {"id": "5083636", "name": "Izaha Jones", "stat": "4.0"
+                                },
+                                {"id": "5083630", "name": "Kyndon Fuselier", "stat": "0.0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "5083589", "name": "Andre Dennis", "stat": "0"
+                                },
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "0"
+                                },
+                                {"id": "5154912", "name": "Vontravious Hall", "stat": "1"
+                                },
+                                {"id": "5165163", "name": "Jordan Wallace", "stat": "0"
+                                },
+                                {"id": "4696274", "name": "Devyn Gibbs", "stat": "0"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "0"
+                                },
+                                {"id": "4879447", "name": "Cameron George", "stat": "0"
+                                },
+                                {"id": "5083636", "name": "Izaha Jones", "stat": "0"
+                                },
+                                {"id": "5083630", "name": "Kyndon Fuselier", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "5083589", "name": "Andre Dennis", "stat": "34"
+                                },
+                                {"id": "4433828", "name": "Khalan Griffin", "stat": "8"
+                                },
+                                {"id": "5154912", "name": "Vontravious Hall", "stat": "12"
+                                },
+                                {"id": "5165163", "name": "Jordan Wallace", "stat": "12"
+                                },
+                                {"id": "4696274", "name": "Devyn Gibbs", "stat": "7"
+                                },
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "9"
+                                },
+                                {"id": "4879447", "name": "Cameron George", "stat": "5"
+                                },
+                                {"id": "5083636", "name": "Izaha Jones", "stat": "4"
+                                },
+                                {"id": "5083630", "name": "Kyndon Fuselier", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "fumbles", "types": [
+                        {"name": "FUM", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "1"
+                                },
+                                {"id": "5083606", "name": "Samuel Scaife IV", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "LOST", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "0"
+                                },
+                                {"id": "5083606", "name": "Samuel Scaife IV", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "REC", "athletes": [
+                                {"id": "5154910", "name": "Robert Coleman", "stat": "0"
+                                },
+                                {"id": "5083606", "name": "Samuel Scaife IV", "stat": "1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "interceptions", "types": [
+                        {"name": "INT", "athletes": [
+                                {"id": "4568404", "name": "Kevin Anderson", "stat": "1"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4568404", "name": "Kevin Anderson", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4568404", "name": "Kevin Anderson", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "kickReturns", "types": [
+                        {"name": "NO", "athletes": [
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "4"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "82"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "20.5"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "25"
+                                }
+                            ]
+                        },
+                        {"name": "TD", "athletes": [
+                                {"id": "4879455", "name": "Damashja Harris", "stat": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "kicking", "types": [
+                        {"name": "FG", "athletes": [
+                                {"id": "4879203", "name": "Chris Esqueda", "stat": "1/1"
+                                }
+                            ]
+                        },
+                        {"name": "PCT", "athletes": [
+                                {"id": "4879203", "name": "Chris Esqueda", "stat": "100.0"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "4879203", "name": "Chris Esqueda", "stat": "30"
+                                }
+                            ]
+                        },
+                        {"name": "XP", "athletes": [
+                                {"id": "4879203", "name": "Chris Esqueda", "stat": "2/2"
+                                }
+                            ]
+                        },
+                        {"name": "PTS", "athletes": [
+                                {"id": "4879203", "name": "Chris Esqueda", "stat": "5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {"name": "punting", "types": [
+                        {"name": "NO", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "6"
+                                }
+                            ]
+                        },
+                        {"name": "YDS", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "242"
+                                }
+                            ]
+                        },
+                        {"name": "AVG", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "40.3"
+                                }
+                            ]
+                        },
+                        {"name": "TB", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "0"
+                                }
+                            ]
+                        },
+                        {"name": "In 20", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "2"
+                                }
+                            ]
+                        },
+                        {"name": "LONG", "athletes": [
+                                {"id": "5083612", "name": "Alfonso Deleon", "stat": "52"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

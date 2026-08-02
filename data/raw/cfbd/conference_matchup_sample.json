@@ -1,0 +1,54 @@
+
+[ 
+{
+    "season": 2023, 
+    "week": 1, 
+    "season_type":"regular", 
+    "game_id": 401282001, 
+    "home_team":"Alabama",
+    "away_team":"Texas",
+    "home_conference": "SEC", 
+    "away_conference": "Big 12", 
+    "home_points": 24 , 
+    "away_points": 34, 
+    "winner_conference":"Big 12", 
+    "loser_conference": "SEC",
+    "margin": 10, 
+    "neutral_site": false
+} , 
+{
+    "season": 2021, 
+    "week": 2, 
+    "season_type":"regular", 
+    "game_id": 401282002, 
+    "home_team":"Ohio State",
+    "away_team":"Oregon",
+    "home_conference": "Big Ten", 
+    "away_conference": "Pac-12", 
+    "home_points": 28 , 
+    "away_points": 35, 
+    "winner_conference":"Pac-12", 
+    "loser_conference": "Big Ten",
+    "margin": 7, 
+    "neutral_site": false
+
+},
+{
+    "season": 2021, 
+    "week": 1, 
+    "season_type":"regular", 
+    "game_id": 401282003, 
+    "home_team":"Clemson",
+    "away_team":"Georgia",
+    "home_conference": "ACC", 
+    "away_conference": "SEC", 
+    "home_points": 3 , 
+    "away_points": 10, 
+    "winner_conference":"SEC", 
+    "loser_conference": "ACC",
+    "margin": 7, 
+    "neutral_site": true
+
+}
+
+]
