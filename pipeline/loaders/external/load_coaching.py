@@ -10,4 +10,4 @@ from pipeline.scrapers.external.coachings import fetch_coaching
 def load_coaching(): 
     return fetch_coaching()
 
-print(load_coaching())
+# print(load_coaching())

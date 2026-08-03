@@ -1,0 +1,11 @@
+team,season,nfl_players_active,nfl_players_total,nfl_draft_last5,nfl_value_score,nfl_starters,avg_nfl_rating
+Georgia,2023,48,72,39,96,22,0.91
+Alabama,2023,45,70,37,94,20,0.9
+Ohio State,2023,42,65,34,92,18,0.89
+LSU,2023,38,60,31,88,17,0.88
+Michigan,2023,35,55,28,85,15,0.87
+Texas,2023,30,50,25,82,14,0.86
+Oregon,2023,28,48,23,80,13,0.85
+Florida State,2023,26,45,22,78,12,0.84
+Washington,2023,24,42,20,76,11,0.83
+Georgia Tech,2023,18,30,12,68,7,0.8

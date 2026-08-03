@@ -1,5 +1,6 @@
 import sys 
 from pathlib import Path
+import csv
 
 
 project_root = Path(__file__).resolve().parents[3]
@@ -9,6 +10,7 @@ sys.path.append(str(project_root))
 from pipeline.loaders.external.load_recruiting_external import load_recruiting_external
 
 def parse_recruiting_external(): 
+    path_recruiting_external = "data/processed/external/recruiting_external_processed.csv"
     list_recruiting_external = []
     result_recruiting_external = load_recruiting_external()
     # return result_recruiting_external
@@ -27,5 +29,24 @@ def parse_recruiting_external():
         }
         list_recruiting_external.append(dict_recruiting_external)
 
-    return list_recruiting_external
+    with open(path_recruiting_external, "w", newline = "") as recruiting_external_csv: 
+
+        recruiting_external_field = [
+            "team", 
+            "season", 
+            "talent_composite",
+            "blue_chip_ratio",
+            "stars_5", 
+            "stars_4", 
+            "stars_3", 
+            "transfers_in", 
+            "transfers_out", 
+            "avg_rating"
+        ]
+
+        writer_recruiting_external = csv.DictWriter(recruiting_external_csv, fieldnames = recruiting_external_field)
+        writer_recruiting_external.writeheader()
+        writer_recruiting_external.writerows(list_recruiting_external)
+
+    return f"le fichier à été copié avec succès vous pouvez le vérifier dans {path_recruiting_external}"
 

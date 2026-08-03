@@ -1,52 +1,40 @@
 
-
 {
-    "performance": {
-        "win_loss_overall": true, 
-        "win_loss_top25": true, 
-        "win_loss_power25": true, 
-        "win_loss_group5": true, 
-        "win_loss_fcs": true, 
-        "point_diffrential": true, 
-        "bowl_results": true, 
-        "playoff_results": true
+    "epa": {
+        "description": "Epa moyen par conférence", 
+        "field": "epa_value", 
+        "Aggregation": "mean"
     }, 
-    "interconference_strength": {
-        "win_loss_vs_conferences": true, 
-        "point_differential_interconference": true, 
-        "epa_interconference": true, 
-        "average_sos": true
+
+    "recruiting": {
+        "description": "Score moyen de recrutement par conférence", 
+        "field": "recruiting_score", 
+        "Aggregation": "mean" 
     }, 
-    "talent": {
-        "recruiting_rank_4yr": true, 
-        "blue_chip_ratio": true, 
-        "nfl_draft_picks": true, 
-        "active_nfl_players": true
+    "nfl": {
+        "description": "Nombre de joueur NFL produits par conférence", 
+        "field": "nfl_players", 
+        "Aggregation": "sum" 
     }, 
-    "economics_tv": {
-        "tv_contract_value": true, 
-        "conference_revenue": true, 
-        "average_tv_audience": true, 
-        "prime_time_audience": true
+    "tv_rating": {
+        "description": "Audience tv moyenne des équipes de la conférence", 
+        "field": "tv_rating", 
+        "Aggregation": "mean" 
     }, 
-    "advanced_stats": {
-        "epa_offense": true, 
-        "epa_defense": true, 
-        "efficiency_offense": true, 
-        "efficiency_defense": true, 
-        "sp_plus": true, 
-        "fpi": true
+     "top25": {
+        "description": "Présence dans le top25(AP/coaches par conférence", 
+        "field": "weeks_ranked", 
+        "Aggregation": "sum" 
+    },
+    "coaching": {
+        "description": "score de coaching moyen par conférence", 
+        "field": "coach_score", 
+        "Aggregation": "mean"
     }, 
-    "top25_presence": {
-        "teams_ranked": true, 
-        "teams_top10": true, 
-        "teams_top5": true,
-        "average_rank": true
-    }, 
-    "coaching":{
-        "coach_continuity": true, 
-        "average_coach_record": true, 
-        "coordinator_epa": true
+    "interconference":{
+        "description": "performance pour les matchs interconférences", 
+        "average_coach_record": "interconference_win_rate", 
+        "coordinator_epa": "mean"
     }
     
 }
