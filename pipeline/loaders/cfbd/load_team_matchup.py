@@ -9,7 +9,7 @@ if project_root not in sys.path:
 
 
 def team_matchups(): 
-    with open("data/raw/team_matchup_sample.json", "r") as jsontaemmatchup: 
+    with open("data/raw/cfbd/team_matchup_sample.json", "r") as jsontaemmatchup: 
         valljsontaemmatchup = json.load(jsontaemmatchup)
     return valljsontaemmatchup
 

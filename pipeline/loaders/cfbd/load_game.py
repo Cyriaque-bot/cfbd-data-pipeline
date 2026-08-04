@@ -8,6 +8,6 @@ if project_root not in sys.path:
 
 
 def load_games(): 
-    with open("data/raw/games_sample.json") as gamesjson:
+    with open("data/raw/cfbd/games_sample.json") as gamesjson:
         vallgamesjson = json.load(gamesjson) 
     return vallgamesjson

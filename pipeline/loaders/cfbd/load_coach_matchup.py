@@ -8,6 +8,6 @@ if project_root not in sys.path:
 
 
 def load_coach_matchup(): 
-   with open("data/raw/coach_matchup_sample.json") as jsoncoachlatchup: 
+   with open("data/raw/cfbd/coach_matchup_sample.json") as jsoncoachlatchup: 
       valcoach_matchup = json.load(jsoncoachlatchup)
    return valcoach_matchup

@@ -8,6 +8,6 @@ if project_root not in sys.path:
 
 
 def load_conference_matchup(): 
-    with open("data/raw/conference_matchup_sample.json", "r") as conferencejson:
+    with open("data/raw/cfbd/conference_matchup_sample.json", "r") as conferencejson:
         vallconference = json.load(conferencejson)
     return vallconference

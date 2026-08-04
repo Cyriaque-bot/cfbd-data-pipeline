@@ -9,7 +9,7 @@ sys.path.append(str(project_root))
 from pipeline.loaders.external.load_interconference import load_interconference
 
 def parse_interconference(): 
-    path_inteconference = "data/processed/external/inteconference_processed.csv"
+    path_interconference = "data/processed/external/inteconference_processed.csv"
     list_interconference = []
 
     result_interconference = load_interconference()
@@ -29,7 +29,7 @@ def parse_interconference():
 
         list_interconference.append(dict_interconference)
 
-    with open(path_inteconference, "w", newline = "") as interconference_csv: 
+    with open(path_interconference, "w", newline = "", encoding = "utf-8") as interconference_csv: 
         interconference_field = [
             "conference", 
             "season", 
@@ -45,4 +45,4 @@ def parse_interconference():
         writer_interconference.writeheader()
         writer_interconference.writerows(list_interconference)
         
-    return f"🤸 inteconference_processed.csv généré dans {path_inteconference}"
+    return f"🤸 inteconference_processed.csv généré dans {path_interconference}"

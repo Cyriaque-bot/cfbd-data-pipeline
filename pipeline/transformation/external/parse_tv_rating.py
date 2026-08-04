@@ -28,7 +28,7 @@ def parse_tv_rating():
         list_tv_rating.append(dict_tv_rating)
   
 
-    with open(path_tv_rating, "w", newline = "")as tv_rating_csv:
+    with open(path_tv_rating, "w", newline = "", encoding = "utf-8")as tv_rating_csv:
             tv_rating_fields = [
                 "team", 
                 "season",

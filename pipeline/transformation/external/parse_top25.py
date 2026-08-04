@@ -36,7 +36,7 @@ def parse_top25():
     
         list_top25.append(dict_top25)
 
-    with open(path_top25, "w" , newline = "") as top25_csv: 
+    with open(path_top25, "w" , newline = "", encoding = "utf-8") as top25_csv: 
          top25_field = [
               "team", 
               "season", 
@@ -47,7 +47,7 @@ def parse_top25():
               "final_rank", 
               "rank_value_score"
          ]
-         writer_top25 = csv.DictWriter(top25_csv, fieldnames = top25_field)
+         writer_top25 = csv.DictWriter(top25_csv, fieldnames = top25_field, )
          writer_top25.writeheader()
          writer_top25.writerows(list_top25)
 

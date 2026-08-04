@@ -7,7 +7,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 def load_coach():    
-    with open("data/raw/coaches_sample.json", "r") as coachesjson:
+    with open("data/raw/cfbd/coaches_sample.json", "r") as coachesjson:
          valcoach = json.load(coachesjson)        
     return valcoach
 

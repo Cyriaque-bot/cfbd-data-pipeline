@@ -10,6 +10,6 @@ if project_root not in sys.path:
 
 
 def load_conference():
-    with open("data/raw/conference_sample.json") as jsonconference: 
+    with open("data/raw/cfbd/conference_sample.json") as jsonconference: 
         vallconference = json.load(jsonconference)
     return vallconference

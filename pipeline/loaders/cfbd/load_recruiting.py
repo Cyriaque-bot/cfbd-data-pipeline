@@ -9,6 +9,6 @@ if project_root not in sys.path:
 
 
 def load_recruiting(year): 
-    with open("data/raw/recruiting_sample.json", "r") as jsonrecruiting: 
+    with open("data/raw/cfbd/recruiting_sample.json", "r") as jsonrecruiting: 
         valrecruiting = json.load(jsonrecruiting)
     return valrecruiting

@@ -7,6 +7,6 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 def loads_venues(): 
-    with open("data/raw/venues_sample.json", "r") as jsonvenues: 
+    with open("data/raw/cfbd/venues_sample.json", "r") as jsonvenues: 
         valvenues = json.load(jsonvenues)
     return valvenues

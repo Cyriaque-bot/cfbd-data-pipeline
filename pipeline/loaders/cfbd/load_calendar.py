@@ -8,6 +8,6 @@ if project_root not in sys.path:
 
 
 def load_calendar(year): 
-    with open("data/raw/calendar_sample.json") as jsoncalendar: 
+    with open("data/raw/cfbd/calendar_sample.json") as jsoncalendar: 
         valljsincalendar = json.load(jsoncalendar)
     return valljsincalendar

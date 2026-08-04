@@ -31,7 +31,7 @@ def parse_nfl():
 
    
 
-    with open(path_nfl, "w", newline = "") as nfl_csv: 
+    with open(path_nfl, "w", newline = "", encoding = "utf-8") as nfl_csv: 
 
         nfl_field = [
             "team", 

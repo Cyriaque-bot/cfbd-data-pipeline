@@ -33,7 +33,7 @@ def parse_epa():
      
         list_epa.append(dict_parse_epa)
 
-    with open(path_epa, "w", newline = "") as epa_csv: 
+    with open(path_epa, "w", newline = "", encoding = "utf-8") as epa_csv: 
         epa_field = [
             "team", 
             "season", 

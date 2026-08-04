@@ -7,6 +7,6 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 def loads_rosters():
-    with open("data/raw/rosters_sample.json", "r") as jsonrosters:
+    with open("data/raw/cfbd/rosters_sample.json", "r") as jsonrosters:
          valjsonroster = json.load(jsonrosters)
     return valjsonroster

@@ -9,6 +9,6 @@ if project_root not in sys.path:
 
 
 def load_teams_stats(): 
-    with open("data/raw/teams_stats_sample.json", "r") as teams_statsjson: 
+    with open("data/raw/cfbd/teams_stats_sample.json", "r") as teams_statsjson: 
         vallteamstats = json.load(teams_statsjson)
     return vallteamstats

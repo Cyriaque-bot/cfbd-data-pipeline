@@ -7,7 +7,7 @@ if project_root not in sys.path:
 
 
 def load_games_players():
-    with open("data/raw/games_players_stats_sample.json", "r") as jsonvalldata:
+    with open("data/raw/cfbd/games_players_stats_sample.json", "r") as jsonvalldata:
          valdata  = json.load(jsonvalldata)
 
     return valdata

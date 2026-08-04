@@ -29,7 +29,7 @@ def parse_recruiting_external():
         }
         list_recruiting_external.append(dict_recruiting_external)
 
-    with open(path_recruiting_external, "w", newline = "") as recruiting_external_csv: 
+    with open(path_recruiting_external, "w", newline = "", encoding = "utf-8") as recruiting_external_csv: 
 
         recruiting_external_field = [
             "team", 

@@ -1,6 +1,5 @@
 import sys
 from pathlib import Path 
-import pandas as pd 
 import csv 
 
 
@@ -31,7 +30,7 @@ def parse_coaching():
         list_coaching.append(dict_coaching)
 
  # part of the code that make the copy 
-    with open(path_coaching, "w", newline = "") as coaching_csv: 
+    with open(path_coaching, "w", newline = "", encoding = "utf-8") as coaching_csv: 
         coaching_fields = [
                          "team", 
                          "season", 
