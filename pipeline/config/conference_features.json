@@ -32,9 +32,9 @@
         "Aggregation": "mean"
     }, 
     "interconference":{
-        "description": "performance pour les matchs interconférences", 
-        "average_coach_record": "interconference_win_rate", 
-        "coordinator_epa": "mean"
+        "description": "performance interconférences de la conférence", 
+        "field": "interconf_value_score", 
+        "Aggregation": "mean"
     }
     
 }
