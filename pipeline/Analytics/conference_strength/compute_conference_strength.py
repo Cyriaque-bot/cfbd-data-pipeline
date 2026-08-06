@@ -14,6 +14,9 @@ from pipeline.scrapers.cfbd.conferences import fetch_conference
 
 
 def load_conference_data():
+
+    # path to write my csv in final folders
+    path_conference_strength = "data/final/external/conference_strength.csv"
     # loading all the processed files from data/processed/external
     path_conference_folder = "data/processed/external/*.csv"
     # retrieve all files
@@ -71,6 +74,7 @@ def load_conference_data():
          how = "left"
     )
 
+    # return df_conference_final
     # open and read the conference  features 
     with(open("pipeline/config/conference_features.json", "r", encoding = "utf-8"))as conferencejson: 
         config_conference = json.load(conferencejson)
@@ -79,81 +83,52 @@ def load_conference_data():
                            "epa_value": "net_epa", 
                            "recruiting_score": "avg_rating", 
                            "nfl_players": "avg_nfl_rating", 
-                           "tv_rating": "tv_value_score", 
-                           "weeks_ranked": "rank_value_score", 
+                           "tv_rating": "avg_viewers", 
+                           "weeks_ranked": "weeks_ranked", 
                            "coach_score": "coach_value_score", 
                            "interconf_value_score": "interconf_value_score"
                            }
-        for i_conference in config_conference: 
-            val_config_conference = config_conference[i_conference]
-            for key_conf, val_conf  in val_config_conference.items(): 
-                target_col_conference = val_config_conference["field"]
+ 
+    for key_conference, val_conference  in config_conference.items(): 
+        target_fieds = val_conference["field"]
+        target_agg = val_conference["Aggregation"]
 
-                real_conf_columns = mapping_columns[target_col_conference]
-                # print(config_conference["field"])
-                target_aggregation = val_config_conference["Aggregation"]
+        real_conf_mapp = mapping_columns[target_fieds]
+                
+        df_conference_final[f"{key_conference}_target_agg"] = (
+             df_conference_final.groupby("conference")[real_conf_mapp].transform(target_agg)
+        )
 
-                df_conference_final[key_conf] = df_conference_final.groupby(
-                                                                "conference")[real_conf_columns].transform(
-                                                                target_aggregation
-                                                                )
-    # return df_conference_final
-    print(list(df_conference_final.columns))
-    return df_conference_final
+    with(open("pipeline/config/conference_weights.json", "r"))as jsonconference_weights: 
+        conference_weights = json.load(jsonconference_weights)
+        mapping_column_weights = {
+                                    "epa": "net_epa", 
+                                    "recruiting":"avg_rating", 
+                                    "nfl": "avg_nfl_rating",
+                                    "tv_rating": "tv_value_score", 
+                                    "top25": "rank_value_score", 
+                                    "coaching": "coach_value_score", 
+                                    "interconference": "interconf_value_score"
+                               }
 
-    # return df_conference_final["net_epa"] = df_conference_final[]
+        df_conference_final["conference_strength_score"] = 0
+        
+        for key_i_weights, val_i_weights in conference_weights.items(): 
 
+            map_col_weight = mapping_column_weights[key_i_weights]
 
+            df_conference_final["conference_strength_score"] = df_conference_final["conference_strength_score"] + (
+                            df_conference_final[map_col_weight] * val_i_weights
+            )
+ 
 
-######### calcul du score composite   ###########
+    df_conference_final = df_conference_final.to_csv(path_conference_strength, index = False, encoding = "utf-8")  
 
-# # retrieve epa and transform it in df 
-#     # path epa 
-#     path_epa = "data/processed/external/epa_processed.csv" 
-#     # load epa 
-#     conf_epa = glob.glob(path_epa)
-#     df_epa = pd.read_csv(conf_epa[0])
+    return f"🤸 our files have been sent succesfuly you can check() on this path {path_conference_strength}"
+    
+  
 
-# # retrieve coaching  and transform it in df 
-#     path_coaching = "data/processed/external/coaching_processed.csv" 
-#     # load coaching
-#     conf_coaching = glob.glob(path_coaching)
-#     df_coaching = pd.read_csv(conf_coaching[0])
-
-# #  retrieve nfl and transform it in df 
-#     path_nfl = "data/processed/external/nfl_processed.csv"
-#     # load nfl 
-#     conf_nfl = glob.glob(path_nfl)
-#     df_nfl = pd.read_csv(conf_nfl[0])
-
-# #  retrieve recruiting_external and transform it in df 
-#     path_recruiting_external = "data/processed/external/recruiting_external_processed.csv"
-#     # load recruiting_external
-#     conf_recruiting_external = glob.glob(path_recruiting_external)
-#     df_path_recruiting_external = pd.read_csv(conf_recruiting_external[0])
-
-# #  retrieve interconference_processed and transform it in df
-#     path_interconference = "data/processed/external/interconference_processed.csv"
-#     # load interconference_processed
-#     conf_interconference_processed = glob.glob(path_interconference)
-#     df_interconference = pd.read_csv(conf_interconference_processed[0])
-
-# #  retrieve top25 and transform it in df
-#     path_top25 = "data/processed/external/top25_processed.csv"
-#     # load top25
-#     conf_top25 = glob.glob(path_top25)
-#     df_top25 = pd.read_csv(conf_top25[0])
-
-# #  retrieve tv_rating and transform it in df
-#     path_tv_rating = "data/processed/external/tv_rating_processed.csv"
-#     # load tv_rating
-#     conf_tv_rating = glob.glob(path_tv_rating)
-#     df_tv_rating = pd.read_csv(conf_tv_rating[0])
-
-
-# ###### field calculation  ######
-#     path_config = "pipeline/config/conference_features.json"
-#     return path_config
-#     return df_tv_rating
 
 print(load_conference_data())
+
+
