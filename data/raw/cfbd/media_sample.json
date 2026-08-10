@@ -1,0 +1,29 @@
+[
+  {
+    "game_id": 401520234,
+    "season": 2023,
+    "week": 2,
+    "network": "ESPN",
+    "start_time": "2023-09-10T19:00:00Z",
+    "is_prime_time": true,
+    "is_national_broadcast": true
+  },
+  {
+    "game_id": 401520567,
+    "season": 2023,
+    "week": 5,
+    "network": "CBS",
+    "start_time": "2023-09-30T20:00:00Z",
+    "is_prime_time": true,
+    "is_national_broadcast": false
+  },
+  {
+    "game_id": 401520890,
+    "season": 2023,
+    "week": 9,
+    "network": "FOX",
+    "start_time": "2023-11-04T21:00:00Z",
+    "is_prime_time": true,
+    "is_national_broadcast": true
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "team": "Alabama",
+    "season": 2023,
+    "talent": 945.32
+  },
+  {
+    "team": "Ohio State",
+    "season": 2023,
+    "talent": 930.15
+  },
+  {
+    "team": "Georgia",
+    "season": 2023,
+    "talent": 950.44
+  },
+  {
+    "team": "Texas",
+    "season": 2023,
+    "talent": 912.88
+  },
+  {
+    "team": "USC",
+    "season": 2023,
+    "talent": 899.22
+  }
+]

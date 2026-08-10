@@ -90,25 +90,27 @@ def load_conference_data():
                            }
  
     for key_conference, val_conference  in config_conference.items(): 
-        target_fieds = val_conference["field"]
+        target_fields = val_conference["field"]
         target_agg = val_conference["Aggregation"]
 
-        real_conf_mapp = mapping_columns[target_fieds]
+        real_conf_mapp = mapping_columns[target_fields]
                 
         df_conference_final[f"{key_conference}_target_agg"] = (
              df_conference_final.groupby("conference")[real_conf_mapp].transform(target_agg)
         )
 
+        # stockage unique dans une table 
+        # return df_conference_final[f"{key_conference}_target_agg"]
     with(open("pipeline/config/conference_weights.json", "r"))as jsonconference_weights: 
         conference_weights = json.load(jsonconference_weights)
         mapping_column_weights = {
-                                    "epa": "net_epa", 
-                                    "recruiting":"avg_rating", 
-                                    "nfl": "avg_nfl_rating",
-                                    "tv_rating": "tv_value_score", 
-                                    "top25": "rank_value_score", 
-                                    "coaching": "coach_value_score", 
-                                    "interconference": "interconf_value_score"
+                                    "epa": "epa_target_agg", 
+                                    "recruiting":"recruiting_target_agg", 
+                                    "nfl": "nfl_target_agg",
+                                    "tv_rating": "tv_rating_target_agg", 
+                                    "top25": "top25_target_agg", 
+                                    "coaching": "coaching_target_agg", 
+                                    "interconference": "interconference_target_agg"
                                }
 
         df_conference_final["conference_strength_score"] = 0

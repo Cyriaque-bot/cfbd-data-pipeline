@@ -6,5 +6,13 @@
     "havoc_rate": true, 
     "finishing_drives": true, 
     "field_position": true, 
-    "returning_production": true 
+    "returning_production": true, 
+
+    "recruiting": true, 
+    "nfl_talent": true, 
+    "coaching": true, 
+    "tv_exposure":true, 
+    "top25": true, 
+
+    "conference_strength_score": true
 }

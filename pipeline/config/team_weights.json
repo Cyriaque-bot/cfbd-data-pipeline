@@ -1,12 +1,21 @@
 {
-    "epa_offense": 0.25, 
-    "epa_defense": 0.25, 
-    "success_rate": 0.15, 
-    "explosiveness": 0.10, 
-    "havoc_rate": 0.10, 
-    "finishing_drives": 0.10, 
-    "field_position": 0.05, 
-    "returning_production": 0.05 
+    "epa_offense": 0.1333, 
+    "epa_defense": 0.1333, 
+    "success_rate": 0.0666, 
+    "explosiveness": 0.0666, 
+    "havoc_rate": 0.0333, 
+    "finishing_drives": 0.0333, 
+    "field_position": 0.0333, 
+    "returning_production": 0.0333, 
+
+    "recruiting": 0.0666, 
+    "nfl_talent": 0.0666, 
+    "coaching": 0.0666, 
+    "tv_exposure": 0.0333, 
+    "top25": 0.0333,
+
+    "conference_strength_score":0.1333
+
 }
 
 

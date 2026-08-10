@@ -3,56 +3,51 @@
     "id": 12345,
     "first_name": "Nick",
     "last_name": "Saban",
-    "hire_date": "2007-01-03",
     "school": "Alabama",
-    "season": 2023
+    "season": 2023,
+    "hire_date": "2007-01-03",
+    "games": 14,
+    "wins": 12,
+    "losses": 2,
+    "conference_wins": 8,
+    "conference_losses": 1,
+    "bowl_wins": 1,
+    "bowl_losses": 0,
+    "career_wins": 205,
+    "career_losses": 65
   },
   {
     "id": 67890,
     "first_name": "Ryan",
     "last_name": "Day",
-    "hire_date": "2019-12-17",
     "school": "Ohio State",
-    "season": 2023
+    "season": 2023,
+    "hire_date": "2019-12-17",
+    "games": 13,
+    "wins": 11,
+    "losses": 2,
+    "conference_wins": 7,
+    "conference_losses": 2,
+    "bowl_wins": 0,
+    "bowl_losses": 1,
+    "career_wins": 56,
+    "career_losses": 8
   },
   {
     "id": 54321,
     "first_name": "Lincoln",
     "last_name": "Riley",
-    "hire_date": "2021-11-28",
     "school": "USC",
-    "season": 2023
-  }, 
-  {
-    "id": 999001,
-    "first_name": "Tom",
-    "last_name": "Allen",
-    "hire_date": "2021-01-01",
-    "school": "Indiana State",
-    "season": 2023
-}, 
-{
-    "id": 999002,
-    "first_name": "Mike",
-    "last_name": "Gundy",
-    "hire_date": "2005-01-01",
-    "school": "Oklahoma State",
-    "season": 2023
-}, 
-{
-   "id": 999003,
-   "first_name": "Clark",
-   "last_name": "Lea",
-   "hire_date": "2021-01-01",
-   "school": "Vanderbilt",
-   "season": 2023
-}, 
-{
-  "id": 999004,
-  "first_name": "Andy",
-  "last_name": "Avalos",
-  "hire_date": "2021-01-01",
-  "school": "Boise State",
-  "season": 2023
-}
+    "season": 2023,
+    "hire_date": "2021-11-28",
+    "games": 13,
+    "wins": 10,
+    "losses": 3,
+    "conference_wins": 7,
+    "conference_losses": 2,
+    "bowl_wins": 0,
+    "bowl_losses": 1,
+    "career_wins": 65,
+    "career_losses": 15
+  }
 ]

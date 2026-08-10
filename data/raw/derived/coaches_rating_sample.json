@@ -1,0 +1,32 @@
+[
+  {
+    "school": "Alabama",
+    "season": 2023,
+    "win_percentage": 0.857,
+    "offensive_epa_impact": 0.12,
+    "defensive_epa_impact": 0.18,
+    "aggressiveness_index": 0.65,
+    "coaching_efficiency": 0.78,
+    "coach_rating": 0.83
+  },
+  {
+    "school": "Ohio State",
+    "season": 2023,
+    "win_percentage": 0.846,
+    "offensive_epa_impact": 0.15,
+    "defensive_epa_impact": 0.10,
+    "aggressiveness_index": 0.72,
+    "coaching_efficiency": 0.75,
+    "coach_rating": 0.79
+  },
+  {
+    "school": "USC",
+    "season": 2023,
+    "win_percentage": 0.769,
+    "offensive_epa_impact": 0.20,
+    "defensive_epa_impact": 0.05,
+    "aggressiveness_index": 0.80,
+    "coaching_efficiency": 0.70,
+    "coach_rating": 0.76
+  }
+]

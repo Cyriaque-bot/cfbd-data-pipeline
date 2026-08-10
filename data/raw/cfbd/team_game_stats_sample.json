@@ -1,0 +1,35 @@
+[
+  {
+    "id": 401520234,
+    "teams": [
+      {
+        "teamId": 1,
+        "team": "Alabama",
+        "conference": "SEC",
+        "homeAway": "home",
+        "points": 34,
+        "stats": [
+          { "category": "totalYards", "stat": "478" },
+          { "category": "rushingYards", "stat": "189" },
+          { "category": "passingYards", "stat": "289" },
+          { "category": "thirdDownEff", "stat": "7-12" },
+          { "category": "fourthDownEff", "stat": "1-2" }
+        ]
+      },
+      {
+        "teamId": 2,
+        "team": "Texas",
+        "conference": "Big 12",
+        "homeAway": "away",
+        "points": 24,
+        "stats": [
+          { "category": "totalYards", "stat": "389" },
+          { "category": "rushingYards", "stat": "102" },
+          { "category": "passingYards", "stat": "287" },
+          { "category": "thirdDownEff", "stat": "5-13" },
+          { "category": "fourthDownEff", "stat": "0-1" }
+        ]
+      }
+    ]
+  }
+]

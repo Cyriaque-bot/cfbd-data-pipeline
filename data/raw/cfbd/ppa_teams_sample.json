@@ -1,0 +1,47 @@
+[
+  {
+    "team": "Alabama",
+    "season": 2023,
+    "epa_offense": 0.215,
+    "epa_defense": -0.145,
+    "net_epa": 0.360,
+    "success_rate": 0.485,
+    "explosiveness": 1.12,
+    "ppa_offense": 0.165,
+    "ppa_defense": -0.120,
+    "havoc_rate": 0.145,
+    "finishing_drives": 4.2,
+    "field_position": 32.5,
+    "returning_production": 0.68
+  },
+  {
+    "team": "Texas",
+    "season": 2023,
+    "epa_offense": 0.190,
+    "epa_defense": -0.110,
+    "net_epa": 0.300,
+    "success_rate": 0.470,
+    "explosiveness": 1.08,
+    "ppa_offense": 0.150,
+    "ppa_defense": -0.095,
+    "havoc_rate": 0.130,
+    "finishing_drives": 3.9,
+    "field_position": 31.2,
+    "returning_production": 0.72
+  },
+  {
+    "team": "Ohio State",
+    "season": 2023,
+    "epa_offense": 0.225,
+    "epa_defense": -0.160,
+    "net_epa": 0.385,
+    "success_rate": 0.495,
+    "explosiveness": 1.15,
+    "ppa_offense": 0.175,
+    "ppa_defense": -0.130,
+    "havoc_rate": 0.150,
+    "finishing_drives": 4.5,
+    "field_position": 33.1,
+    "returning_production": 0.70
+  }
+]

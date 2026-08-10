@@ -34,6 +34,6 @@ def parse_coaches(raws_coaches):
 
     # return valintercoachesone
 
-from pipeline.scrapers.coaches import fetch_coaches
-varcoache = fetch_coaches(2023)
-print(parse_coaches(varcoache))
+# from pipeline.scrapers.coaches import fetch_coaches
+# varcoache = fetch_coaches(2023)
+# print(parse_coaches(varcoache))

@@ -1,7 +1,17 @@
 import pandas as pd
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
+
+
+
 from pipeline.analytics.matchup.parse_coach_matchup import build_coach_dataset
 from pipeline.analytics.coach.anal_coach_season import analyze_coach_season
 from pipeline.analytics.coach.anal_coach_vs_coach import analyze_coach_vs_coach
+
+
 
 # Etape 1 - Fonction utilitaire: récupérer la ligne d'un coach
 
