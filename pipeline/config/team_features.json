@@ -1,14 +1,22 @@
 {
     "epa_offense": true, 
     "epa_defense": true, 
-    "success_rate": true, 
-    "explosiveness": true, 
-    "havoc_rate": true, 
-    "finishing_drives": true, 
-    "field_position": true, 
-    "returning_production": true, 
 
-    "recruiting": true, 
+    "success_rate_offense": true, 
+    "success_rate_defense": true, 
+
+    "explosiveness_offense": true, 
+    "explosiveness_defense": true, 
+
+    "havoc_offense": true, 
+    "havoc_defense": true,
+
+    "finishing_drives_offense": true, 
+    "finishing_drives_defense": true, 
+    
+    "field_position_offense": true, 
+    "field_position_defense": true, 
+
     "nfl_talent": true, 
     "coaching": true, 
     "tv_exposure":true, 

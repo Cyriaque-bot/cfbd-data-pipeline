@@ -1,0 +1,32 @@
+[
+    {
+        "school": "Alabama",
+        "season": 2023,
+        "coach_rating": 0.714
+    },
+    {
+        "school": "Texas",
+        "season": 2023,
+        "coach_rating": 0.573
+    },
+    {
+        "school": "Georgia",
+        "season": 2023,
+        "coach_rating": 0.654
+    },
+    {
+        "school": "Clemson",
+        "season": 2023,
+        "coach_rating": 0.337
+    },
+    {
+        "school": "Ohio State",
+        "season": 2023,
+        "coach_rating": 0.605
+    },
+    {
+        "school": "Notre Dame",
+        "season": 2023,
+        "coach_rating": 0.565
+    }
+]

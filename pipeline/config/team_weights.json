@@ -1,21 +1,28 @@
 {
-    "epa_offense": 0.1333, 
-    "epa_defense": 0.1333, 
-    "success_rate": 0.0666, 
-    "explosiveness": 0.0666, 
-    "havoc_rate": 0.0333, 
-    "finishing_drives": 0.0333, 
-    "field_position": 0.0333, 
-    "returning_production": 0.0333, 
+    "epa_offense": 0.12,
+    "epa_defense": 0.12,
 
-    "recruiting": 0.0666, 
-    "nfl_talent": 0.0666, 
-    "coaching": 0.0666, 
-    "tv_exposure": 0.0333, 
-    "top25": 0.0333,
+    "success_rate_offense": 0.06,
+    "success_rate_defense": 0.06,
 
-    "conference_strength_score":0.1333
+    "explosiveness_offense": 0.05,
+    "explosiveness_defense": 0.05,
 
+    "havoc_offense": 0.03,
+    "havoc_defense": 0.03,
+
+    "finishing_drives_offense": 0.03,
+    "finishing_drives_defense": 0.03,
+
+    "field_position_offense": 0.03,
+    "field_position_defense": 0.03,
+
+    "nfl_talent": 0.06,
+    "coaching": 0.06,
+    "tv_exposure": 0.03,
+    "top25": 0.03,
+
+    "conference_strength_score": 0.10
 }
 
 

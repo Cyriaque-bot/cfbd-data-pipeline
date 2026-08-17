@@ -1,27 +1,32 @@
 [
   {
+    "year": 2023,
     "team": "Alabama",
-    "season": 2023,
     "talent": 945.32
   },
   {
-    "team": "Ohio State",
-    "season": 2023,
-    "talent": 930.15
-  },
-  {
-    "team": "Georgia",
-    "season": 2023,
-    "talent": 950.44
-  },
-  {
+    "year": 2023,
     "team": "Texas",
-    "season": 2023,
-    "talent": 912.88
+    "talent": 910.41
   },
   {
-    "team": "USC",
-    "season": 2023,
-    "talent": 899.22
+    "year": 2023,
+    "team": "Georgia",
+    "talent": 950.12
+  },
+  {
+    "year": 2023,
+    "team": "Clemson",
+    "talent": 905.21
+  },
+  {
+    "year": 2023,
+    "team": "Ohio State",
+    "talent": 940.83
+  },
+  {
+    "year": 2023,
+    "team": "Notre Dame",
+    "talent": 899.54
   }
 ]

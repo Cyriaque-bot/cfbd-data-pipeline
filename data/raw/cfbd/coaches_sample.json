@@ -1,53 +1,152 @@
 [
   {
-    "id": 12345,
-    "first_name": "Nick",
-    "last_name": "Saban",
-    "school": "Alabama",
-    "season": 2023,
-    "hire_date": "2007-01-03",
-    "games": 14,
-    "wins": 12,
-    "losses": 2,
-    "conference_wins": 8,
-    "conference_losses": 1,
-    "bowl_wins": 1,
-    "bowl_losses": 0,
-    "career_wins": 205,
-    "career_losses": 65
+    "id": 1,
+    "firstName": "Nick",
+    "lastName": "Saban",
+    "hireDate": "2007-01-03T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 100,
+        "school": "Alabama",
+        "conference": "SEC",
+        "year": 2023,
+        "games": 13,
+        "wins": 11,
+        "losses": 2,
+        "ties": 0,
+        "winPercentage": 0.846,
+        "preseasonRank": 4,
+        "postseasonRank": 5,
+        "srs": 21.5,
+        "spOverall": 28.1,
+        "spOffense": 32.4,
+        "spDefense": 23.7
+      }
+    ]
   },
   {
-    "id": 67890,
-    "first_name": "Ryan",
-    "last_name": "Day",
-    "school": "Ohio State",
-    "season": 2023,
-    "hire_date": "2019-12-17",
-    "games": 13,
-    "wins": 11,
-    "losses": 2,
-    "conference_wins": 7,
-    "conference_losses": 2,
-    "bowl_wins": 0,
-    "bowl_losses": 1,
-    "career_wins": 56,
-    "career_losses": 8
+    "id": 2,
+    "firstName": "Steve",
+    "lastName": "Sarkisian",
+    "hireDate": "2021-01-02T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 200,
+        "school": "Texas",
+        "conference": "Big 12",
+        "year": 2023,
+        "games": 13,
+        "wins": 10,
+        "losses": 3,
+        "ties": 0,
+        "winPercentage": 0.769,
+        "preseasonRank": 11,
+        "postseasonRank": 12,
+        "srs": 17.8,
+        "spOverall": 24.5,
+        "spOffense": 29.1,
+        "spDefense": 20.3
+      }
+    ]
   },
   {
-    "id": 54321,
-    "first_name": "Lincoln",
-    "last_name": "Riley",
-    "school": "USC",
-    "season": 2023,
-    "hire_date": "2021-11-28",
-    "games": 13,
-    "wins": 10,
-    "losses": 3,
-    "conference_wins": 7,
-    "conference_losses": 2,
-    "bowl_wins": 0,
-    "bowl_losses": 1,
-    "career_wins": 65,
-    "career_losses": 15
+    "id": 3,
+    "firstName": "Kirby",
+    "lastName": "Smart",
+    "hireDate": "2016-12-06T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 300,
+        "school": "Georgia",
+        "conference": "SEC",
+        "year": 2023,
+        "games": 13,
+        "wins": 12,
+        "losses": 1,
+        "ties": 0,
+        "winPercentage": 0.923,
+        "preseasonRank": 1,
+        "postseasonRank": 3,
+        "srs": 23.9,
+        "spOverall": 30.2,
+        "spOffense": 33.0,
+        "spDefense": 27.4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "firstName": "Dabo",
+    "lastName": "Swinney",
+    "hireDate": "2008-12-01T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 400,
+        "school": "Clemson",
+        "conference": "ACC",
+        "year": 2023,
+        "games": 13,
+        "wins": 9,
+        "losses": 4,
+        "ties": 0,
+        "winPercentage": 0.692,
+        "preseasonRank": 9,
+        "postseasonRank": 16,
+        "srs": 14.2,
+        "spOverall": 20.1,
+        "spOffense": 24.0,
+        "spDefense": 18.3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "firstName": "Ryan",
+    "lastName": "Day",
+    "hireDate": "2019-12-17T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 500,
+        "school": "Ohio State",
+        "conference": "Big Ten",
+        "year": 2023,
+        "games": 13,
+        "wins": 11,
+        "losses": 2,
+        "ties": 0,
+        "winPercentage": 0.846,
+        "preseasonRank": 3,
+        "postseasonRank": 7,
+        "srs": 22.1,
+        "spOverall": 27.4,
+        "spOffense": 31.2,
+        "spDefense": 23.5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "firstName": "Marcus",
+    "lastName": "Freeman",
+    "hireDate": "2021-12-03T15:00:00Z",
+    "seasons": [
+      {
+        "teamId": 600,
+        "school": "Notre Dame",
+        "conference": "Independent",
+        "year": 2023,
+        "games": 13,
+        "wins": 10,
+        "losses": 3,
+        "ties": 0,
+        "winPercentage": 0.769,
+        "preseasonRank": 13,
+        "postseasonRank": 14,
+        "srs": 18.4,
+        "spOverall": 23.2,
+        "spOffense": 27.0,
+        "spDefense": 20.1
+      }
+    ]
   }
 ]

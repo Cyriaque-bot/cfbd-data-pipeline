@@ -1,29 +1,53 @@
 [
   {
-    "game_id": 401520234,
+    "id": 401110723,
     "season": 2023,
-    "week": 2,
-    "network": "ESPN",
-    "start_time": "2023-09-10T19:00:00Z",
-    "is_prime_time": true,
-    "is_national_broadcast": true
+    "week": 1,
+    "seasonType": "regular",
+
+    "startTime": "2023-09-02T19:00:00Z",
+    "isStartTimeTBD": false,
+
+    "homeTeam": "Alabama",
+    "homeConference": "SEC",
+    "awayTeam": "Texas",
+    "awayConference": "Big 12",
+
+    "mediaType": "tv",
+    "outlet": "ESPN"
   },
   {
-    "game_id": 401520567,
+    "id": 401110724,
     "season": 2023,
-    "week": 5,
-    "network": "CBS",
-    "start_time": "2023-09-30T20:00:00Z",
-    "is_prime_time": true,
-    "is_national_broadcast": false
+    "week": 1,
+    "seasonType": "regular",
+
+    "startTime": "2023-09-02T20:00:00Z",
+    "isStartTimeTBD": false,
+
+    "homeTeam": "Georgia",
+    "homeConference": "SEC",
+    "awayTeam": "Clemson",
+    "awayConference": "ACC",
+
+    "mediaType": "tv",
+    "outlet": "FOX"
   },
   {
-    "game_id": 401520890,
+    "id": 401110725,
     "season": 2023,
-    "week": 9,
-    "network": "FOX",
-    "start_time": "2023-11-04T21:00:00Z",
-    "is_prime_time": true,
-    "is_national_broadcast": true
+    "week": 1,
+    "seasonType": "regular",
+
+    "startTime": "2023-09-02T21:00:00Z",
+    "isStartTimeTBD": false,
+
+    "homeTeam": "Ohio State",
+    "homeConference": "Big Ten",
+    "awayTeam": "Notre Dame",
+    "awayConference": "Independent",
+
+    "mediaType": "tv",
+    "outlet": "CBS"
   }
 ]

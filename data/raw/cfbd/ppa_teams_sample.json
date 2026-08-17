@@ -1,47 +1,188 @@
 [
   {
+    "season": 2023,
+    "conference": "SEC",
     "team": "Alabama",
-    "season": 2023,
-    "epa_offense": 0.215,
-    "epa_defense": -0.145,
-    "net_epa": 0.360,
-    "success_rate": 0.485,
-    "explosiveness": 1.12,
-    "ppa_offense": 0.165,
-    "ppa_defense": -0.120,
-    "havoc_rate": 0.145,
-    "finishing_drives": 4.2,
-    "field_position": 32.5,
-    "returning_production": 0.68
+    "offense": {
+      "cumulative": {
+        "rushing": 0.38,
+        "passing": 0.52,
+        "total": 0.45
+      },
+      "thirdDown": 0.41,
+      "secondDown": 0.47,
+      "firstDown": 0.43,
+      "rushing": 0.38,
+      "passing": 0.52,
+      "overall": 0.45
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.12,
+        "passing": -0.15,
+        "total": -0.14
+      },
+      "thirdDown": -0.10,
+      "secondDown": -0.13,
+      "firstDown": -0.11,
+      "rushing": -0.12,
+      "passing": -0.15,
+      "overall": -0.14
+    }
   },
   {
+    "season": 2023,
+    "conference": "Big 12",
     "team": "Texas",
-    "season": 2023,
-    "epa_offense": 0.190,
-    "epa_defense": -0.110,
-    "net_epa": 0.300,
-    "success_rate": 0.470,
-    "explosiveness": 1.08,
-    "ppa_offense": 0.150,
-    "ppa_defense": -0.095,
-    "havoc_rate": 0.130,
-    "finishing_drives": 3.9,
-    "field_position": 31.2,
-    "returning_production": 0.72
+    "offense": {
+      "cumulative": {
+        "rushing": 0.35,
+        "passing": 0.48,
+        "total": 0.41
+      },
+      "thirdDown": 0.39,
+      "secondDown": 0.44,
+      "firstDown": 0.40,
+      "rushing": 0.35,
+      "passing": 0.48,
+      "overall": 0.41
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.09,
+        "passing": -0.12,
+        "total": -0.10
+      },
+      "thirdDown": -0.08,
+      "secondDown": -0.11,
+      "firstDown": -0.09,
+      "rushing": -0.09,
+      "passing": -0.12,
+      "overall": -0.10
+    }
   },
   {
-    "team": "Ohio State",
     "season": 2023,
-    "epa_offense": 0.225,
-    "epa_defense": -0.160,
-    "net_epa": 0.385,
-    "success_rate": 0.495,
-    "explosiveness": 1.15,
-    "ppa_offense": 0.175,
-    "ppa_defense": -0.130,
-    "havoc_rate": 0.150,
-    "finishing_drives": 4.5,
-    "field_position": 33.1,
-    "returning_production": 0.70
+    "conference": "SEC",
+    "team": "Georgia",
+    "offense": {
+      "cumulative": {
+        "rushing": 0.41,
+        "passing": 0.50,
+        "total": 0.48
+      },
+      "thirdDown": 0.43,
+      "secondDown": 0.49,
+      "firstDown": 0.45,
+      "rushing": 0.41,
+      "passing": 0.50,
+      "overall": 0.48
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.10,
+        "passing": -0.13,
+        "total": -0.11
+      },
+      "thirdDown": -0.09,
+      "secondDown": -0.12,
+      "firstDown": -0.10,
+      "rushing": -0.10,
+      "passing": -0.13,
+      "overall": -0.11
+    }
+  },
+  {
+    "season": 2023,
+    "conference": "ACC",
+    "team": "Clemson",
+    "offense": {
+      "cumulative": {
+        "rushing": 0.33,
+        "passing": 0.44,
+        "total": 0.39
+      },
+      "thirdDown": 0.37,
+      "secondDown": 0.42,
+      "firstDown": 0.38,
+      "rushing": 0.33,
+      "passing": 0.44,
+      "overall": 0.39
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.08,
+        "passing": -0.11,
+        "total": -0.09
+      },
+      "thirdDown": -0.07,
+      "secondDown": -0.10,
+      "firstDown": -0.08,
+      "rushing": -0.08,
+      "passing": -0.11,
+      "overall": -0.09
+    }
+  },
+  {
+    "season": 2023,
+    "conference": "Big Ten",
+    "team": "Ohio State",
+    "offense": {
+      "cumulative": {
+        "rushing": 0.40,
+        "passing": 0.55,
+        "total": 0.50
+      },
+      "thirdDown": 0.46,
+      "secondDown": 0.51,
+      "firstDown": 0.47,
+      "rushing": 0.40,
+      "passing": 0.55,
+      "overall": 0.50
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.10,
+        "passing": -0.12,
+        "total": -0.11
+      },
+      "thirdDown": -0.09,
+      "secondDown": -0.11,
+      "firstDown": -0.10,
+      "rushing": -0.10,
+      "passing": -0.12,
+      "overall": -0.11
+    }
+  },
+  {
+    "season": 2023,
+    "conference": "Independent",
+    "team": "Notre Dame",
+    "offense": {
+      "cumulative": {
+        "rushing": 0.36,
+        "passing": 0.47,
+        "total": 0.42
+      },
+      "thirdDown": 0.40,
+      "secondDown": 0.45,
+      "firstDown": 0.41,
+      "rushing": 0.36,
+      "passing": 0.47,
+      "overall": 0.42
+    },
+    "defense": {
+      "cumulative": {
+        "rushing": -0.11,
+        "passing": -0.14,
+        "total": -0.12
+      },
+      "thirdDown": -0.10,
+      "secondDown": -0.13,
+      "firstDown": -0.11,
+      "rushing": -0.11,
+      "passing": -0.14,
+      "overall": -0.12
+    }
   }
 ]
