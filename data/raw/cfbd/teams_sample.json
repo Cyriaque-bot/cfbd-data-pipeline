@@ -4,71 +4,163 @@
     "school": "Alabama",
     "mascot": "Crimson Tide",
     "abbreviation": "ALA",
-    "alt_name1": null,
-    "alt_name2": null,
-    "alt_name3": null,
+    "alternateNames": [],
     "conference": "SEC",
     "division": "West",
+    "classification": "FBS",
     "color": "9E1B32",
-    "alt_color": "FFFFFF",
+    "alternateColor": "FFFFFF",
     "logos": [
       "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
     ],
+    "twitter": "@AlabamaFTBL",
     "location": {
+      "id": 1,
+      "name": "Bryant-Denny Stadium",
       "city": "Tuscaloosa",
       "state": "AL",
       "zip": "35487",
-      "country": "USA",
+      "countryCode": "USA",
+      "timezone": "America/Chicago",
       "latitude": 33.2098,
-      "longitude": -87.5692
+      "longitude": -87.5692,
+      "elevation": "0",
+      "capacity": 101821,
+      "constructionYear": 1929,
+      "grass": true,
+      "dome": false
     }
   },
+
   {
     "id": 2132,
     "school": "Ohio State",
     "mascot": "Buckeyes",
     "abbreviation": "OSU",
-    "alt_name1": null,
-    "alt_name2": null,
-    "alt_name3": null,
+    "alternateNames": [],
     "conference": "Big Ten",
     "division": "East",
+    "classification": "FBS",
     "color": "BB0000",
-    "alt_color": "666666",
+    "alternateColor": "666666",
     "logos": [
       "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
     ],
+    "twitter": "@OhioStateFB",
     "location": {
+      "id": 2,
+      "name": "Ohio Stadium",
       "city": "Columbus",
       "state": "OH",
       "zip": "43210",
-      "country": "USA",
+      "countryCode": "USA",
+      "timezone": "America/New_York",
       "latitude": 40.0142,
-      "longitude": -83.0309
+      "longitude": -83.0309,
+      "elevation": "0",
+      "capacity": 102780,
+      "constructionYear": 1922,
+      "grass": false,
+      "dome": false
     }
   },
+
   {
     "id": 2390,
     "school": "USC",
     "mascot": "Trojans",
     "abbreviation": "USC",
-    "alt_name1": "Southern California",
-    "alt_name2": null,
-    "alt_name3": null,
+    "alternateNames": ["Southern California"],
     "conference": "Pac-12",
     "division": null,
+    "classification": "FBS",
     "color": "990000",
-    "alt_color": "FFC72C",
+    "alternateColor": "FFC72C",
     "logos": [
       "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
     ],
+    "twitter": "@USC_FB",
     "location": {
+      "id": 3,
+      "name": "Los Angeles Memorial Coliseum",
       "city": "Los Angeles",
       "state": "CA",
       "zip": "90089",
-      "country": "USA",
+      "countryCode": "USA",
+      "timezone": "America/Los_Angeles",
       "latitude": 34.0224,
-      "longitude": -118.2851
+      "longitude": -118.2851,
+      "elevation": "0",
+      "capacity": 77500,
+      "constructionYear": 1923,
+      "grass": true,
+      "dome": false
+    }
+  },
+
+  {
+    "id": 2391,
+    "school": "Notre Dame",
+    "mascot": "Fighting Irish",
+    "abbreviation": "ND",
+    "alternateNames": [],
+    "conference": "Independent",
+    "division": null,
+    "classification": "FBS",
+    "color": "002B5C",
+    "alternateColor": "C99700",
+    "logos": [
+      "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png"
+    ],
+    "twitter": "@NDFootball",
+    "location": {
+      "id": 4,
+      "name": "Notre Dame Stadium",
+      "city": "South Bend",
+      "state": "IN",
+      "zip": "46617",
+      "countryCode": "USA",
+      "timezone": "America/Indiana/Indianapolis",
+      "latitude": 41.6998,
+      "longitude": -86.2390,
+      "elevation": "0",
+      "capacity": 80000,
+      "constructionYear": 1930,
+      "grass": true,
+      "dome": false
+    }
+  },
+
+  {
+    "id": 2392,
+    "school": "Clemson",
+    "mascot": "Tigers",
+    "abbreviation": "CLEM",
+    "alternateNames": [],
+    "conference": "ACC",
+    "division": null,
+    "classification": "FBS",
+    "color": "F56600",
+    "alternateColor": "522D80",
+    "logos": [
+      "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
+    ],
+    "twitter": "@ClemsonFB",
+    "location": {
+      "id": 5,
+      "name": "Memorial Stadium",
+      "city": "Clemson",
+      "state": "SC",
+      "zip": "29634",
+      "countryCode": "USA",
+      "timezone": "America/New_York",
+      "latitude": 34.6780,
+      "longitude": -82.8360,
+      "elevation": "0",
+      "capacity": 81500,
+      "constructionYear": 1942,
+      "grass": true,
+      "dome": false
     }
   }
 ]

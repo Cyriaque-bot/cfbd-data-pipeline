@@ -1,9 +1,9 @@
 import sys 
-import os 
+from pathlib import Path
+
 # added project_root to the root of sys.path
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
 
 # from cfbd_client import get_teams
@@ -14,4 +14,4 @@ def fetch_teams(year):
     # return get_teams(year)
     return loads_teams()
 
-# print(fetch_teams(2023))
+# print(fetch_teams(all))

@@ -11,3 +11,5 @@ def loads_teams():
         valdata = json.load(jsonteams)
 
    return valdata
+
+# print(loads_teams())

@@ -1,84 +1,169 @@
 [
   {
     "season": 2023,
-    : "week"1,
-    "poll": "AP Top 25",
-    "ranks": [
+    "seasonType": "regular",
+    "week": 1,
+    "polls": [
       {
-        "rank": 1,
-        "school": "Georgia",
-        "conference": "SEC"
-      },
-      {
-        "rank": 2,
-        "school": "Michigan",
-        "conference": "Big Ten"
-      },
-      {
-        "rank": 3,
-        "school": "Ohio State",
-        "conference": "Big Ten"
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": [
+          {
+            "rank": 1,
+            "teamId": 1,
+            "school": "Georgia",
+            "conference": "SEC",
+            "firstPlaceVotes": 58,
+            "points": 1540
+          },
+          {
+            "rank": 2,
+            "teamId": 2,
+            "school": "Michigan",
+            "conference": "Big Ten",
+            "firstPlaceVotes": 2,
+            "points": 1480
+          },
+          {
+            "rank": 3,
+            "teamId": 3,
+            "school": "Ohio State",
+            "conference": "Big Ten",
+            "firstPlaceVotes": 0,
+            "points": 1420
+          }
+        ]
       }
     ]
   },
+
   {
     "season": 2023,
+    "seasonType": "regular",
     "week": 2,
-    "poll": "AP Top 25",
-    "ranks": [
+    "polls": [
       {
-        "rank": 1,
-        "school": "Georgia",
-        "conference": "SEC"
-      },
-      {
-        "rank": 2,
-        "school": "Michigan",
-        "conference": "Big Ten"
-      },
-      {
-        "rank": 3,
-        "school": "Alabama",
-        "conference": "SEC"
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": [
+          {
+            "rank": 1,
+            "teamId": 1,
+            "school": "Georgia",
+            "conference": "SEC",
+            "firstPlaceVotes": 60,
+            "points": 1550
+          },
+          {
+            "rank": 2,
+            "teamId": 2,
+            "school": "Michigan",
+            "conference": "Big Ten",
+            "firstPlaceVotes": 0,
+            "points": 1490
+          },
+          {
+            "rank": 3,
+            "teamId": 4,
+            "school": "Alabama",
+            "conference": "SEC",
+            "firstPlaceVotes": 0,
+            "points": 1410
+          }
+        ]
       }
     ]
   },
 
-
   {
     "season": 2023,
+    "seasonType": "regular",
     "week": 6,
-    "poll": "AP Top 25",
-    "ranks": [
+    "polls": [
       {
-        "rank": 3,
-        "school": "Texas",
-        "conference": "Big 12"
-      },
-      {
-        "rank": 12,
-        "school": "Oklahoma",
-        "conference": "Big 12"
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": [
+          {
+            "rank": 3,
+            "teamId": 5,
+            "school": "Texas",
+            "conference": "Big 12",
+            "firstPlaceVotes": 0,
+            "points": 1380
+          },
+          {
+            "rank": 12,
+            "teamId": 6,
+            "school": "Oklahoma",
+            "conference": "Big 12",
+            "firstPlaceVotes": 0,
+            "points": 1120
+          }
+        ]
       }
     ]
   },
 
+  {
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 13,
+    "polls": [
+      {
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": [
+          {
+            "rank": 4,
+            "teamId": 4,
+            "school": "Alabama",
+            "conference": "SEC",
+            "firstPlaceVotes": 0,
+            "points": 1400
+          },
+          {
+            "rank": 18,
+            "teamId": 7,
+            "school": "Auburn",
+            "conference": "SEC",
+            "firstPlaceVotes": 0,
+            "points": 780
+          }
+        ]
+      }
+    ]
+  },
 
   {
     "season": 2023,
+    "seasonType": "regular",
     "week": 13,
-    "poll": "AP Top 25",
-    "ranks": [
+    "polls": [
       {
-        "rank": 4,
-        "school": "Alabama",
-        "conference": "SEC"
-      },
-      {
-        "rank": 18,
-        "school": "Auburn",
-        "conference": "SEC"
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": []
       }
-    ]
+    ],
+    "school": "Notre Dame",
+    "teamId": 8,
+    "conference": "Independent"
+  },
+
+  {
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 13,
+    "polls": [
+      {
+        "poll": "AP Top 25",
+        "isFinal": false,
+        "ranks": []
+      }
+    ],
+    "school": "Clemson",
+    "teamId": 9,
+    "conference": "ACC"
   }
 ]
