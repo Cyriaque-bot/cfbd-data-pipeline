@@ -1,0 +1,65 @@
+[
+  {
+    "season": 2023,
+    "playerId": 101,
+    "player": "Carson Beck",
+    "team": "Georgia",
+    "category": "passing",
+    "statType": "yards",
+    "stat": 3250
+  },
+  {
+    "season": 2023,
+    "playerId": 101,
+    "player": "Carson Beck",
+    "team": "Georgia",
+    "category": "rushing",
+    "statType": "yards",
+    "stat": 120
+  },
+  {
+    "season": 2023,
+    "playerId": 102,
+    "player": "Kendall Milton",
+    "team": "Georgia",
+    "category": "rushing",
+    "statType": "yards",
+    "stat": 780
+  },
+  {
+    "season": 2023,
+    "playerId": 103,
+    "player": "Brock Bowers",
+    "team": "Georgia",
+    "category": "receiving",
+    "statType": "yards",
+    "stat": 890
+  },
+  {
+    "season": 2023,
+    "playerId": 104,
+    "player": "Malaki Starks",
+    "team": "Georgia",
+    "category": "defense",
+    "statType": "tackles",
+    "stat": 68
+  },
+  {
+    "season": 2023,
+    "playerId": 104,
+    "player": "Malaki Starks",
+    "team": "Georgia",
+    "category": "defense",
+    "statType": "sacks",
+    "stat": 2
+  },
+  {
+    "season": 2023,
+    "playerId": 104,
+    "player": "Malaki Starks",
+    "team": "Georgia",
+    "category": "defense",
+    "statType": "pressures",
+    "stat": 12
+  }
+]

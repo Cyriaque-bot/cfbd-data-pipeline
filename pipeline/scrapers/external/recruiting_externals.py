@@ -29,5 +29,5 @@ def fetch_recruiting_external():
     return result_recruiting_external          
 
    
-# print(fetch_recruiting_externe())
+# print(fetch_recruiting_external())
 

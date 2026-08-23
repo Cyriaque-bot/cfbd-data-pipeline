@@ -1,0 +1,34 @@
+[
+  {
+    "id": 101,
+    "firstName": "Carson",
+    "lastName": "Beck",
+    "team": "Georgia",
+    "position": "QB",
+    "year": 3
+  },
+  {
+    "id": 102,
+    "firstName": "Kendall",
+    "lastName": "Milton",
+    "team": "Georgia",
+    "position": "RB",
+    "year": 4
+  },
+  {
+    "id": 103,
+    "firstName": "Brock",
+    "lastName": "Bowers",
+    "team": "Georgia",
+    "position": "TE",
+    "year": 3
+  },
+  {
+    "id": 104,
+    "firstName": "Malaki",
+    "lastName": "Starks",
+    "team": "Georgia",
+    "position": "DB",
+    "year": 2
+  }
+]

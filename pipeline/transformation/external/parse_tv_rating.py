@@ -23,7 +23,9 @@ def parse_tv_rating():
             "peak_viewers": float(i["peak_viewers"]), 
             "prime_time_games":int(i["prime_time_games"]), 
             "network_exposure": float(i["network_exposure"]), 
-            "tv_value_score": int(i["tv_value_score"])
+            "tv_value_score": int(i["tv_value_score"]), 
+            "market_size": float(i["market_size"]), 
+            "network_importance": float(i["network_importance"])
         }
         list_tv_rating.append(dict_tv_rating)
   
@@ -36,7 +38,9 @@ def parse_tv_rating():
                 "peak_viewers", 
                 "prime_time_games", 
                 "network_exposure", 
-                "tv_value_score"
+                "tv_value_score", 
+                "market_size", 
+                "network_importance"
             ]
 
             write_tv_rating = csv.DictWriter(tv_rating_csv, fieldnames = tv_rating_fields)
@@ -44,3 +48,4 @@ def parse_tv_rating():
             write_tv_rating.writerows(list_tv_rating)
     return f"🤸félicitation le fichier a été compié dans {path_tv_rating}"
 
+print(parse_tv_rating())

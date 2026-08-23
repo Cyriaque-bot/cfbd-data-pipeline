@@ -25,7 +25,10 @@ def parse_recruiting_external():
             "stars_3": int(i["stars_3"]), 
             "transfers_in": int(i["transfers_in"]), 
             "transfers_out": int(i["transfers_out"]), 
-            "avg_rating": float(i["avg_rating"])
+            "avg_rating": float(i["avg_rating"]), 
+            "roster_value": float(i["roster_value"]), 
+            "nfl_projection": float(i["nfl_projection"]), 
+            "position_value": float(i["position_value"])
         }
         list_recruiting_external.append(dict_recruiting_external)
 
@@ -41,7 +44,10 @@ def parse_recruiting_external():
             "stars_3", 
             "transfers_in", 
             "transfers_out", 
-            "avg_rating"
+            "avg_rating", 
+            "roster_value", 
+            "nfl_projection", 
+            "position_value"
         ]
 
         writer_recruiting_external = csv.DictWriter(recruiting_external_csv, fieldnames = recruiting_external_field)
@@ -50,3 +56,4 @@ def parse_recruiting_external():
 
     return f"le fichier à été copié avec succès vous pouvez le vérifier dans {path_recruiting_external}"
 
+# print(parse_recruiting_external())

@@ -22,5 +22,8 @@
     "tv_exposure":true, 
     "top25": true, 
 
-    "conference_strength_score": true
+    "conference_strength_score": true, 
+
+    "injury_score": true, 
+    "returning_production": true
 }

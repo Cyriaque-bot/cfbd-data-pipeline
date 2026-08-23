@@ -1,6 +1,6 @@
 {
-    "epa_offense": 0.12,
-    "epa_defense": 0.12,
+    "epa_offense": 0.10,
+    "epa_defense": 0.10,
 
     "success_rate_offense": 0.06,
     "success_rate_defense": 0.06,
@@ -17,12 +17,16 @@
     "field_position_offense": 0.03,
     "field_position_defense": 0.03,
 
-    "nfl_talent": 0.06,
+    "nfl_talent": 0.08,
     "coaching": 0.06,
     "tv_exposure": 0.03,
     "top25": 0.03,
 
-    "conference_strength_score": 0.10
+    "conference_strength_score": 0.10, 
+
+     "injury_score":  0.05,
+    "returning_production":  0.05
+
 }
 
 
