@@ -24,8 +24,8 @@ def build_context_features(
         df_team_stats, 
         df_rivalries, 
         df_prime_games, 
-        df_rankings, 
-        df_conf_strength
+        df_rankings
+       
 ): 
     # tri initial 
     df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
@@ -82,3 +82,56 @@ def build_context_features(
     df = compute_schedule_difficulty_weighted(df)
 
     return df 
+
+from pipeline.scrapers.cfbd.game_team_stat import fetch_teams_stat
+from pipeline.scrapers.cfbd.games import fetch_games
+from pipeline.scrapers.cfbd.weathers import fetch_weather
+from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
+from pipeline.scrapers.cfbd.prime_times import fetch_prime_time
+from pipeline.scrapers.cfbd.rankings import fetch_rankings
+from pipeline.scrapers.cfbd.games import fetch_games
+
+# parsing 
+
+from pipeline.transformation.cfbd.parse_game_team_stats_old import parse_team_game_stats
+from pipeline.transformation.cfbd.parse_games import parse_games
+from pipeline.transformation.cfbd.parse_weathers import parse_weathers
+from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
+from pipeline.transformation.cfbd.parse_rankings import parse_rankings
+from pipeline.transformation.cfbd.parse_prime_times import parse_prime_time
+from pipeline.transformation.cfbd.parse_games import parse_games
+
+vallgame = fetch_teams_stat(all)
+df_games = pd.DataFrame(parse_team_game_stats(vallgame))
+
+vallweather = fetch_weather(all)
+df_weather =  pd.DataFrame(parse_weathers(vallweather))
+
+vallteam_stats = fetch_teams_stat(all)
+df_team_stats =  pd.DataFrame(parse_team_game_stats(vallteam_stats))
+
+vallrivalries = fetch_rivalries()
+df_rivalries =  pd.DataFrame(parse_rivalries(vallrivalries))
+
+vallprime_games = fetch_prime_time()
+df_prime_games =  pd.DataFrame(parse_prime_time(vallprime_games))
+
+vall_rankings = fetch_rankings(all)
+df_rankings =  pd.DataFrame(parse_rankings(vall_rankings))
+
+
+vallstyle = fetch_teams_stat(all)
+df_style =  pd.DataFrame(parse_team_game_stats(vallstyle))
+print(df_games)
+df_context = build_context_features(
+    df_games, 
+    df_weather, 
+    df_style, 
+    df_team_stats,
+    df_rivalries, 
+    df_prime_games,
+    df_rankings
+
+
+)
+print(df_context)

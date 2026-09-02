@@ -13,7 +13,7 @@ from pipeline.analytics.matchup.parse_team_matchup import parse_team_matchup
 # Conference Strength
 from pipeline.transformation.cfbd.parse_conference_matchup import parse_conference_strength
 # team_stat 
-from pipeline.transformation.cfbd.parse_team_game_stats import parse_team_game_stats
+from pipeline.transformation.cfbd.parse_game_team_stats_old import parse_team_game_stats
 # parse_games
 from pipeline.transformation.cfbd.parse_games import parse_games
 # weather
@@ -38,7 +38,7 @@ from analytics.matchup.team_matchup import (
 
 # Scrapers 
 from pipeline.scrapers.cfbd.teams_matchups import fetch_load_team
-from pipeline.scrapers.cfbd.team_game_stat import fetch_teams_stat
+from pipeline.scrapers.cfbd.game_team_stat import fetch_teams_stat
 from pipeline.scrapers.cfbd.conferences import fetch_conference
 from pipeline.scrapers.cfbd.games import fetch_games
 from pipeline.scrapers.cfbd.weathers import fetch_weather
@@ -183,7 +183,7 @@ vall = fetch_load_team()
 df_team_raw = vall 
 
 
-df_games = pd.DataFrame(parse_games(fetch_games(all)))
+df_games = pd.DataFrame(parse_games(fetch_games()))
 df_weather = pd.DataFrame(parse_weathers(fetch_weather(all)))
 df_team_stats = pd.DataFrame(parse_team_game_stats(fetch_teams_stat(all)))
 df_rivalries = pd.DataFrame(parse_rivalries(fetch_rivalries()))

@@ -1,31 +1,35 @@
 import sys 
-import os 
+import os
+from pathlib import Path 
 
-project_root =  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
 
 
 def parse_rankings(raws_ranking): 
-    validctranking = []
-    for i in raws_ranking:
-        valistrankingone = {
-            "season" : i["season"], 
-            "week" : i["week"], 
-            "poll" : i["poll"]
-        }
-        for j in i["ranks"]: 
-            valistrankingtwo = {
-            **valistrankingone, 
-            "rank": j["rank"], 
-            "school": j["school"], 
-            "conference": j["conference"]
-            }
-            validctranking.append(valistrankingtwo)
+    validctranking = []  
+    for i_ranking in raws_ranking: 
+        for key_ranking , val_ranking in i_ranking.items(): 
+            if key_ranking == "polls": 
+                for j_ranking in val_ranking: 
+                    # print(j_ranking)
+                    for keykranking, valkeykrankin in j_ranking.items(): 
+                         if keykranking == "ranks": 
+                            for l_kranking in valkeykrankin: 
+                                valistrankingone = {
+                                    "season": i_ranking["season"], 
+                                    "week": i_ranking["week"], 
+                                    "poll": j_ranking["poll"],
+                                    "rank": l_kranking["rank"],
+                                    "school": l_kranking["school"], 
+                                    "conference": l_kranking["conference"]
+                                }
+
+                                validctranking.append(valistrankingone)  
     
     return validctranking
 
-# from pipeline.scrapers.rankings import fetch_rankings
+# from pipeline.scrapers.cfbd.rankings import fetch_rankings
 # valrankings = fetch_rankings(2023)
 # print(parse_rankings(valrankings))

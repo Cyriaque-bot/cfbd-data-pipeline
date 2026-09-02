@@ -8,17 +8,18 @@ sys.path.append(str(project_root))
 
 from pipeline.loaders.external.load_conference_strength import load_conference_strength
 
-def parse_conference_stength(raw_conference_strength): 
+def parse_conference_strength(raw_conference_strength): 
     list_conference_strength = []
     for i_conference_strength in raw_conference_strength: 
         dict_conference_strength = {
+            "school": i_conference_strength["team"],
             "conference" : i_conference_strength["conference"],
-            "conference_strength_score": float(i_conference_strength["conference_strength_score"])
+            "conference_strength_score": i_conference_strength["conference_strength_score"]
         }
 
         list_conference_strength.append(dict_conference_strength)
 
     return list_conference_strength
 
-# val = load_conference_strength()
-# print(parse_conference_stength(val))
+val = load_conference_strength()
+print(parse_conference_strength(val))

@@ -40,6 +40,7 @@ def team_top25(list_teams, list_top25):
 
 
     return f"🤸 the file has been copied succesfully"
+    return df_teams_top25
 
 
 

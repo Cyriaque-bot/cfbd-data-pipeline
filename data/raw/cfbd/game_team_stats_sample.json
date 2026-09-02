@@ -1,0 +1,151 @@
+[
+  {
+    "id": 401300001,
+    "teams": [
+      {
+        "teamId": 52,
+        "team": "Alabama",
+        "conference": "SEC",
+        "homeAway": "home",
+        "points": 34,
+        "stats": [
+          {"category": "totalYards", "stat": "465"},
+          {"category": "rushingYards", "stat": "210"},
+          {"category": "netPassingYards", "stat": "255"},
+          {"category": "thirdDownEff", "stat": "6-12"},
+          {"category": "fourthDownEff", "stat": "1-1"},
+          {"category": "turnovers", "stat": "1"},
+          {"category": "firstDowns", "stat": "22"},
+          {"category": "yardsPerPass", "stat": "8.5"},
+          {"category": "yardsPerRushAttempt", "stat": "5.1"}
+        ]
+      },
+      {
+        "teamId": 78,
+        "team": "Texas",
+        "conference": "Big 12",
+        "homeAway": "away",
+        "points": 24,
+        "stats": [
+          {"category": "totalYards", "stat": "398"},
+          {"category": "rushingYards", "stat": "155"},
+          {"category": "netPassingYards", "stat": "243"},
+          {"category": "thirdDownEff", "stat": "5-13"},
+          {"category": "fourthDownEff", "stat": "0-1"},
+          {"category": "turnovers", "stat": "2"},
+          {"category": "firstDowns", "stat": "19"},
+          {"category": "yardsPerPass", "stat": "7.9"},
+          {"category": "yardsPerRushAttempt", "stat": "4.3"}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 401300002,
+    "teams": [
+      {
+        "teamId": 37,
+        "team": "Auburn",
+        "conference": "SEC",
+        "homeAway": "home",
+        "points": 28,
+        "stats": [
+          {"category": "totalYards", "stat": "412"},
+          {"category": "rushingYards", "stat": "188"},
+          {"category": "netPassingYards", "stat": "224"},
+          {"category": "thirdDownEff", "stat": "7-14"},
+          {"category": "turnovers", "stat": "1"},
+          {"category": "firstDowns", "stat": "20"}
+        ]
+      },
+      {
+        "teamId": 52,
+        "team": "Notre Dame",
+        "conference": "Independent",
+        "homeAway": "away",
+        "points": 21,
+        "stats": [
+          {"category": "totalYards", "stat": "375"},
+          {"category": "rushingYards", "stat": "160"},
+          {"category": "netPassingYards", "stat": "215"},
+          {"category": "thirdDownEff", "stat": "5-12"},
+          {"category": "turnovers", "stat": "2"},
+          {"category": "firstDowns", "stat": "18"}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 401300003,
+    "teams": [
+      {
+        "teamId": 130,
+        "team": "Michigan",
+        "conference": "Big Ten",
+        "homeAway": "home",
+        "points": 35,
+        "stats": [
+          {"category": "totalYards", "stat": "489"},
+          {"category": "rushingYards", "stat": "220"},
+          {"category": "netPassingYards", "stat": "269"},
+          {"category": "thirdDownEff", "stat": "8-15"},
+          {"category": "turnovers", "stat": "1"},
+          {"category": "firstDowns", "stat": "24"}
+        ]
+      },
+      {
+        "teamId": 194,
+        "team": "Ohio State",
+        "conference": "Big Ten",
+        "homeAway": "away",
+        "points": 31,
+        "stats": [
+          {"category": "totalYards", "stat": "455"},
+          {"category": "rushingYards", "stat": "175"},
+          {"category": "netPassingYards", "stat": "280"},
+          {"category": "thirdDownEff", "stat": "6-14"},
+          {"category": "turnovers", "stat": "2"},
+          {"category": "firstDowns", "stat": "21"}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 401300004,
+    "teams": [
+      {
+        "teamId": 203,
+        "team": "Clemson",
+        "conference": "ACC",
+        "homeAway": "home",
+        "points": 27,
+        "stats": [
+          {"category": "totalYards", "stat": "430"},
+          {"category": "rushingYards", "stat": "190"},
+          {"category": "netPassingYards", "stat": "240"},
+          {"category": "thirdDownEff", "stat": "7-12"},
+          {"category": "turnovers", "stat": "1"},
+          {"category": "firstDowns", "stat": "23"}
+        ]
+      },
+      {
+        "teamId": 87,
+        "team": "Oklahoma",
+        "conference": "Big 12",
+        "homeAway": "away",
+        "points": 20,
+        "stats": [
+          {"category": "totalYards", "stat": "385"},
+          {"category": "rushingYards", "stat": "165"},
+          {"category": "netPassingYards", "stat": "220"},
+          {"category": "thirdDownEff", "stat": "4-11"},
+          {"category": "turnovers", "stat": "2"},
+          {"category": "firstDowns", "stat": "19"}
+        ]
+      }
+    ]
+  }
+]

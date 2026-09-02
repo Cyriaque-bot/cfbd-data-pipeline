@@ -10,3 +10,6 @@ def load_rankings():
     with open("data/raw/cfbd/rankings_sample.json") as rankingsjson: 
         valrankings = json.load(rankingsjson)
     return valrankings
+
+
+# print(load_rankings())
