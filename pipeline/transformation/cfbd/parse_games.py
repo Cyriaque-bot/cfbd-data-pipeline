@@ -14,7 +14,7 @@ def parse_games(games_raws):
                     "game_id": int(i_games["id"]), 
                     "season": int(i_games["season"]), 
                     "week": int(i_games["week"]), 
-                    "season_type": i_games["season_type"], 
+                    "season_type": i_games["seasonType"], 
                     "start_date": i_games["startDate"],
                     "completed": i_games["completed"], 
                     "neutral_site": i_games["neutralSite"],
@@ -25,13 +25,14 @@ def parse_games(games_raws):
                     "venue": i_games["venue"],
                     "attendance": int(i_games["attendance"]),
 
+
                     #  home team
-                    "home_id": int(i_games["home_id"]),
+                    "home_id": int(i_games["homeId"]),
                     "home_team" : i_games["homeTeam"],
-                    "home_conference": i_games["home_conference"],
+                    "home_conference": i_games["homeConference"],
                     "home_classification": i_games["homeClassification"],
                     "home_points": int(i_games["homePoints"]),
-                    "home_line_score": i_games["homeLineScores"], 
+                    "home_line_scores": i_games["homeLineScores"], 
                     "home_pregame_elo": int(i_games["homePregameElo"]), 
                     "home_postgame_elo": int(i_games["homePostgameElo"]),
                     "home_win_prob_postgame": float(i_games["homePostgameWinProbability"]), 
@@ -43,7 +44,7 @@ def parse_games(games_raws):
                     "away_conference": i_games["awayConference"], 
                     "away_classification": i_games["awayClassification"],
                     "away_points": int(i_games["awayPoints"]),  
-                    "away_line_score": i_games["awayLineScores"], 
+                    "away_line_scores": i_games["awayLineScores"], 
                     "away_pregame_elo": int(i_games["awayPregameElo"]), 
                     "away_postgame_elo": int(i_games["awayPostgameElo"]),
                     "away_win_prob_postgame": float(i_games["awayPostgameWinProbability"]),
@@ -51,9 +52,9 @@ def parse_games(games_raws):
                     # extra metadata
                     
                     "excitement_index": float(i_games["excitementIndex"]), 
-                    "higlights": i_games["highlights"], 
-                    "date": int(i_games["start_date"])
-                    
+                    "highlights": i_games["highlights"],
+                    "notes":i_games.get("notes"), 
+                    "playoff": i_games.get("playoff")
               }
         listgames.append(gamedict)
     return listgames
