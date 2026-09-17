@@ -1,0 +1,718 @@
+[
+  {
+    "gameId": 401300001,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Alabama",
+    "opponent": "Texas",
+    "offense": {
+      "passingPlays": {
+        "explosiveness": 0.85,
+        "successRate": 0.48,
+        "totalPPA": 12.4,
+        "ppa": 0.18
+      },
+      "rushingPlays": {
+        "explosiveness": 0.72,
+        "successRate": 0.52,
+        "totalPPA": 10.1,
+        "ppa": 0.15
+      },
+      "passingDowns": {
+        "explosiveness": 0.90,
+        "successRate": 0.42,
+        "ppa": 0.20
+      },
+      "standardDowns": {
+        "explosiveness": 0.70,
+        "successRate": 0.55,
+        "ppa": 0.14
+      },
+      "openFieldYardsTotal": 45,
+      "openFieldYards": 1.8,
+      "secondLevelYardsTotal": 60,
+      "secondLevelYards": 2.4,
+      "lineYardsTotal": 110,
+      "lineYards": 4.4,
+      "stuffRate": 0.18,
+      "powerSuccess": 0.70,
+      "explosiveness": 0.78,
+      "successRate": 0.50,
+      "totalPPA": 22.5,
+      "ppa": 0.17,
+      "drives": 12,
+      "plays": 67
+    },
+    "defense": {
+      "passingPlays": {
+        "explosiveness": 0.80,
+        "successRate": 0.45,
+        "totalPPA": 11.2,
+        "ppa": 0.16
+      },
+      "rushingPlays": {
+        "explosiveness": 0.65,
+        "successRate": 0.48,
+        "totalPPA": 9.5,
+        "ppa": 0.14
+      },
+      "passingDowns": {
+        "explosiveness": 0.85,
+        "successRate": 0.40,
+        "ppa": 0.18
+      },
+      "standardDowns": {
+        "explosiveness": 0.68,
+        "successRate": 0.52,
+        "ppa": 0.13
+      },
+      "openFieldYardsTotal": 40,
+      "openFieldYards": 1.6,
+      "secondLevelYardsTotal": 55,
+      "secondLevelYards": 2.2,
+      "lineYardsTotal": 100,
+      "lineYards": 4.0,
+      "stuffRate": 0.20,
+      "powerSuccess": 0.68,
+      "explosiveness": 0.74,
+      "successRate": 0.48,
+      "totalPPA": 20.7,
+      "ppa": 0.15,
+      "drives": 11,
+      "plays": 70
+    }
+  },
+  {
+    "gameId": 401300002,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Auburn",
+    "opponent": "Notre Dame",
+    "offense": {
+      "passingPlays": {
+        "explosiveness": 0.80,
+        "successRate": 0.46,
+        "totalPPA": 11.2,
+        "ppa": 0.16
+      },
+      "rushingPlays": {
+        "explosiveness": 0.68,
+        "successRate": 0.54,
+        "totalPPA": 10.0,
+        "ppa": 0.15
+      },
+      "passingDowns": {
+        "explosiveness": 0.86,
+        "successRate": 0.40,
+        "ppa": 0.18
+      },
+      "standardDowns": {
+        "explosiveness": 0.67,
+        "successRate": 0.56,
+        "ppa": 0.14
+      },
+      "openFieldYardsTotal": 40,
+      "openFieldYards": 1.6,
+      "secondLevelYardsTotal": 56,
+      "secondLevelYards": 2.2,
+      "lineYardsTotal": 105,
+      "lineYards": 4.2,
+      "stuffRate": 0.18,
+      "powerSuccess": 0.72,
+      "explosiveness": 0.74,
+      "successRate": 0.50,
+      "totalPPA": 21.8,
+      "ppa": 0.16,
+      "drives": 12,
+      "plays": 64
+    },
+    "defense": {
+      "passingPlays": {
+        "explosiveness": 0.77,
+        "successRate": 0.43,
+        "totalPPA": 10.4,
+        "ppa": 0.15
+      },
+      "rushingPlays": {
+        "explosiveness": 0.61,
+        "successRate": 0.48,
+        "totalPPA": 8.8,
+        "ppa": 0.13
+      },
+      "passingDowns": {
+        "explosiveness": 0.82,
+        "successRate": 0.38,
+        "ppa": 0.17
+      },
+      "standardDowns": {
+        "explosiveness": 0.64,
+        "successRate": 0.52,
+        "ppa": 0.12
+      },
+      "openFieldYardsTotal": 36,
+      "openFieldYards": 1.4,
+      "secondLevelYardsTotal": 50,
+      "secondLevelYards": 2.0,
+      "lineYardsTotal": 92,
+      "lineYards": 3.7,
+      "stuffRate": 0.20,
+      "powerSuccess": 0.67,
+      "explosiveness": 0.70,
+      "successRate": 0.46,
+      "totalPPA": 19.2,
+      "ppa": 0.14,
+      "drives": 11,
+      "plays": 67
+    }
+  },
+  {
+    "gameId": 401300003,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Michigan",
+    "opponent": "Ohio State",
+    "offense": {
+      "passingPlays": {
+        "explosiveness": 0.82,
+        "successRate": 0.46,
+        "totalPPA": 11.8,
+        "ppa": 0.17
+      },
+      "rushingPlays": {
+        "explosiveness": 0.70,
+        "successRate": 0.54,
+        "totalPPA": 10.8,
+        "ppa": 0.16
+      },
+      "passingDowns": {
+        "explosiveness": 0.88,
+        "successRate": 0.41,
+        "ppa": 0.19
+      },
+      "standardDowns": {
+        "explosiveness": 0.69,
+        "successRate": 0.56,
+        "ppa": 0.14
+      },
+      "openFieldYardsTotal": 42,
+      "openFieldYards": 1.7,
+      "secondLevelYardsTotal": 58,
+      "secondLevelYards": 2.3,
+      "lineYardsTotal": 108,
+      "lineYards": 4.3,
+      "stuffRate": 0.17,
+      "powerSuccess": 0.72,
+      "explosiveness": 0.76,
+      "successRate": 0.51,
+      "totalPPA": 22.6,
+      "ppa": 0.17,
+      "drives": 13,
+      "plays": 65
+    },
+    "defense": {
+      "passingPlays": {
+        "explosiveness": 0.79,
+        "successRate": 0.44,
+        "totalPPA": 10.9,
+        "ppa": 0.16
+      },
+      "rushingPlays": {
+        "explosiveness": 0.63,
+        "successRate": 0.49,
+        "totalPPA": 9.2,
+        "ppa": 0.14
+      },
+      "passingDowns": {
+        "explosiveness": 0.84,
+        "successRate": 0.39,
+        "ppa": 0.18
+      },
+      "standardDowns": {
+        "explosiveness": 0.66,
+        "successRate": 0.53,
+        "ppa": 0.13
+      },
+      "openFieldYardsTotal": 38,
+      "openFieldYards": 1.5,
+      "secondLevelYardsTotal": 52,
+      "secondLevelYards": 2.1,
+      "lineYardsTotal": 95,
+      "lineYards": 3.9,
+      "stuffRate": 0.19,
+      "powerSuccess": 0.69,
+      "explosiveness": 0.72,
+      "successRate": 0.47,
+      "totalPPA": 19.8,
+      "ppa": 0.14,
+      "drives": 12,
+      "plays": 69
+    }
+  },
+  {
+    "gameId": 401300004,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Clemson",
+    "opponent": "Oklahoma",
+    "offense": {
+      "passingPlays": {
+        "explosiveness": 0.80,
+        "successRate": 0.47,
+        "totalPPA": 11.5,
+        "ppa": 0.17
+      },
+      "rushingPlays": {
+        "explosiveness": 0.69,
+        "successRate": 0.53,
+        "totalPPA": 10.4,
+        "ppa": 0.15
+      },
+      "passingDowns": {
+        "explosiveness": 0.87,
+        "successRate": 0.40,
+        "ppa": 0.18
+      },
+      "standardDowns": {
+        "explosiveness": 0.67,
+        "successRate": 0.55,
+        "ppa": 0.14
+      },
+      "openFieldYardsTotal": 41,
+      "openFieldYards": 1.6,
+      "secondLevelYardsTotal": 55,
+      "secondLevelYards": 2.2,
+      "lineYardsTotal": 104,
+      "lineYards": 4.1,
+      "stuffRate": 0.19,
+      "powerSuccess": 0.71,
+      "explosiveness": 0.74,
+      "successRate": 0.50,
+      "totalPPA": 21.9,
+      "ppa": 0.16,
+      "drives": 12,
+      "plays": 64
+    },
+    "defense": {
+      "passingPlays": {
+        "explosiveness": 0.77,
+        "successRate": 0.43,
+        "totalPPA": 10.3,
+        "ppa": 0.15
+      },
+      "rushingPlays": {
+        "explosiveness": 0.62,
+        "successRate": 0.48,
+        "totalPPA": 8.9,
+        "ppa": 0.13
+      },
+      "passingDowns": {
+        "explosiveness": 0.83,
+        "successRate": 0.38,
+        "ppa": 0.17
+      },
+      "standardDowns": {
+        "explosiveness": 0.64,
+        "successRate": 0.52,
+        "ppa": 0.12
+      },
+      "openFieldYardsTotal": 37,
+      "openFieldYards": 1.4,
+      "secondLevelYardsTotal": 50,
+      "secondLevelYards": 2.0,
+      "lineYardsTotal": 92,
+      "lineYards": 3.7,
+      "stuffRate": 0.20,
+      "powerSuccess": 0.67,
+      "explosiveness": 0.70,
+      "successRate": 0.46,
+      "totalPPA": 19.1,
+      "ppa": 0.14,
+      "drives": 11,
+      "plays": 67
+    }
+  }, 
+  {
+  "gameId": 401300001,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Texas",
+  "opponent": "Alabama",
+
+  "offense": {
+    "passingPlays": {
+      "explosiveness": 0.78,
+      "successRate": 0.44,
+      "totalPPA": 11.0,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.66,
+      "successRate": 0.50,
+      "totalPPA": 9.2,
+      "ppa": 0.14
+    },
+    "passingDowns": {
+      "explosiveness": 0.83,
+      "successRate": 0.39,
+      "ppa": 0.17
+    },
+    "standardDowns": {
+      "explosiveness": 0.67,
+      "successRate": 0.53,
+      "ppa": 0.13
+    },
+
+    "openFieldYardsTotal": 38,
+    "openFieldYards": 1.5,
+    "secondLevelYardsTotal": 52,
+    "secondLevelYards": 2.1,
+    "lineYardsTotal": 96,
+    "lineYards": 3.9,
+
+    "stuffRate": 0.20,
+    "powerSuccess": 0.66,
+
+    "explosiveness": 0.72,
+    "successRate": 0.47,
+    "totalPPA": 19.4,
+    "ppa": 0.15,
+
+    "drives": 11,
+    "plays": 70
+  },
+
+  "defense": {
+    "passingPlays": {
+      "explosiveness": 0.82,
+      "successRate": 0.46,
+      "totalPPA": 11.8,
+      "ppa": 0.17
+    },
+    "rushingPlays": {
+      "explosiveness": 0.68,
+      "successRate": 0.51,
+      "totalPPA": 9.8,
+      "ppa": 0.15
+    },
+    "passingDowns": {
+      "explosiveness": 0.87,
+      "successRate": 0.41,
+      "ppa": 0.18
+    },
+    "standardDowns": {
+      "explosiveness": 0.69,
+      "successRate": 0.54,
+      "ppa": 0.14
+    },
+
+    "openFieldYardsTotal": 42,
+    "openFieldYards": 1.7,
+    "secondLevelYardsTotal": 58,
+    "secondLevelYards": 2.3,
+    "lineYardsTotal": 102,
+    "lineYards": 4.0,
+
+    "stuffRate": 0.19,
+    "powerSuccess": 0.69,
+
+    "explosiveness": 0.75,
+    "successRate": 0.49,
+    "totalPPA": 20.1,
+    "ppa": 0.15,
+
+    "drives": 12,
+    "plays": 68
+  }
+}, 
+
+{
+  "gameId": 401300002,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Notre Dame",
+  "opponent": "Auburn",
+
+  "offense": {
+    "passingPlays": {
+      "explosiveness": 0.79,
+      "successRate": 0.45,
+      "totalPPA": 10.8,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.67,
+      "successRate": 0.52,
+      "totalPPA": 9.4,
+      "ppa": 0.14
+    },
+    "passingDowns": {
+      "explosiveness": 0.84,
+      "successRate": 0.39,
+      "ppa": 0.17
+    },
+    "standardDowns": {
+      "explosiveness": 0.66,
+      "successRate": 0.55,
+      "ppa": 0.13
+    },
+
+    "openFieldYardsTotal": 39,
+    "openFieldYards": 1.5,
+    "secondLevelYardsTotal": 54,
+    "secondLevelYards": 2.1,
+    "lineYardsTotal": 98,
+    "lineYards": 3.9,
+
+    "stuffRate": 0.19,
+    "powerSuccess": 0.68,
+
+    "explosiveness": 0.73,
+    "successRate": 0.48,
+    "totalPPA": 19.7,
+    "ppa": 0.15,
+
+    "drives": 11,
+    "plays": 66
+  },
+
+  "defense": {
+    "passingPlays": {
+      "explosiveness": 0.78,
+      "successRate": 0.44,
+      "totalPPA": 10.6,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.62,
+      "successRate": 0.49,
+      "totalPPA": 8.9,
+      "ppa": 0.13
+    },
+    "passingDowns": {
+      "explosiveness": 0.83,
+      "successRate": 0.38,
+      "ppa": 0.17
+    },
+    "standardDowns": {
+      "explosiveness": 0.65,
+      "successRate": 0.52,
+      "ppa": 0.12
+    },
+
+    "openFieldYardsTotal": 37,
+    "openFieldYards": 1.4,
+    "secondLevelYardsTotal": 51,
+    "secondLevelYards": 2.0,
+    "lineYardsTotal": 93,
+    "lineYards": 3.7,
+
+    "stuffRate": 0.20,
+    "powerSuccess": 0.66,
+
+    "explosiveness": 0.71,
+    "successRate": 0.46,
+    "totalPPA": 18.9,
+    "ppa": 0.14,
+
+    "drives": 10,
+    "plays": 67
+  }
+}, 
+
+{
+  "gameId": 401300003,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Ohio State",
+  "opponent": "Michigan",
+
+  "offense": {
+    "passingPlays": {
+      "explosiveness": 0.81,
+      "successRate": 0.45,
+      "totalPPA": 11.4,
+      "ppa": 0.17
+    },
+    "rushingPlays": {
+      "explosiveness": 0.69,
+      "successRate": 0.53,
+      "totalPPA": 10.2,
+      "ppa": 0.15
+    },
+    "passingDowns": {
+      "explosiveness": 0.87,
+      "successRate": 0.40,
+      "ppa": 0.18
+    },
+    "standardDowns": {
+      "explosiveness": 0.68,
+      "successRate": 0.55,
+      "ppa": 0.14
+    },
+
+    "openFieldYardsTotal": 41,
+    "openFieldYards": 1.6,
+    "secondLevelYardsTotal": 56,
+    "secondLevelYards": 2.2,
+    "lineYardsTotal": 106,
+    "lineYards": 4.2,
+
+    "stuffRate": 0.18,
+    "powerSuccess": 0.70,
+
+    "explosiveness": 0.75,
+    "successRate": 0.49,
+    "totalPPA": 20.4,
+    "ppa": 0.15,
+
+    "drives": 12,
+    "plays": 68
+  },
+
+  "defense": {
+    "passingPlays": {
+      "explosiveness": 0.80,
+      "successRate": 0.45,
+      "totalPPA": 11.0,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.64,
+      "successRate": 0.49,
+      "totalPPA": 9.0,
+      "ppa": 0.14
+    },
+    "passingDowns": {
+      "explosiveness": 0.85,
+      "successRate": 0.39,
+      "ppa": 0.18
+    },
+    "standardDowns": {
+      "explosiveness": 0.67,
+      "successRate": 0.53,
+      "ppa": 0.13
+    },
+
+    "openFieldYardsTotal": 39,
+    "openFieldYards": 1.5,
+    "secondLevelYardsTotal": 53,
+    "secondLevelYards": 2.1,
+    "lineYardsTotal": 94,
+    "lineYards": 3.8,
+
+    "stuffRate": 0.19,
+    "powerSuccess": 0.68,
+
+    "explosiveness": 0.72,
+    "successRate": 0.47,
+    "totalPPA": 19.6,
+    "ppa": 0.14,
+
+    "drives": 11,
+    "plays": 69
+  }
+}, 
+
+{
+  "gameId": 401300004,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Oklahoma",
+  "opponent": "Clemson",
+
+  "offense": {
+    "passingPlays": {
+      "explosiveness": 0.79,
+      "successRate": 0.45,
+      "totalPPA": 11.1,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.67,
+      "successRate": 0.52,
+      "totalPPA": 9.3,
+      "ppa": 0.14
+    },
+    "passingDowns": {
+      "explosiveness": 0.85,
+      "successRate": 0.39,
+      "ppa": 0.17
+    },
+    "standardDowns": {
+      "explosiveness": 0.66,
+      "successRate": 0.54,
+      "ppa": 0.13
+    },
+
+    "openFieldYardsTotal": 38,
+    "openFieldYards": 1.5,
+    "secondLevelYardsTotal": 52,
+    "secondLevelYards": 2.1,
+    "lineYardsTotal": 97,
+    "lineYards": 3.9,
+
+    "stuffRate": 0.19,
+    "powerSuccess": 0.67,
+
+    "explosiveness": 0.72,
+    "successRate": 0.47,
+    "totalPPA": 19.3,
+    "ppa": 0.15,
+
+    "drives": 11,
+    "plays": 67
+  },
+
+  "defense": {
+    "passingPlays": {
+      "explosiveness": 0.78,
+      "successRate": 0.44,
+      "totalPPA": 10.5,
+      "ppa": 0.16
+    },
+    "rushingPlays": {
+      "explosiveness": 0.63,
+      "successRate": 0.48,
+      "totalPPA": 8.8,
+      "ppa": 0.13
+    },
+    "passingDowns": {
+      "explosiveness": 0.83,
+      "successRate": 0.38,
+      "ppa": 0.17
+    },
+    "standardDowns": {
+      "explosiveness": 0.64,
+      "successRate": 0.52,
+      "ppa": 0.12
+    },
+
+    "openFieldYardsTotal": 36,
+    "openFieldYards": 1.4,
+    "secondLevelYardsTotal": 50,
+    "secondLevelYards": 2.0,
+    "lineYardsTotal": 92,
+    "lineYards": 3.7,
+
+    "stuffRate": 0.20,
+    "powerSuccess": 0.66,
+
+    "explosiveness": 0.70,
+    "successRate": 0.46,
+    "totalPPA": 18.8,
+    "ppa": 0.14,
+
+    "drives": 10,
+    "plays": 67
+  }
+}
+
+]

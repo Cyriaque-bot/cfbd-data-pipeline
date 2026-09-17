@@ -44,10 +44,10 @@ def team_top25(list_teams, list_top25):
 
 
 
-list_teams = fetch_teams(all)
-list_ranking = fetch_rankings(all)
+# list_teams = fetch_teams(all)
+# list_ranking = fetch_rankings(all)
 
-vakteam = parse_teams(list_teams)
-vaktop25 = parse_top25(list_ranking)
+# vakteam = parse_teams(list_teams)
+# vaktop25 = parse_top25(list_ranking)
 
-print(team_top25(list_teams, vaktop25))
+# print(team_top25(list_teams, vaktop25))

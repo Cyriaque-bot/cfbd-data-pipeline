@@ -11,7 +11,7 @@ sys.path.append(str(project_root))
 # parsing 
 from pipeline.analytics.matchup.parse_team_matchup import parse_team_matchup
 # Conference Strength
-from pipeline.transformation.cfbd.parse_conference_matchup import parse_conference_strength
+# from pipeline.transformation.cfbd.parse_conference_matchup import parse_conference_strength
 # team_stat 
 from pipeline.transformation.cfbd.parse_game_team_stats_old import parse_team_game_stats
 # parse_games
@@ -38,7 +38,7 @@ from analytics.matchup.team_matchup import (
 
 # Scrapers 
 from pipeline.scrapers.cfbd.teams_matchups import fetch_load_team
-from pipeline.scrapers.cfbd.game_team_stat import fetch_teams_stat
+# from pipeline.scrapers.cfbd.game_team_stat import fetch_teams_stat
 from pipeline.scrapers.cfbd.conferences import fetch_conference
 from pipeline.scrapers.cfbd.games import fetch_games
 from pipeline.scrapers.cfbd.weathers import fetch_weather
@@ -123,7 +123,7 @@ def build_team_matchup(
          df_rivalries, 
          df_prime_games, 
          df_rankings, 
-         df_conf_strength
+        #  df_conf_strength
          )
 
     # normalisation des colonnes home/away avant team_matchup final
@@ -185,28 +185,28 @@ df_team_raw = vall
 
 df_games = pd.DataFrame(parse_games(fetch_games()))
 df_weather = pd.DataFrame(parse_weathers(fetch_weather(all)))
-df_team_stats = pd.DataFrame(parse_team_game_stats(fetch_teams_stat(all)))
+# df_team_stats = pd.DataFrame(parse_team_game_stats(fetch_teams_stat(all)))
 df_rivalries = pd.DataFrame(parse_rivalries(fetch_rivalries()))
 df_prime_games = pd.DataFrame(parse_prime_time(fetch_prime_time()))
 df_rankings = pd.DataFrame(parse_rankings(fetch_rankings(all)))
 df_conf_strength = parse_conference_strength(parse_team_matchup(vall))
 
 # Style of Play
-df_style_raw = fetch_teams_stat(all)
-df_style = compute_style_of_play(pd.DataFrame(parse_team_game_stats(df_style_raw)))
+# df_style_raw = fetch_teams_stat(all)
+# df_style = compute_style_of_play(pd.DataFrame(parse_team_game_stats(df_style_raw)))
 
 #Appel final de mon pipeline 
-df_final = build_team_matchup(
-       df_team_raw, 
-       df_games, 
-       df_weather, 
-       df_style, 
-       df_team_stats, 
-       df_rivalries, 
-       df_prime_games, 
-       df_rankings, 
-       df_conf_strength
-)
-print(df_final)
+# df_final = build_team_matchup(
+#        df_team_raw, 
+#        df_games, 
+#        df_weather, 
+#        df_style, 
+#     #    df_team_stats, 
+#        df_rivalries, 
+#        df_prime_games, 
+#        df_rankings, 
+#        df_conf_strength
+# )
+# print(df_final)
 
 print(df_final.columns.tolist())

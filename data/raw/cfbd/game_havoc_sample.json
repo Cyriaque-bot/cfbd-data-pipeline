@@ -1,0 +1,230 @@
+[
+  {
+    "gameId": 401300001,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Alabama",
+    "conference": "SEC",
+    "opponent": "Texas",
+    "opponentConference": "Big 12",
+    "offense": {
+      "dbHavocRate": 0.07,
+      "frontSevenHavocRate": 0.12,
+      "havocRate": 0.19,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 5,
+      "totalHavocEvents": 8,
+      "totalPlays": 67
+    },
+    "defense": {
+      "dbHavocRate": 0.09,
+      "frontSevenHavocRate": 0.15,
+      "havocRate": 0.24,
+      "dbHavocEvents": 4,
+      "frontSevenHavocEvents": 6,
+      "totalHavocEvents": 10,
+      "totalPlays": 70
+    }
+  },
+  {
+    "gameId": 401300002,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Auburn",
+    "conference": "SEC",
+    "opponent": "Notre Dame",
+    "opponentConference": "Independent",
+    "offense": {
+      "dbHavocRate": 0.06,
+      "frontSevenHavocRate": 0.11,
+      "havocRate": 0.17,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 4,
+      "totalHavocEvents": 7,
+      "totalPlays": 63
+    },
+    "defense": {
+      "dbHavocRate": 0.08,
+      "frontSevenHavocRate": 0.13,
+      "havocRate": 0.21,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 5,
+      "totalHavocEvents": 8,
+      "totalPlays": 66
+    }
+  },
+  {
+    "gameId": 401300003,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Michigan",
+    "conference": "Big Ten",
+    "opponent": "Ohio State",
+    "opponentConference": "Big Ten",
+    "offense": {
+      "dbHavocRate": 0.05,
+      "frontSevenHavocRate": 0.10,
+      "havocRate": 0.15,
+      "dbHavocEvents": 2,
+      "frontSevenHavocEvents": 4,
+      "totalHavocEvents": 6,
+      "totalPlays": 65
+    },
+    "defense": {
+      "dbHavocRate": 0.08,
+      "frontSevenHavocRate": 0.14,
+      "havocRate": 0.22,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 6,
+      "totalHavocEvents": 9,
+      "totalPlays": 68
+    }
+  },
+  {
+    "gameId": 401300004,
+    "season": 2023,
+    "seasonType": "regular",
+    "week": 1,
+    "team": "Clemson",
+    "conference": "ACC",
+    "opponent": "Oklahoma",
+    "opponentConference": "Big 12",
+    "offense": {
+      "dbHavocRate": 0.06,
+      "frontSevenHavocRate": 0.11,
+      "havocRate": 0.17,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 4,
+      "totalHavocEvents": 7,
+      "totalPlays": 64
+    },
+    "defense": {
+      "dbHavocRate": 0.08,
+      "frontSevenHavocRate": 0.14,
+      "havocRate": 0.22,
+      "dbHavocEvents": 3,
+      "frontSevenHavocEvents": 6,
+      "totalHavocEvents": 9,
+      "totalPlays": 67
+    }
+  }, 
+  {
+  "gameId": 401300001,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Texas",
+  "conference": "Big 12",
+  "opponent": "Alabama",
+  "opponentConference": "SEC",
+  "offense": {
+    "dbHavocRate": 0.06,
+    "frontSevenHavocRate": 0.11,
+    "havocRate": 0.17,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 4,
+    "totalHavocEvents": 7,
+    "totalPlays": 63
+  },
+  "defense": {
+    "dbHavocRate": 0.08,
+    "frontSevenHavocRate": 0.13,
+    "havocRate": 0.21,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 5,
+    "totalHavocEvents": 8,
+    "totalPlays": 66
+  }
+}, 
+
+{
+  "gameId": 401300002,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Notre Dame",
+  "conference": "Independent",
+  "opponent": "Auburn",
+  "opponentConference": "SEC",
+  "offense": {
+    "dbHavocRate": 0.06,
+    "frontSevenHavocRate": 0.10,
+    "havocRate": 0.16,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 4,
+    "totalHavocEvents": 7,
+    "totalPlays": 64
+  },
+  "defense": {
+    "dbHavocRate": 0.07,
+    "frontSevenHavocRate": 0.12,
+    "havocRate": 0.19,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 5,
+    "totalHavocEvents": 8,
+    "totalPlays": 65
+  }
+}, 
+
+{
+  "gameId": 401300003,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Ohio State",
+  "conference": "Big Ten",
+  "opponent": "Michigan",
+  "opponentConference": "Big Ten",
+  "offense": {
+    "dbHavocRate": 0.05,
+    "frontSevenHavocRate": 0.09,
+    "havocRate": 0.14,
+    "dbHavocEvents": 2,
+    "frontSevenHavocEvents": 4,
+    "totalHavocEvents": 6,
+    "totalPlays": 66
+  },
+  "defense": {
+    "dbHavocRate": 0.07,
+    "frontSevenHavocRate": 0.13,
+    "havocRate": 0.20,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 6,
+    "totalHavocEvents": 9,
+    "totalPlays": 68
+  }
+}, 
+
+{
+  "gameId": 401300004,
+  "season": 2023,
+  "seasonType": "regular",
+  "week": 1,
+  "team": "Oklahoma",
+  "conference": "Big 12",
+  "opponent": "Clemson",
+  "opponentConference": "ACC",
+  "offense": {
+    "dbHavocRate": 0.06,
+    "frontSevenHavocRate": 0.10,
+    "havocRate": 0.16,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 4,
+    "totalHavocEvents": 7,
+    "totalPlays": 65
+  },
+  "defense": {
+    "dbHavocRate": 0.07,
+    "frontSevenHavocRate": 0.13,
+    "havocRate": 0.20,
+    "dbHavocEvents": 3,
+    "frontSevenHavocEvents": 6,
+    "totalHavocEvents": 9,
+    "totalPlays": 67
+  }
+}
+
+]

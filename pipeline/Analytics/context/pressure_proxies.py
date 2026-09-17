@@ -7,28 +7,28 @@ project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
 
 
-# df = pd.DataFrame([
-#     {
-#         "team": "Alabama",
-#         "opponent": "Auburn",
-#         "season": 2023,
-#         "week": 1,
-#         "season_type": "regular",
-#         "date": "2023-09-02",
-#         "point_diff": 14,
-#         "game_id": 401520000
-#     },
-#     {
-#         "team": "Georgia",
-#         "opponent": "UT Martin",
-#         "season": 2023,
-#         "week": 1,
-#         "season_type": "regular",
-#         "date": "2023-09-02",
-#         "point_diff": 28,
-#         "game_id": 401520001
-#     }
-# ])  
+df = pd.DataFrame([
+    {
+        "team": "Alabama",
+        "opponent": "Auburn",
+        "season": 2023,
+        "week": 1,
+        "season_type": "regular",
+        "date": "2023-09-02",
+        "point_diff": 14,
+        "game_id": 401520000
+    },
+    {
+        "team": "Georgia",
+        "opponent": "UT Martin",
+        "season": 2023,
+        "week": 1,
+        "season_type": "regular",
+        "date": "2023-09-02",
+        "point_diff": 28,
+        "game_id": 401520001
+    }
+])  
 
 
 
@@ -42,7 +42,7 @@ def merge_rivalries(df, rivalries_list):
     riv["opponent"] = riv["opponent"].str.lower()
 
     # Definition d'une intensité par défaut
-    major = ["Iron Bowl", "Red River", "The Game", "Army-Navy "]
+    major = ["Iron Bowl", "Red River", "The Game", "Army-Navy"]
     medium = ["Jeweled Shillelagh", "Civil War", "Sunshine Showdown"]
     minor = ["Egg Bowl", "Palmetto Bowl"]
 
@@ -85,14 +85,21 @@ def merge_rivalries(df, rivalries_list):
     return df 
 
 
-def merge_prime_time(df, prime_df):
-    prime = pd.DataFrame(prime_df).copy()
+
+def merge_media(df, media_df):
+    media = pd.DataFrame(media_df).copy()
+    # keep only the column that we need
+    cols = ["game_id", "national_broadcast", "prime_time"]
+    media = media[[c for c in cols if c in media.columns]]
     df = df.merge(
-        prime, 
+        media, 
         on = 'game_id', 
         how =  "left"
     )
-    df["is_prime_time"] = df["is_prime_time"].fillna(0).astype(int)
+    # normalization 
+    df["prime_time"] = df["prime_time"].fillna(0).astype(int)
+    df["national_broadcast"] = df["national_broadcast"].fillna(0).astype(int)
+
     return df 
 
 # print("=== APRES merge_prime_time ===")
@@ -134,11 +141,15 @@ def compute_media_pressure(df):
     df["media_pressure"] = 0
 
     # Si nous avons une colonne "is_prime_time" otu "tv_audience", nous pouvons l'utiliser 
-    if "is_prime_time" in df.columns: 
-        df["media_pressure"] =  df["media_pressure"] + df["is_prime_time"]
+    if "prime_time" in df.columns: 
+        df["media_pressure"] =  df["media_pressure"] + df["prime_time"]
 
-    # Si Proxy simple : match entre deux équipes 
-    if "team_rank" in df.columns and "opponent_rank" in df.columns: 
+    # national TV
+    if "is_national_tv" in df.columns: 
+        df["media_pressure"] =  df["media_pressure"] + df["national_broadcast"]
+
+    # game between two team from top25
+
         df["media_pressure"] = df["media_pressure"] + ((df["team_rank"] <= 25) & (df["opponent_rank"] <= 25)).astype(int)
     return df 
 
@@ -177,7 +188,7 @@ def compute_pressure_index(df, w_rivalry = 0.25, w_stakes = 0.25, w_media = 0.25
 
 def compute_pressure_proxies(df, rivalries_df , prime_df, rankings_df ): 
     df = merge_rivalries(df, rivalries_df)
-    df = merge_prime_time(df, prime_df)
+    df = merge_media(df, prime_df)
     df = merge_rankings(df, rankings_df)
 
     df = compute_stakes_pressure(df)
@@ -188,21 +199,21 @@ def compute_pressure_proxies(df, rivalries_df , prime_df, rankings_df ):
     return df
 
 # if __name__ == "__name__":
-from pipeline.scrapers.cfbd.prime_times import fetch_prime_time
-from pipeline.scrapers.cfbd.rankings import fetch_rankings
-from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
-from pipeline.transformation.cfbd.parse_rankings import parse_rankings
-from pipeline.transformation.cfbd.parse_prime_times import parse_prime_time
-from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
+# from pipeline.scrapers.cfbd.media import fetch_media
+# from pipeline.scrapers.cfbd.rankings import fetch_rankings
+# from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
+# from pipeline.transformation.cfbd.parse_rankings import parse_rankings
+# from pipeline.transformation.cfbd.parse_media import parse_media
+# from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
 
 # valrivalries = fetch_rivalries()
 # rivalries_df = parse_rivalries(valrivalries)
 
-# valprime = fetch_prime_time()
-# prime_df  = parse_prime_time(valprime)
+# valprime = fetch_media()
+# media_df  = parse_media(valprime)
 
 # valranking = fetch_rankings(all)
 # rankings_df = parse_rankings(valranking)
 
-# df_with_pressure = compute_pressure_proxies(df, rivalries_df, prime_df, rankings_df )
+# df_with_pressure = compute_pressure_proxies(df, rivalries_df, media_df, rankings_df )
 # print(df_with_pressure.head())

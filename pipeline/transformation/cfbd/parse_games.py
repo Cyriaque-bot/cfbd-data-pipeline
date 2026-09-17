@@ -1,11 +1,10 @@
 import os 
 import sys 
-
+from pathlib import Path
 import pandas as pd 
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path: 
-    sys.path.insert(0, project_root)
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
 def parse_games(games_raws): 
     listgames = []
@@ -67,6 +66,6 @@ def parse_games(games_raws):
 #     df = df.rename(columns = {
 #         "id"
 #     })
-# from pipeline.scrapers.games import fetch_games
-# valgames = fetch_games(2023)
+# from pipeline.scrapers.cfbd.games import fetch_games
+# valgames = fetch_games()
 # print(parse_games(valgames))

@@ -29,9 +29,9 @@ def parse_media(raw_media):
             "away_team": i_media["awayTeam"], 
             "network": i_media["outlet"], 
             "start_time": i_media["startTime"], 
-            "prime_time": prime_time_start <= prime_time_final <= prime_time_end, 
-            "national_broadcast" : True if i_media["outlet"] in ("FOX", "CBS", "ESPN", "ESPN2", "ESPNU", "ABC", 
-                                                                 "NBC", "FS1", "SEC Network","Big Ten Network") else False
+            "prime_time": 1 if (prime_time_start <= prime_time_final <= prime_time_end) else 0 , 
+            "national_broadcast" : 1 if i_media["outlet"] in ("FOX", "CBS", "ESPN", "ESPN2", "ESPNU", "ABC", 
+                                                                 "NBC", "FS1", "SEC Network","Big Ten Network") else 0
         }
 
         list_media.append(dict_media)

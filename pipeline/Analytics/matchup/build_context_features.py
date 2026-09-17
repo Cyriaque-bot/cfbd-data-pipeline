@@ -5,6 +5,9 @@ import sys
 project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
 
+
+
+
 from pipeline.analytics.context.style_of_play import compute_style_of_play
 from pipeline.analytics.context.weather_impact import compute_weather_features
 from pipeline.analytics.context.weather_features import compute_weather_schock, compute_weather_familiarity, compute_weather_resilience
@@ -18,17 +21,18 @@ from pipeline.analytics.context.schedule_difficulty import compute_schedule_diff
 
 
 def build_context_features(
-        df, 
+        df_games, 
         df_weather, 
         df_style, 
         df_team_stats, 
         df_rivalries, 
-        df_prime_games, 
+        df_media, 
         df_rankings
-       
 ): 
+    # before transform our games in dataframe
+    # df_games = pd.DataFrame(df_games)
     # tri initial 
-    df = df.sort_values(["team", "season", "week"]).reset_index(drop = True)
+    df = df_games.sort_values(["team", "season", "week"]).reset_index(drop = True)
 
     # style de jeu (run/pass/balanced + 3rd/4th  down)
     df_style = compute_style_of_play(df_style)
@@ -66,7 +70,7 @@ def build_context_features(
     df = compute_injuries_proxies(df)
 
     # pressure proxies
-    df = compute_pressure_proxies(df, df_rivalries , df_prime_games, df_rankings)
+    df = compute_pressure_proxies(df, df_rivalries , df_media, df_rankings)
 
     # momentum
     df = compute_streaks(df)
@@ -83,26 +87,26 @@ def build_context_features(
 
     return df 
 
-from pipeline.scrapers.cfbd.game_team_stat import fetch_teams_stat
-from pipeline.scrapers.cfbd.games import fetch_games
+from pipeline.scrapers.derived.games_team_stats import fetch_games_team_stats
 from pipeline.scrapers.cfbd.weathers import fetch_weather
 from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
 from pipeline.scrapers.cfbd.prime_times import fetch_prime_time
 from pipeline.scrapers.cfbd.rankings import fetch_rankings
-from pipeline.scrapers.cfbd.games import fetch_games
+from pipeline.scrapers.cfbd
+
 
 # parsing 
 
-from pipeline.transformation.cfbd.parse_game_team_stats_old import parse_team_game_stats
-from pipeline.transformation.cfbd.parse_games import parse_games
+from pipeline.transformation.derived.parse_games_team_stats import parse_games_team_stats
+
 from pipeline.transformation.cfbd.parse_weathers import parse_weathers
 from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
 from pipeline.transformation.cfbd.parse_rankings import parse_rankings
-from pipeline.transformation.cfbd.parse_prime_times import parse_prime_time
-from pipeline.transformation.cfbd.parse_games import parse_games
+from pipeline.transformation.cfbd.parse_media import parse_media
 
-vallgame = fetch_teams_stat(all)
-df_games = pd.DataFrame(parse_team_game_stats(vallgame))
+
+vallgame = fetch_games_team_stats()
+df_games = pd.DataFrame(parse_games_team_stats(vallgame))
 
 vallweather = fetch_weather(all)
 df_weather =  pd.DataFrame(parse_weathers(vallweather))
