@@ -87,7 +87,7 @@ def build_context_features(
 
     return df 
 
-from pipeline.scrapers.derived.games_team_stats import fetch_games_team_stats
+from pipeline.scrapers.derived.merge_games_team_stats import fetch_games_team_stats
 from pipeline.scrapers.cfbd.weathers import fetch_weather
 from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
 from pipeline.scrapers.cfbd.prime_times import fetch_prime_time
@@ -97,7 +97,7 @@ from pipeline.scrapers.cfbd
 
 # parsing 
 
-from pipeline.transformation.derived.parse_games_team_stats import parse_games_team_stats
+from pipeline.transformation.derived.parse_merge_games_team_stats import parse_games_team_stats
 
 from pipeline.transformation.cfbd.parse_weathers import parse_weathers
 from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries

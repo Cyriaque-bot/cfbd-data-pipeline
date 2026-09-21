@@ -3,7 +3,7 @@
     "id": 401300001,
     "teams": [
       {
-        "teamId": 52,
+        "teamId": 333,
         "team": "Alabama",
         "conference": "SEC",
         "homeAway": "home",
@@ -21,7 +21,7 @@
         ]
       },
       {
-        "teamId": 78,
+        "teamId": 251,
         "team": "Texas",
         "conference": "Big 12",
         "homeAway": "away",
@@ -45,7 +45,7 @@
     "id": 401300002,
     "teams": [
       {
-        "teamId": 37,
+        "teamId": 2,
         "team": "Auburn",
         "conference": "SEC",
         "homeAway": "home",
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "teamId": 52,
+        "teamId": 87,
         "team": "Notre Dame",
         "conference": "Independent",
         "homeAway": "away",
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "teamId": 87,
+        "teamId": 201,
         "team": "Oklahoma",
         "conference": "Big 12",
         "homeAway": "away",
