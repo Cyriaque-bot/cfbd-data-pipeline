@@ -7,30 +7,6 @@ project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
 
 
-df = pd.DataFrame([
-    {
-        "team": "Alabama",
-        "opponent": "Auburn",
-        "season": 2023,
-        "week": 1,
-        "season_type": "regular",
-        "date": "2023-09-02",
-        "point_diff": 14,
-        "game_id": 401520000
-    },
-    {
-        "team": "Georgia",
-        "opponent": "UT Martin",
-        "season": 2023,
-        "week": 1,
-        "season_type": "regular",
-        "date": "2023-09-02",
-        "point_diff": 28,
-        "game_id": 401520001
-    }
-])  
-
-
 
 def merge_rivalries(df, rivalries_list): 
     # Convertir en DataFrame

@@ -3,7 +3,7 @@ import pandas as pd
 # Offense Drop
 
 def compute_offense_drop(df): 
-    raw = df["recent_points_for"] - df["points_for"]
+    raw = df["recent_points_for"] - df["team_points"]
 
     # Normalisation par la valeurs absolue max 
     max_abs = raw.abs().max()
@@ -15,7 +15,7 @@ def compute_offense_drop(df):
 
 # defense collapse
 def compute_defense_collapse(df): 
-    raw = df["points_against"] - df["recent_points_against"]
+    raw = df["opponent_points"] - df["recent_points_against"]
     max_abs = raw.abs().max()
     if pd.isna(max_abs) or max_abs == 0: 
         df["defense_collapse"] = 0
@@ -32,6 +32,15 @@ def compute_margin_shock(df):
     else: 
         df["margin_shock"] = raw.abs() /  max_abs
     return df 
+
+def compute_momentum_shock(df): 
+    raw = df["momentum_score"] - df["recent_momentum"]
+    max_abs = raw.abs().max()
+    if pd.isna(max_abs) or max_abs == 0: 
+       df["momentum_shock"] = 0
+    else: 
+       df["momentum_shock"] = raw.abs()/ max_abs
+    return df
 
 def compute_injury_proxy_score(df): 
     df["injury_proxy_raw"] = (
@@ -57,7 +66,7 @@ def normalize_injury_proxy(df):
 def compute_injuries_proxies(df): 
     # Tri chronologique indispensable 
 
-    df = df.sort_values(by = ["team", "season", "week"])
+    df = df.sort_values(by = ["team_id", "season", "week"])
 
     # 1) offense Drop
     df = compute_offense_drop(df) 

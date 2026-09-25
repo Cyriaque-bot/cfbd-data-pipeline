@@ -34,7 +34,7 @@ def compute_weather_features(df_weather, df_style, df_team_stats):
 
     df["wind_impact"] = df["wind_speed"].clip(0, 30) / 30
     df["rain_impact"] = (df["precipitation"]/5).clip(0, 1)
-
+    df["snow_impact"] = (df["snow_fall"]/5).clip(0, 1)
     df["temperature_impact"] = df["temperature"].apply(
         lambda t: abs(t - 30) / 30 if pd.notna(t)  else 0
     ).clip(0,1)
@@ -45,8 +45,9 @@ def compute_weather_features(df_weather, df_style, df_team_stats):
 
     df["weather_score_raw"] =  (
 
-        0.35 * df["wind_impact"] + 
-        0.35 * df["rain_impact"] + 
+        0.30 * df["wind_impact"] + 
+        0.30 * df["rain_impact"] + 
+        0.10 *  df["snow_impact"]+
         0.20 * df["temperature_impact"] + 
         0.10 * df["humidity_impact"]
 
@@ -55,37 +56,20 @@ def compute_weather_features(df_weather, df_style, df_team_stats):
    # Normalized score soit score de difficulté météo 
     min_val = df["weather_score_raw"].min()
     max_val = df["weather_score_raw"].max()
+
     if max_val == min_val: 
         df["weather_score_norm"] = 0
     else: 
         df["weather_score_norm"] = (df["weather_score_raw"]  - min_val) /(max_val - min_val)
 
     df["weather_score_norm"] = df["weather_score_norm"].fillna(0)
+    
     # sensiblity météo selon style de jeu 
     df["weather_sensitivity"] = (
         0.6 *  df["pass_heavy"] * (df["wind_impact"] + df["rain_impact"])+
-        0.4 * df["run_heavy"] * df["rain_impact"]+
+        0.4 * df["run_heavy"] * (df["rain_impact"] + df["snow_impact"]) +
         0.2 * df["balanced"] * df["weather_score_raw"]
     )
     
     return df 
-
-
-
-# from pipeline.scrapers.teams_stat import fetch_teams_stat
-# from pipeline.scrapers.weather import fetch_weather
-# from pipeline.transformation.parse_weathers import parse_weathers
-# from pipeline.transformation.parse_team_stats import parse_team_stats
-# from pipeline.analytics.context.style_of_play import compute_style_of_play
-# raw_team_stat = fetch_teams_stat(all)
-# raw_parse_team_stat = parse_team_stats(raw_team_stat)
-# df_raw_parse_team_stat = pd.DataFrame(raw_parse_team_stat)
-
-# vallraw_weather = fetch_weather(all)
-# vallrawparse_weather = parse_weathers(vallraw_weather)
-# df_vallrawparses_weather = pd.DataFrame(vallrawparse_weather)
-
-
-# valdatafraf = compute_style_of_play(df_raw_parse_team_stat)
-# print(compute_weather_features(vallrawparse_weather, valdatafraf, df_raw_parse_team_stat))
 

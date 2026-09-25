@@ -22,7 +22,7 @@ def merge_games_team_stats(raw_parse_game, raw_parse_game_stats):
     df_games["away"] = df_games["away_team"]
     df_games["points_away"] = df_games["away_points"]
     df_games["conference_away"] = df_games["away_conference"]
-   
+    df_games["id_away"] = df_games["away_id"]
      # merge in home 
     df_games_int_home = df_games.merge(
         df_games_stats, 
@@ -35,6 +35,7 @@ def merge_games_team_stats(raw_parse_game, raw_parse_game_stats):
     df_games["away"] = df_games["home_team"]
     df_games["points_away"] = df_games["home_points"]
     df_games["conference_away"] = df_games["home_conference"]
+    df_games["id_away"] = df_games["home_id"]
 
     # merge in away 
     df_games_int_away = df_games.merge(
@@ -48,15 +49,15 @@ def merge_games_team_stats(raw_parse_game, raw_parse_game_stats):
     # add flag home and away 
     df_games_int_home["team_side"] = "home"
     df_games_int_away["team_side"] = "away"
-
+    
     # print(df_games_int_away.info())
     # concat all the merge in order to have the final one
     df_games_final = pd.concat([df_games_int_home, df_games_int_away])
 
-    # return df_games_final.columns
-    # return df_games_final[["game_id", "season", "week", "team", "conference", "points", "away", "conference_away","points_away",
-    #                         "home_points","home_team","home_conference", "away_id", "away_team", "away_conference", "away_points",
-    #                         "home_line_scores", "away_line_scores"]]
+    # # return df_games_final.columns
+    # return df_games_final[["game_id", "season", "week", "team", "team_id", "home_id", "conference", "points", "away", "id_away", "away_id","conference_away",
+    #                         "points_away", "home_points","home_team","home_conference", "away_team", "away_conference", "away_points",
+    #                         "home_line_scores", "away_line_scores", "team_side"]]
     # transform in json format
     
     # df_games_final.info()

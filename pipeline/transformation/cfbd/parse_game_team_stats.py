@@ -98,5 +98,5 @@ def parse_game_team_stats(raw_game_team_stat):
     return val_final_game_team_list
     
 
-val = fetch_game_team_stats()
-print(parse_game_team_stats(val))
+# val = fetch_game_team_stats()
+# print(parse_game_team_stats(val))

@@ -7,7 +7,7 @@ sys.path.append(str(project_root))
 
 from pipeline.loaders.cfbd.load_weather import load_weather
 
-def fetch_weather(season): 
+def fetch_weather(): 
     return load_weather() 
 
 

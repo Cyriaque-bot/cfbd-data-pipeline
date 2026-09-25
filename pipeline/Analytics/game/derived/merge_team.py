@@ -35,7 +35,8 @@ def merge_team(raw_games_team_stats, raw_games_advanced_stats, raw_games_havoc_s
 
     # some final calculations
     df_team["yards_per_play"] = round(df_team["yards_total"] /  df_team["off_plays"], 2)
-    # return df_team
+    # return df_team.columns
+    # return df_team[["team", "opponent", "home_id", "team_id", "opponent_id", "away_id"]]
    
     df_team = df_team.to_json(orient = "records", indent = 4)
     with open("data/raw/derived/merge_team_sample.json", "w") as json_merge_team: 

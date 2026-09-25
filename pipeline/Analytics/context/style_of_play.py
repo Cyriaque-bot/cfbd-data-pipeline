@@ -31,12 +31,12 @@ def compute_style_of_play(df_team_stats):
     # Ratios run / pass
     #Si yardsTotal == 0 (cas réel pour certaines équipes FCS ou blowouts)
 
-    df["run_ratio"] = df.apply(lambda row: row["yardsRushing"] /row["yardsTotal"] if row["yardsTotal"] > 0 else 0, 
+    df["run_ratio"] = df.apply(lambda row: row["rushing_yards"] /row["yards_total"] if row["yards_total"] > 0 else 0, 
                                axis = 1
               ) 
 
 
-    df["pass_ratio"] = df.apply(lambda row : row["passingYards"] / row["yardsTotal"] if row["yardsTotal"] > 0 else 0, 
+    df["pass_ratio"] = df.apply(lambda row : row["passing_yards"] / row["yards_total"] if row["yards_total"] > 0 else 0, 
                                 axis = 1
     ) 
 

@@ -39,10 +39,12 @@ def parse_games_team_stats(raw_parse_games_team_stats):
             "game_id" : i_fetch_merge_game_team["game_id"], 
             "season" : i_fetch_merge_game_team["season"], 
             "team": i_fetch_merge_game_team["team"], 
+            "team_id": i_fetch_merge_game_team["team_id"], 
             "team_points": i_fetch_merge_game_team["points"],
             "week" : i_fetch_merge_game_team["week"], 
 
             "opponent": i_fetch_merge_game_team["away"],
+            "opponent_id": i_fetch_merge_game_team["id_away"],
             "opponent_points":i_fetch_merge_game_team["points_away"],
             "season_type": i_fetch_merge_game_team["season_type"], 
             "start_date": i_fetch_merge_game_team["start_date"],
@@ -55,6 +57,7 @@ def parse_games_team_stats(raw_parse_games_team_stats):
             "rushing_yards": i_fetch_merge_game_team["rushing_yards"], 
             "passing_yards": i_fetch_merge_game_team["net_passing_yards"], 
             "turnovers": i_fetch_merge_game_team["turnovers"], 
+            "team_side": i_fetch_merge_game_team["team_side"],
             "third_down_pct": fnct_third_down_eff(), 
             "fourth_down_pct":fnct_fourth_down_eff()
         }
