@@ -117,7 +117,7 @@ df_rivalries =  pd.DataFrame(parse_rivalries(vallrivalries))
 vallprime_games = fetch_media()
 df_prime_games =  pd.DataFrame(parse_media(vallprime_games))
 
-vall_rankings = fetch_rankings(all)
+vall_rankings = fetch_rankings()
 df_rankings =  pd.DataFrame(parse_rankings(vall_rankings))
 
 

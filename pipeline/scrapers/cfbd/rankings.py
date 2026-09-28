@@ -1,14 +1,13 @@
+from pathlib import Path
 import sys
-import os 
 
-project_root =  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+
+project_root =  Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
 # from cfbd_client import get_rankings
 from pipeline.loaders.cfbd.load_ranking import load_rankings
 
-def fetch_rankings(year):
+def fetch_rankings():
     return load_rankings()
 
-# print(fetch_rankings(2023))

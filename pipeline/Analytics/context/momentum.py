@@ -2,44 +2,42 @@ import pandas as pd
 
 
 def compute_streaks(df): 
-    df = df.sort_values(["team", "date"]).reset_index(drop = True)
+    df = df.sort_values(["team_id", "start_date"]).reset_index(drop = True)
 
     # Win streak
     df["win_streak"] = (
-        df.groupby("team")["result"]
+        df.groupby("team_id")["result"]
           .transform(lambda x: x.eq("W").astype(int).groupby((x != "W").cumsum()).cumsum())
     )
 
     # Loss streak 
 
     df["loss_streak"] = (
-        df.groupby("team")["result"]
+        df.groupby("team_id")["result"]
           .transform(lambda x: x.eq("L").astype(int).groupby((x != "L").cumsum()).cumsum())
     )
 
     return df
 
 
-# df_test = compute_streaks(final)
-# print(df_test[["team", "date", "result", "win_streak", "loss_streak"]])
 
 def compute_recent_margin(df, window = 3): 
-    df = df.sort_values(["team", "date"]).reset_index(drop = True)
+    df = df.sort_values(["team_id", "start_date"]).reset_index(drop = True)
 
-# Marge brute 
+# gross margin 
 
     df["margin"] = df["points_for"] - df["points_against"]
 
-# Moyenne sur les N derniers matchs
+# Average over the last N matches
 
     df["recent_margin"] = (
-    df.groupby("team")["margin"]
+    df.groupby("team_id")["margin"]
       .transform(lambda x: x.rolling(window, min_periods = 1).mean())
     ) 
     return df
 
 
-# Création d'une fonction générique 
+# creating a generic function 
 
 def normalize_column(df, col): 
     col_min = df[col].min()
@@ -48,7 +46,7 @@ def normalize_column(df, col):
         return df[col] * 0
     return (df[col] - col_min) / (col_max - col_min)
 
-# Maintenant on normalise les features momentum
+# Now, we normalize the momentum features.
 
 def normalize_column_features (df): 
     df["win_streak_norm"] = normalize_column(df, "win_streak")
@@ -71,18 +69,18 @@ def compute_momentum_score(df, w_streak = 0.4, w_margin = 0.3, w_loss = 0.3):
 # compute_momentum_differential()
 
 def compute_momentum_differential(df): 
-    # notre objectif ici est de monter qu'une équipe arrive dans le match avec une meilleure dynamique que les autres.
-    # On crée un df avec team -> momentum_score 
-    opp = df[["team", "season", "week", "momentum_score"]].copy()
+    # Our goal here is to show that one team is entering the match with better momentum than the others.
+    # We create a df avec team -> momentum_score 
+    opp = df[["team_id", "season", "week", "momentum_score"]].copy()
     opp = opp.rename(columns = {
         "team": "opponent", 
         "momentum_score": "opponent_momentum_score"
     })
 
-    # On merge pour récupérer le momentum de l'adversaire
+    # we retrieved opponent
     df = df.merge(
         opp, 
-        on = ["opponent", "season", "week"], 
+        on = ["opponent_id", "season", "week"], 
         how = "left"
     )
 

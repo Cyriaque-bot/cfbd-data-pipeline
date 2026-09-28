@@ -1,5 +1,6 @@
 import sys 
 from pathlib import Path
+from datetime import datetime
 
 project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str())
@@ -10,19 +11,31 @@ from pipeline.scrapers.derived.merge_team import fetch_merge_team
 def parse_merge_team(raw_merge_team): 
     list_raw_merge_team = []
 
+    def result_map(): 
+        if i_merge_team["team_points"] > i_merge_team["opponent_points"]: 
+            return "W"
+        elif i_merge_team["team_points"] < i_merge_team["opponent_points"]:
+            return "L"
+        else: 
+            return "T"
+
     for i_merge_team in raw_merge_team: 
         dict_merge_team = {
+
             # temporal columns
             "game_id": i_merge_team["game_id"], 
             "season": i_merge_team["season"], 
             "week": i_merge_team["week"], 
             "season_type": i_merge_team["season_type"], 
             "start_date": i_merge_team["start_date"], 
+            "date":  datetime.fromisoformat(i_merge_team["start_date"].replace('Z', '+00:00')).date(), 
+
              # matchs columns
             "completed": i_merge_team["completed"], 
             "neutral_site": i_merge_team["neutral_site"], 
             "conference_game": i_merge_team["conference_game"], 
             "venue": i_merge_team["venue"],
+
             # team and opponent
             "team_id": i_merge_team["team_id"], 
             "team": i_merge_team["team"], 
@@ -34,6 +47,9 @@ def parse_merge_team(raw_merge_team):
             "opponent": i_merge_team["opponent"], 
             "opponent_conference": i_merge_team["opponent_conference"], 
             "opponent_points": i_merge_team["opponent_points"],
+
+            # result 
+            "result": result_map(), 
 
             # stats brutes
             "yards_total": i_merge_team["yards_total"], 

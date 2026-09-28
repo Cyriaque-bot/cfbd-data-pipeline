@@ -13,7 +13,6 @@ def parse_rankings(raws_ranking):
         for key_ranking , val_ranking in i_ranking.items(): 
             if key_ranking == "polls": 
                 for j_ranking in val_ranking: 
-                    # print(j_ranking)
                     for keykranking, valkeykrankin in j_ranking.items(): 
                          if keykranking == "ranks": 
                             for l_kranking in valkeykrankin: 

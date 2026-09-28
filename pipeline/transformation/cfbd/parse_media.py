@@ -9,6 +9,7 @@ sys.path.append(str(project_root))
 
 
 from pipeline.scrapers.cfbd.media import fetch_media 
+
 def parse_media(raw_media): 
     list_media = []
     prime_time_start = time(19, 0)

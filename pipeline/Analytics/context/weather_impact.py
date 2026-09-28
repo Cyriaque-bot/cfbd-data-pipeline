@@ -5,7 +5,6 @@ import sys
 
 project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
-
 def compute_weather_features(df_weather, df_style, df_team_stats): 
 
     # combine les données météo avec le style de jeu pour produire : 
@@ -63,7 +62,7 @@ def compute_weather_features(df_weather, df_style, df_team_stats):
         df["weather_score_norm"] = (df["weather_score_raw"]  - min_val) /(max_val - min_val)
 
     df["weather_score_norm"] = df["weather_score_norm"].fillna(0)
-    
+
     # sensiblity météo selon style de jeu 
     df["weather_sensitivity"] = (
         0.6 *  df["pass_heavy"] * (df["wind_impact"] + df["rain_impact"])+
