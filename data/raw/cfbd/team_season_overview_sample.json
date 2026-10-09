@@ -1,0 +1,2250 @@
+[ 
+{
+  "teamId": 333,
+  "team": "Alabama",
+  "season": 2023,
+  "conference": "SEC",
+
+  "record": {
+    "wins": 12,
+    "losses": 2,
+    "ties": 0,
+    "games": 14
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 37.5, "rank": 6 },
+      "defense": { "rating": 28.1, "rank": 5 },
+      "specialTeams": { "rating": 1.2, "rank": 22 },
+      "overall": { "rating": 65.8, "rank": 4 }
+    },
+    "srs": { "rating": 21.4, "rank": 5 },
+    "elo": 1684,
+    "core": {
+      "offense": { "rating": 36.1, "rank": 7 },
+      "defense": { "rating": 27.9, "rank": 6 },
+      "overall": { "rating": 64.0, "rank": 5 }
+    },
+    "fpi": {
+      "offense": { "rating": 3.1, "rank": 11 },
+      "defense": { "rating": 2.8, "rank": 7 },
+      "specialTeams": { "rating": 0.3, "rank": 40 },
+      "overall": { "rating": 5.9, "rank": 6 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Alabama",
+    "conference": "SEC",
+
+    "offense": {
+      "ppa": 0.73,
+      "totalPPA": 168.4,
+      "successRate": 0.46,
+      "explosiveness": 1.12,
+      "drives": 165,
+      "plays": 920,
+
+      "passingPlays": {
+        "explosiveness": 1.35,
+        "successRate": 0.48,
+        "totalPPA": 98.2,
+        "ppa": 0.28,
+        "rate": 0.52
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.95,
+        "successRate": 0.44,
+        "totalPPA": 70.2,
+        "ppa": 0.18,
+        "rate": 0.48
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.42,
+        "successRate": 0.40,
+        "ppa": 0.26,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.90,
+        "successRate": 0.52,
+        "ppa": 0.20,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.08,
+        "frontSeven": 0.12,
+        "total": 0.20
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.92,
+        "averageStart": 31.4
+      },
+
+      "pointsPerOpportunity": 4.2,
+      "totalOpportunies": 41,
+
+      "openFieldYardsTotal": 280,
+      "openFieldYards": 1.8,
+
+      "secondLevelYardsTotal": 260,
+      "secondLevelYards": 1.6,
+
+      "lineYardsTotal": 520,
+      "lineYards": 2.9,
+
+      "stuffRate": 0.17,
+      "powerSuccess": 0.78
+    },
+
+    "defense": {
+      "ppa": -0.6,
+      "totalPPA": -98.1,
+      "successRate": 0.38,
+      "explosiveness": 0.89,
+      "drives": 158,
+      "plays": 880,
+
+      "passingPlays": {
+        "explosiveness": 0.92,
+        "successRate": 0.36,
+        "totalPPA": -62.4,
+        "ppa": -0.15,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.85,
+        "successRate": 0.40,
+        "totalPPA": -35.7,
+        "ppa": -0.09,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.30,
+        "ppa": -0.18,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.80,
+        "successRate": 0.40,
+        "ppa": -0.11,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.10,
+        "frontSeven": 0.14,
+        "total": 0.24
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.52,
+        "averageStart": 28.7
+      },
+
+      "pointsPerOpportunity": 3.1,
+      "totalOpportunies": 39,
+
+      "openFieldYardsTotal": 210,
+      "openFieldYards": 1.3,
+
+      "secondLevelYardsTotal": 190,
+      "secondLevelYards": 1.2,
+
+      "lineYardsTotal": 450,
+      "lineYards": 2.6,
+
+      "stuffRate": 0.21,
+      "powerSuccess": 0.72
+    }
+  },
+
+  "statRankings": {
+    "teamId": 333,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 8, "percentile": 0.94 },
+      "successRate": { "rank": 10, "percentile": 0.92 },
+      "explosiveness": { "rank": 12, "percentile": 0.90 },
+      "standardDowns.successRate": { "rank": 7, "percentile": 0.95 },
+      "passingDowns.successRate": { "rank": 14, "percentile": 0.89 },
+      "passingPlays.ppa": { "rank": 9, "percentile": 0.93 },
+      "rushingPlays.ppa": { "rank": 15, "percentile": 0.88 },
+      "lineYards": { "rank": 18, "percentile": 0.86 },
+      "secondLevelYards": { "rank": 20, "percentile": 0.85 },
+      "openFieldYards": { "rank": 22, "percentile": 0.84 },
+      "stuffRate": { "rank": 30, "percentile": 0.78 },
+      "powerSuccess": { "rank": 9, "percentile": 0.93 },
+      "havoc.total": { "rank": 40, "percentile": 0.70 },
+      "pointsPerOpportunity": { "rank": 11, "percentile": 0.91 },
+      "fieldPosition.averageStart": { "rank": 15, "percentile": 0.88 },
+      "fieldPosition.averagePredictedPoints": { "rank": 13, "percentile": 0.90 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 5, "percentile": 0.97 },
+      "successRate": { "rank": 6, "percentile": 0.96 },
+      "explosiveness": { "rank": 8, "percentile": 0.94 },
+      "standardDowns.successRate": { "rank": 9, "percentile": 0.93 },
+      "passingDowns.successRate": { "rank": 10, "percentile": 0.92 },
+      "passingPlays.ppa": { "rank": 6, "percentile": 0.96 },
+      "rushingPlays.ppa": { "rank": 10, "percentile": 0.92 },
+      "lineYards": { "rank": 12, "percentile": 0.91 },
+      "secondLevelYards": { "rank": 14, "percentile": 0.89 },
+      "openFieldYards": { "rank": 16, "percentile": 0.88 },
+      "stuffRate": { "rank": 20, "percentile": 0.85 },
+      "powerSuccess": { "rank": 18, "percentile": 0.86 },
+      "havoc.total": { "rank": 9, "percentile": 0.93 },
+      "pointsPerOpportunity": { "rank": 10, "percentile": 0.92 },
+      "fieldPosition.averageStart": { "rank": 22, "percentile": 0.84 },
+      "fieldPosition.averagePredictedPoints": { "rank": 19, "percentile": 0.87 }
+    }
+  }
+},
+
+{
+  "teamId": 61,
+  "team": "Georgia",
+  "season": 2023,
+  "conference": "SEC",
+
+  "record": {
+    "wins": 13,
+    "losses": 1,
+    "ties": 0,
+    "games": 14
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 39.1, "rank": 5 },
+      "defense": { "rating": 27.4, "rank": 6 },
+      "specialTeams": { "rating": 1.0, "rank": 30 },
+      "overall": { "rating": 66.5, "rank": 3 }
+    },
+    "srs": { "rating": 22.1, "rank": 4 },
+    "elo": 1712,
+    "core": {
+      "offense": { "rating": 37.8, "rank": 6 },
+      "defense": { "rating": 27.9, "rank": 5 },
+      "overall": { "rating": 65.7, "rank": 4 }
+    },
+    "fpi": {
+      "offense": { "rating": 3.4, "rank": 8 },
+      "defense": { "rating": 2.9, "rank": 6 },
+      "specialTeams": { "rating": 0.2, "rank": 50 },
+      "overall": { "rating": 6.3, "rank": 4 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Georgia",
+    "conference": "SEC",
+
+    "offense": {
+      "ppa": 0.25,
+      "totalPPA": 175.2,
+      "successRate": 0.48,
+      "explosiveness": 1.10,
+      "drives": 170,
+      "plays": 940,
+
+      "passingPlays": {
+        "explosiveness": 1.32,
+        "successRate": 0.50,
+        "totalPPA": 102.4,
+        "ppa": 0.30,
+        "rate": 0.53
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.92,
+        "successRate": 0.45,
+        "totalPPA": 72.8,
+        "ppa": 0.19,
+        "rate": 0.47
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.40,
+        "successRate": 0.44,
+        "ppa": 0.28,
+        "rate": 0.32
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.52,
+        "ppa": 0.22,
+        "rate": 0.68
+      },
+
+      "havoc": {
+        "db": 0.07,
+        "frontSeven": 0.11,
+        "total": 0.18
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 2.05,
+        "averageStart": 32.1
+      },
+
+      "pointsPerOpportunity": 4.2,
+      "totalOpportunies": 41,
+
+      "openFieldYardsTotal": 310,
+      "openFieldYards": 1.9,
+
+      "secondLevelYardsTotal": 280,
+      "secondLevelYards": 1.7,
+
+      "lineYardsTotal": 520,
+      "lineYards": 2.9,
+
+      "stuffRate": 0.17,
+      "powerSuccess": 0.78,
+
+      "drives": 170,
+      "plays": 940
+    },
+
+    "defense": {
+      "ppa": -0.14,
+      "totalPPA": -102.8,
+      "successRate": 0.36,
+      "explosiveness": 0.87,
+      "drives": 160,
+      "plays": 870,
+
+      "passingPlays": {
+        "explosiveness": 0.90,
+        "successRate": 0.34,
+        "totalPPA": -58.1,
+        "ppa": -0.15,
+        "rate": 0.49
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.82,
+        "successRate": 0.38,
+        "totalPPA": -44.7,
+        "ppa": -0.12,
+        "rate": 0.51
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.30,
+        "ppa": -0.18,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.80,
+        "successRate": 0.40,
+        "ppa": -0.11,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.11,
+        "frontSeven": 0.15,
+        "total": 0.26
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.48,
+        "averageStart": 28.4
+      },
+
+      "pointsPerOpportunity": 3.1,
+      "totalOpportunies": 39,
+
+      "openFieldYardsTotal": 210,
+      "openFieldYards": 1.3,
+
+      "secondLevelYardsTotal": 190,
+      "secondLevelYards": 1.2,
+
+      "lineYardsTotal": 450,
+      "lineYards": 2.6,
+
+      "stuffRate": 0.21,
+      "powerSuccess": 0.72,
+
+      "drives": 160,
+      "plays": 870
+    }
+  },
+
+  "statRankings": {
+    "teamId": 61,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 7, "population": 133, "tied": false, "percentile": 0.95 },
+      "successRate": { "rank": 6, "percentile": 0.96 },
+      "explosiveness": { "rank": 10, "percentile": 0.92 },
+      "standardDowns.successRate": { "rank": 5, "percentile": 0.97 },
+      "passingDowns.successRate": { "rank": 12, "percentile": 0.90 },
+      "passingPlays.ppa": { "rank": 8, "percentile": 0.94 },
+      "rushingPlays.ppa": { "rank": 14, "percentile": 0.89 },
+      "lineYards": { "rank": 18, "percentile": 0.86 },
+      "secondLevelYards": { "rank": 20, "percentile": 0.85 },
+      "openFieldYards": { "rank": 22, "percentile": 0.84 },
+      "stuffRate": { "rank": 30, "percentile": 0.78 },
+      "powerSuccess": { "rank": 9, "percentile": 0.93 },
+      "havoc.total": { "rank": 40, "percentile": 0.70 },
+      "pointsPerOpportunity": { "rank": 11, "percentile": 0.91 },
+      "fieldPosition.averageStart": { "rank": 15, "percentile": 0.88 },
+      "fieldPosition.averagePredictedPoints": { "rank": 13, "percentile": 0.90 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 5, "percentile": 0.97 },
+      "successRate": { "rank": 4, "percentile": 0.98 },
+      "explosiveness": { "rank": 6, "percentile": 0.96 },
+      "standardDowns.successRate": { "rank": 7, "percentile": 0.95 },
+      "passingDowns.successRate": { "rank": 8, "percentile": 0.94 },
+      "passingPlays.ppa": { "rank": 6, "percentile": 0.96 },
+      "rushingPlays.ppa": { "rank": 10, "percentile": 0.92 },
+      "lineYards": { "rank": 12, "percentile": 0.91 },
+      "secondLevelYards": { "rank": 14, "percentile": 0.89 },
+      "openFieldYards": { "rank": 16, "percentile": 0.88 },
+      "stuffRate": { "rank": 20, "percentile": 0.85 },
+      "powerSuccess": { "rank": 18, "percentile": 0.86 },
+      "havoc.total": { "rank": 9, "percentile": 0.93 },
+      "pointsPerOpportunity": { "rank": 10, "percentile": 0.92 },
+      "fieldPosition.averageStart": { "rank": 22, "percentile": 0.84 },
+      "fieldPosition.averagePredictedPoints": { "rank": 19, "percentile": 0.87 }
+    }
+  }
+}, 
+{
+  "teamId": 130,
+  "team": "Michigan",
+  "season": 2023,
+  "conference": "B1G",
+
+  "record": {
+    "wins": 15,
+    "losses": 0,
+    "ties": 0,
+    "games": 15
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 36.0, "rank": 7 },
+      "defense": { "rating": 29.8, "rank": 1 },
+      "specialTeams": { "rating": 1.3, "rank": 18 },
+      "overall": { "rating": 67.2, "rank": 1 }
+    },
+    "srs": { "rating": 23.4, "rank": 1 },
+    "elo": 1765,
+    "core": {
+      "offense": { "rating": 35.1, "rank": 8 },
+      "defense": { "rating": 29.7, "rank": 1 },
+      "overall": { "rating": 66.0, "rank": 1 }
+    },
+    "fpi": {
+      "offense": { "rating": 3.0, "rank": 12 },
+      "defense": { "rating": 3.4, "rank": 1 },
+      "specialTeams": { "rating": 0.4, "rank": 35 },
+      "overall": { "rating": 6.8, "rank": 2 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Michigan",
+    "conference": "B1G",
+
+    "offense": {
+      "ppa": 0.22,
+      "totalPPA": 162.5,
+      "successRate": 0.47,
+      "explosiveness": 1.05,
+      "drives": 168,
+      "plays": 900,
+
+      "passingPlays": {
+        "explosiveness": 1.20,
+        "successRate": 0.49,
+        "totalPPA": 92.1,
+        "ppa": 0.27,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.88,
+        "successRate": 0.45,
+        "totalPPA": 70.4,
+        "ppa": 0.18,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.32,
+        "successRate": 0.42,
+        "ppa": 0.25,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.90,
+        "successRate": 0.51,
+        "ppa": 0.20,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.06,
+        "frontSeven": 0.10,
+        "total": 0.16
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.98,
+        "averageStart": 31.8
+      },
+
+      "pointsPerOpportunity": 4.0,
+      "totalOpportunies": 39,
+
+      "openFieldYardsTotal": 295,
+      "openFieldYards": 1.8,
+
+      "secondLevelYardsTotal": 260,
+      "secondLevelYards": 1.6,
+
+      "lineYardsTotal": 510,
+      "lineYards": 2.8,
+
+      "stuffRate": 0.18,
+      "powerSuccess": 0.76,
+
+      "drives": 168,
+      "plays": 900
+    },
+
+    "defense": {
+      "ppa": -0.17,
+      "totalPPA": -118.4,
+      "successRate": 0.34,
+      "explosiveness": 0.82,
+      "drives": 150,
+      "plays": 820,
+
+      "passingPlays": {
+        "explosiveness": 0.85,
+        "successRate": 0.32,
+        "totalPPA": -65.2,
+        "ppa": -0.18,
+        "rate": 0.47
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.78,
+        "successRate": 0.36,
+        "totalPPA": -53.2,
+        "ppa": -0.16,
+        "rate": 0.53
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.90,
+        "successRate": 0.28,
+        "ppa": -0.20,
+        "rate": 0.29
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.75,
+        "successRate": 0.38,
+        "ppa": -0.14,
+        "rate": 0.71
+      },
+
+      "havoc": {
+        "db": 0.12,
+        "frontSeven": 0.16,
+        "total": 0.28
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.40,
+        "averageStart": 27.9
+      },
+
+      "pointsPerOpportunity": 2.9,
+      "totalOpportunies": 36,
+
+      "openFieldYardsTotal": 180,
+      "openFieldYards": 1.1,
+
+      "secondLevelYardsTotal": 160,
+      "secondLevelYards": 1.0,
+
+      "lineYardsTotal": 430,
+      "lineYards": 2.5,
+
+      "stuffRate": 0.23,
+      "powerSuccess": 0.70,
+
+      "drives": 150,
+      "plays": 820
+    }
+  },
+
+  "statRankings": {
+    "teamId": 130,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 12, "percentile": 0.91 },
+      "successRate": { "rank": 10, "percentile": 0.92 },
+      "explosiveness": { "rank": 15, "percentile": 0.88 },
+      "standardDowns.successRate": { "rank": 11, "percentile": 0.91 },
+      "passingDowns.successRate": { "rank": 18, "percentile": 0.86 },
+      "passingPlays.ppa": { "rank": 14, "percentile": 0.89 },
+      "rushingPlays.ppa": { "rank": 20, "percentile": 0.85 },
+      "lineYards": { "rank": 22, "percentile": 0.84 },
+      "secondLevelYards": { "rank": 25, "percentile": 0.82 },
+      "openFieldYards": { "rank": 28, "percentile": 0.79 },
+      "stuffRate": { "rank": 35, "percentile": 0.74 },
+      "powerSuccess": { "rank": 14, "percentile": 0.89 },
+      "havoc.total": { "rank": 45, "percentile": 0.66 },
+      "pointsPerOpportunity": { "rank": 16, "percentile": 0.88 },
+      "fieldPosition.averageStart": { "rank": 20, "percentile": 0.85 },
+      "fieldPosition.averagePredictedPoints": { "rank": 18, "percentile": 0.86 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 1, "percentile": 1.00 },
+      "successRate": { "rank": 1, "percentile": 1.00 },
+      "explosiveness": { "rank": 2, "percentile": 0.99 },
+      "standardDowns.successRate": { "rank": 3, "percentile": 0.98 },
+      "passingDowns.successRate": { "rank": 4, "percentile": 0.97 },
+      "passingPlays.ppa": { "rank": 2, "percentile": 0.99 },
+      "rushingPlays.ppa": { "rank": 3, "percentile": 0.98 },
+      "lineYards": { "rank": 5, "percentile": 0.96 },
+      "secondLevelYards": { "rank": 7, "percentile": 0.95 },
+      "openFieldYards": { "rank": 9, "percentile": 0.93 },
+      "stuffRate": { "rank": 12, "percentile": 0.91 },
+      "powerSuccess": { "rank": 10, "percentile": 0.92 },
+      "havoc.total": { "rank": 3, "percentile": 0.98 },
+      "pointsPerOpportunity": { "rank": 5, "percentile": 0.96 },
+      "fieldPosition.averageStart": { "rank": 18, "percentile": 0.86 },
+      "fieldPosition.averagePredictedPoints": { "rank": 12, "percentile": 0.91 }
+    }
+  }
+},
+{
+  "teamId": 194,
+  "team": "Ohio State",
+  "season": 2023,
+  "conference": "B1G",
+
+  "record": {
+    "wins": 11,
+    "losses": 2,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 35.2, "rank": 10 },
+      "defense": { "rating": 28.9, "rank": 3 },
+      "specialTeams": { "rating": 0.9, "rank": 38 },
+      "overall": { "rating": 64.1, "rank": 6 }
+    },
+    "srs": { "rating": 20.8, "rank": 7 },
+    "elo": 1658,
+    "core": {
+      "offense": { "rating": 34.0, "rank": 11 },
+      "defense": { "rating": 28.7, "rank": 4 },
+      "overall": { "rating": 62.7, "rank": 7 }
+    },
+    "fpi": {
+      "offense": { "rating": 2.8, "rank": 15 },
+      "defense": { "rating": 3.1, "rank": 3 },
+      "specialTeams": { "rating": 0.3, "rank": 42 },
+      "overall": { "rating": 5.7, "rank": 7 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Ohio State",
+    "conference": "B1G",
+
+    "offense": {
+      "ppa": 0.21,
+      "totalPPA": 148.3,
+      "successRate": 0.45,
+      "explosiveness": 1.15,
+      "drives": 160,
+      "plays": 880,
+
+      "passingPlays": {
+        "explosiveness": 1.38,
+        "successRate": 0.47,
+        "totalPPA": 88.4,
+        "ppa": 0.26,
+        "rate": 0.50
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.90,
+        "successRate": 0.43,
+        "totalPPA": 59.9,
+        "ppa": 0.17,
+        "rate": 0.50
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.45,
+        "successRate": 0.40,
+        "ppa": 0.24,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.92,
+        "successRate": 0.49,
+        "ppa": 0.19,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.08,
+        "frontSeven": 0.12,
+        "total": 0.20
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.90,
+        "averageStart": 31.2
+      },
+
+      "pointsPerOpportunity": 3.9,
+      "totalOpportunies": 37,
+
+      "openFieldYardsTotal": 280,
+      "openFieldYards": 1.7,
+
+      "secondLevelYardsTotal": 240,
+      "secondLevelYards": 1.5,
+
+      "lineYardsTotal": 480,
+      "lineYards": 2.7,
+
+      "stuffRate": 0.19,
+      "powerSuccess": 0.75,
+
+      "drives": 160,
+      "plays": 880
+    },
+
+    "defense": {
+      "ppa": -0.15,
+      "totalPPA": -110.2,
+      "successRate": 0.35,
+      "explosiveness": 0.80,
+      "drives": 155,
+      "plays": 830,
+
+      "passingPlays": {
+        "explosiveness": 0.83,
+        "successRate": 0.33,
+        "totalPPA": -60.1,
+        "ppa": -0.17,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.76,
+        "successRate": 0.37,
+        "totalPPA": -50.1,
+        "ppa": -0.14,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.88,
+        "successRate": 0.29,
+        "ppa": -0.19,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.74,
+        "successRate": 0.39,
+        "ppa": -0.13,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.11,
+        "frontSeven": 0.15,
+        "total": 0.26
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.38,
+        "averageStart": 27.5
+      },
+
+      "pointsPerOpportunity": 3.0,
+      "totalOpportunies": 34,
+
+      "openFieldYardsTotal": 170,
+      "openFieldYards": 1.1,
+
+      "secondLevelYardsTotal": 150,
+      "secondLevelYards": 0.9,
+
+      "lineYardsTotal": 420,
+      "lineYards": 2.5,
+
+      "stuffRate": 0.24,
+      "powerSuccess": 0.69,
+
+      "drives": 155,
+      "plays": 830
+    }
+  },
+
+  "statRankings": {
+    "teamId": 194,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 18, "percentile": 0.86 },
+      "successRate": { "rank": 16, "percentile": 0.88 },
+      "explosiveness": { "rank": 12, "percentile": 0.90 },
+      "standardDowns.successRate": { "rank": 14, "percentile": 0.89 },
+      "passingDowns.successRate": { "rank": 20, "percentile": 0.84 },
+      "passingPlays.ppa": { "rank": 15, "percentile": 0.88 },
+      "rushingPlays.ppa": { "rank": 22, "percentile": 0.83 },
+      "lineYards": { "rank": 24, "percentile": 0.83 },
+      "secondLevelYards": { "rank": 27, "percentile": 0.81 },
+      "openFieldYards": { "rank": 30, "percentile": 0.78 },
+      "stuffRate": { "rank": 38, "percentile": 0.72 },
+      "powerSuccess": { "rank": 18, "percentile": 0.86 },
+      "havoc.total": { "rank": 48, "percentile": 0.64 },
+      "pointsPerOpportunity": { "rank": 20, "percentile": 0.84 },
+      "fieldPosition.averageStart": { "rank": 22, "percentile": 0.84 },
+      "fieldPosition.averagePredictedPoints": { "rank": 20, "percentile": 0.85 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 3, "percentile": 0.98 },
+      "successRate": { "rank": 3, "percentile": 0.98 },
+      "explosiveness": { "rank": 4, "percentile": 0.97 },
+      "standardDowns.successRate": { "rank": 5, "percentile": 0.96 },
+      "passingDowns.successRate": { "rank": 6, "percentile": 0.95 },
+      "passingPlays.ppa": { "rank": 4, "percentile": 0.97 },
+      "rushingPlays.ppa": { "rank": 6, "percentile": 0.95 },
+      "lineYards": { "rank": 8, "percentile": 0.94 },
+      "secondLevelYards": { "rank": 10, "percentile": 0.92 },
+      "openFieldYards": { "rank": 12, "percentile": 0.91 },
+      "stuffRate": { "rank": 15, "percentile": 0.89 },
+      "powerSuccess": { "rank": 14, "percentile": 0.89 },
+      "havoc.total": { "rank": 6, "percentile": 0.95 },
+      "pointsPerOpportunity": { "rank": 8, "percentile": 0.94 },
+      "fieldPosition.averageStart": { "rank": 20, "percentile": 0.85 },
+      "fieldPosition.averagePredictedPoints": { "rank": 15, "percentile": 0.88 }
+    }
+  }
+},
+{
+  "teamId": 30,
+  "team": "USC",
+  "season": 2023,
+  "conference": "Pac-12",
+
+  "record": {
+    "wins": 8,
+    "losses": 5,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 41.0, "rank": 3 },
+      "defense": { "rating": 20.1, "rank": 70 },
+      "specialTeams": { "rating": 0.6, "rank": 55 },
+      "overall": { "rating": 61.1, "rank": 15 }
+    },
+    "srs": { "rating": 14.8, "rank": 22 },
+    "elo": 1540,
+    "core": {
+      "offense": { "rating": 39.8, "rank": 4 },
+      "defense": { "rating": 19.9, "rank": 68 },
+      "overall": { "rating": 59.7, "rank": 18 }
+    },
+    "fpi": {
+      "offense": { "rating": 4.1, "rank": 5 },
+      "defense": { "rating": -0.4, "rank": 80 },
+      "specialTeams": { "rating": 0.2, "rank": 60 },
+      "overall": { "rating": 3.2, "rank": 28 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "USC",
+    "conference": "Pac-12",
+
+    "offense": {
+      "ppa": 0.27,
+      "totalPPA": 182.4,
+      "successRate": 0.49,
+      "explosiveness": 1.30,
+      "drives": 175,
+      "plays": 950,
+
+      "passingPlays": {
+        "explosiveness": 1.55,
+        "successRate": 0.51,
+        "totalPPA": 112.8,
+        "ppa": 0.33,
+        "rate": 0.54
+      },
+
+      "rushingPlays": {
+        "explosiveness": 1.05,
+        "successRate": 0.46,
+        "totalPPA": 69.6,
+        "ppa": 0.20,
+        "rate": 0.46
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.70,
+        "successRate": 0.43,
+        "ppa": 0.30,
+        "rate": 0.33
+      },
+
+      "standardDowns": {
+        "explosiveness": 1.10,
+        "successRate": 0.53,
+        "ppa": 0.24,
+        "rate": 0.67
+      },
+
+      "havoc": {
+        "db": 0.05,
+        "frontSeven": 0.09,
+        "total": 0.14
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 2.15,
+        "averageStart": 33.0
+      },
+
+      "pointsPerOpportunity": 4.6,
+      "totalOpportunies": 45,
+
+      "openFieldYardsTotal": 340,
+      "openFieldYards": 2.0,
+
+      "secondLevelYardsTotal": 300,
+      "secondLevelYards": 1.8,
+
+      "lineYardsTotal": 540,
+      "lineYards": 3.0,
+
+      "stuffRate": 0.15,
+      "powerSuccess": 0.80,
+
+      "drives": 175,
+      "plays": 950
+    },
+
+    "defense": {
+      "ppa": 0.05,
+      "totalPPA": 32.1,
+      "successRate": 0.42,
+      "explosiveness": 1.20,
+      "drives": 180,
+      "plays": 960,
+
+      "passingPlays": {
+        "explosiveness": 1.30,
+        "successRate": 0.40,
+        "totalPPA": 18.4,
+        "ppa": 0.06,
+        "rate": 0.52
+      },
+
+      "rushingPlays": {
+        "explosiveness": 1.10,
+        "successRate": 0.44,
+        "totalPPA": 13.7,
+        "ppa": 0.04,
+        "rate": 0.48
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.40,
+        "successRate": 0.35,
+        "ppa": 0.07,
+        "rate": 0.32
+      },
+
+      "standardDowns": {
+        "explosiveness": 1.05,
+        "successRate": 0.45,
+        "ppa": 0.04,
+        "rate": 0.68
+      },
+
+      "havoc": {
+        "db": 0.07,
+        "frontSeven": 0.10,
+        "total": 0.17
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 2.05,
+        "averageStart": 32.8
+      },
+
+      "pointsPerOpportunity": 4.8,
+      "totalOpportunies": 48,
+
+      "openFieldYardsTotal": 380,
+      "openFieldYards": 2.3,
+
+      "secondLevelYardsTotal": 330,
+      "secondLevelYards": 2.0,
+
+      "lineYardsTotal": 600,
+      "lineYards": 3.3,
+
+      "stuffRate": 0.12,
+      "powerSuccess": 0.83,
+
+      "drives": 180,
+      "plays": 960
+    }
+  },
+
+  "statRankings": {
+    "teamId": 30,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 4, "percentile": 0.97 },
+      "successRate": { "rank": 6, "percentile": 0.96 },
+      "explosiveness": { "rank": 2, "percentile": 0.99 },
+      "standardDowns.successRate": { "rank": 7, "percentile": 0.95 },
+      "passingDowns.successRate": { "rank": 10, "percentile": 0.92 },
+      "passingPlays.ppa": { "rank": 3, "percentile": 0.98 },
+      "rushingPlays.ppa": { "rank": 12, "percentile": 0.90 },
+      "lineYards": { "rank": 15, "percentile": 0.89 },
+      "secondLevelYards": { "rank": 10, "percentile": 0.92 },
+      "openFieldYards": { "rank": 8, "percentile": 0.94 },
+      "stuffRate": { "rank": 20, "percentile": 0.85 },
+      "powerSuccess": { "rank": 5, "percentile": 0.96 },
+      "havoc.total": { "rank": 60, "percentile": 0.55 },
+      "pointsPerOpportunity": { "rank": 3, "percentile": 0.98 },
+      "fieldPosition.averageStart": { "rank": 12, "percentile": 0.91 },
+      "fieldPosition.averagePredictedPoints": { "rank": 9, "percentile": 0.93 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 110, "percentile": 0.17 },
+      "successRate": { "rank": 105, "percentile": 0.21 },
+      "explosiveness": { "rank": 115, "percentile": 0.14 },
+      "standardDowns.successRate": { "rank": 100, "percentile": 0.25 },
+      "passingDowns.successRate": { "rank": 95, "percentile": 0.29 },
+      "passingPlays.ppa": { "rank": 108, "percentile": 0.19 },
+      "rushingPlays.ppa": { "rank": 102, "percentile": 0.23 },
+      "lineYards": { "rank": 98, "percentile": 0.26 },
+      "secondLevelYards": { "rank": 120, "percentile": 0.10 },
+      "openFieldYards": { "rank": 125, "percentile": 0.06 },
+      "stuffRate": { "rank": 90, "percentile": 0.32 },
+      "powerSuccess": { "rank": 85, "percentile": 0.36 },
+      "havoc.total": { "rank": 70, "percentile": 0.47 },
+      "pointsPerOpportunity": { "rank": 115, "percentile": 0.14 },
+      "fieldPosition.averageStart": { "rank": 110, "percentile": 0.17 },
+      "fieldPosition.averagePredictedPoints": { "rank": 112, "percentile": 0.16 }
+    }
+  }
+}, 
+{
+  "teamId": 251,
+  "team": "Texas",
+  "season": 2023,
+  "conference": "Big 12",
+
+  "record": {
+    "wins": 12,
+    "losses": 2,
+    "ties": 0,
+    "games": 14
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 38.0, "rank": 4 },
+      "defense": { "rating": 27.0, "rank": 8 },
+      "specialTeams": { "rating": 0.8, "rank": 45 },
+      "overall": { "rating": 65.0, "rank": 5 }
+    },
+    "srs": { "rating": 20.5, "rank": 8 },
+    "elo": 1670,
+    "core": {
+      "offense": { "rating": 36.8, "rank": 6 },
+      "defense": { "rating": 26.8, "rank": 9 },
+      "overall": { "rating": 63.6, "rank": 6 }
+    },
+    "fpi": {
+      "offense": { "rating": 3.2, "rank": 10 },
+      "defense": { "rating": 2.8, "rank": 8 },
+      "specialTeams": { "rating": 0.3, "rank": 40 },
+      "overall": { "rating": 6.0, "rank": 5 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Texas",
+    "conference": "Big 12",
+
+    "offense": {
+      "ppa": 0.24,
+      "totalPPA": 160.2,
+      "successRate": 0.46,
+      "explosiveness": 1.18,
+      "drives": 162,
+      "plays": 910,
+
+      "passingPlays": {
+        "explosiveness": 1.40,
+        "successRate": 0.48,
+        "totalPPA": 95.1,
+        "ppa": 0.29,
+        "rate": 0.51
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.95,
+        "successRate": 0.44,
+        "totalPPA": 65.1,
+        "ppa": 0.18,
+        "rate": 0.49
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.55,
+        "successRate": 0.41,
+        "ppa": 0.26,
+        "rate": 0.32
+      },
+
+      "standardDowns": {
+        "explosiveness": 1.00,
+        "successRate": 0.50,
+        "ppa": 0.21,
+        "rate": 0.68
+      },
+
+      "havoc": {
+        "db": 0.07,
+        "frontSeven": 0.11,
+        "total": 0.18
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 2.00,
+        "averageStart": 31.5
+      },
+
+      "pointsPerOpportunity": 4.1,
+      "totalOpportunies": 40,
+
+      "openFieldYardsTotal": 300,
+      "openFieldYards": 1.8,
+
+      "secondLevelYardsTotal": 260,
+      "secondLevelYards": 1.6,
+
+      "lineYardsTotal": 500,
+      "lineYards": 2.8,
+
+      "stuffRate": 0.17,
+      "powerSuccess": 0.77,
+
+      "drives": 162,
+      "plays": 910
+    },
+
+    "defense": {
+      "ppa": -0.13,
+      "totalPPA": -102.4,
+      "successRate": 0.37,
+      "explosiveness": 0.88,
+      "drives": 158,
+      "plays": 870,
+
+      "passingPlays": {
+        "explosiveness": 0.92,
+        "successRate": 0.35,
+        "totalPPA": -58.0,
+        "ppa": -0.16,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.82,
+        "successRate": 0.39,
+        "totalPPA": -44.4,
+        "ppa": -0.12,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.30,
+        "ppa": -0.18,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.80,
+        "successRate": 0.41,
+        "ppa": -0.11,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.10,
+        "frontSeven": 0.14,
+        "total": 0.24
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.50,
+        "averageStart": 28.6
+      },
+
+      "pointsPerOpportunity": 3.2,
+      "totalOpportunies": 38,
+
+      "openFieldYardsTotal": 200,
+      "openFieldYards": 1.3,
+
+      "secondLevelYardsTotal": 180,
+      "secondLevelYards": 1.1,
+
+      "lineYardsTotal": 430,
+      "lineYards": 2.5,
+
+      "stuffRate": 0.22,
+      "powerSuccess": 0.71,
+
+      "drives": 158,
+      "plays": 870
+    }
+  },
+
+  "statRankings": {
+    "teamId": 251,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 10, "percentile": 0.93 },
+      "successRate": { "rank": 12, "percentile": 0.91 },
+      "explosiveness": { "rank": 8, "percentile": 0.94 },
+      "standardDowns.successRate": { "rank": 11, "percentile": 0.91 },
+      "passingDowns.successRate": { "rank": 15, "percentile": 0.88 },
+      "passingPlays.ppa": { "rank": 9, "percentile": 0.93 },
+      "rushingPlays.ppa": { "rank": 18, "percentile": 0.86 },
+      "lineYards": { "rank": 20, "percentile": 0.85 },
+      "secondLevelYards": { "rank": 22, "percentile": 0.84 },
+      "openFieldYards": { "rank": 25, "percentile": 0.82 },
+      "stuffRate": { "rank": 30, "percentile": 0.78 },
+      "powerSuccess": { "rank": 12, "percentile": 0.90 },
+      "havoc.total": { "rank": 50, "percentile": 0.62 },
+      "pointsPerOpportunity": { "rank": 14, "percentile": 0.89 },
+      "fieldPosition.averageStart": { "rank": 18, "percentile": 0.86 },
+      "fieldPosition.averagePredictedPoints": { "rank": 16, "percentile": 0.88 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 12, "percentile": 0.91 },
+      "successRate": { "rank": 14, "percentile": 0.89 },
+      "explosiveness": { "rank": 16, "percentile": 0.88 },
+      "standardDowns.successRate": { "rank": 18, "percentile": 0.86 },
+      "passingDowns.successRate": { "rank": 20, "percentile": 0.84 },
+      "passingPlays.ppa": { "rank": 14, "percentile": 0.89 },
+      "rushingPlays.ppa": { "rank": 18, "percentile": 0.86 },
+      "lineYards": { "rank": 20, "percentile": 0.85 },
+      "secondLevelYards": { "rank": 22, "percentile": 0.84 },
+      "openFieldYards": { "rank": 25, "percentile": 0.82 },
+      "stuffRate": { "rank": 28, "percentile": 0.79 },
+      "powerSuccess": { "rank": 26, "percentile": 0.80 },
+      "havoc.total": { "rank": 22, "percentile": 0.84 },
+      "pointsPerOpportunity": { "rank": 18, "percentile": 0.86 },
+      "fieldPosition.averageStart": { "rank": 24, "percentile": 0.82 },
+      "fieldPosition.averagePredictedPoints": { "rank": 20, "percentile": 0.85 }
+    }
+  }
+},
+{
+  "teamId": 201,
+  "team": "Oklahoma",
+  "season": 2023,
+  "conference": "Big 12",
+
+  "record": {
+    "wins": 10,
+    "losses": 3,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 37.2, "rank": 8 },
+      "defense": { "rating": 24.8, "rank": 25 },
+      "specialTeams": { "rating": 0.7, "rank": 48 },
+      "overall": { "rating": 62.0, "rank": 12 }
+    },
+    "srs": { "rating": 17.5, "rank": 15 },
+    "elo": 1605,
+    "core": {
+      "offense": { "rating": 36.0, "rank": 9 },
+      "defense": { "rating": 24.5, "rank": 27 },
+      "overall": { "rating": 60.5, "rank": 14 }
+    },
+    "fpi": {
+      "offense": { "rating": 3.5, "rank": 9 },
+      "defense": { "rating": 1.3, "rank": 25 },
+      "specialTeams": { "rating": 0.2, "rank": 58 },
+      "overall": { "rating": 4.8, "rank": 15 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Oklahoma",
+    "conference": "Big 12",
+
+    "offense": {
+      "ppa": 0.23,
+      "totalPPA": 155.8,
+      "successRate": 0.47,
+      "explosiveness": 1.22,
+      "drives": 168,
+      "plays": 930,
+
+      "passingPlays": {
+        "explosiveness": 1.45,
+        "successRate": 0.49,
+        "totalPPA": 92.7,
+        "ppa": 0.28,
+        "rate": 0.52
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.98,
+        "successRate": 0.45,
+        "totalPPA": 63.1,
+        "ppa": 0.17,
+        "rate": 0.48
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.60,
+        "successRate": 0.40,
+        "ppa": 0.25,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 1.05,
+        "successRate": 0.51,
+        "ppa": 0.20,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.06,
+        "frontSeven": 0.11,
+        "total": 0.17
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.95,
+        "averageStart": 31.0
+      },
+
+      "pointsPerOpportunity": 4.0,
+      "totalOpportunies": 38,
+
+      "openFieldYardsTotal": 310,
+      "openFieldYards": 1.9,
+
+      "secondLevelYardsTotal": 270,
+      "secondLevelYards": 1.7,
+
+      "lineYardsTotal": 490,
+      "lineYards": 2.7,
+
+      "stuffRate": 0.18,
+      "powerSuccess": 0.76,
+
+      "drives": 168,
+      "plays": 930
+    },
+
+    "defense": {
+      "ppa": -0.10,
+      "totalPPA": -78.5,
+      "successRate": 0.39,
+      "explosiveness": 0.90,
+      "drives": 165,
+      "plays": 900,
+
+      "passingPlays": {
+        "explosiveness": 0.95,
+        "successRate": 0.37,
+        "totalPPA": -45.2,
+        "ppa": -0.13,
+        "rate": 0.50
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.85,
+        "successRate": 0.41,
+        "totalPPA": -33.3,
+        "ppa": -0.09,
+        "rate": 0.50
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.00,
+        "successRate": 0.32,
+        "ppa": -0.15,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.82,
+        "successRate": 0.42,
+        "ppa": -0.10,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.09,
+        "frontSeven": 0.13,
+        "total": 0.22
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.55,
+        "averageStart": 28.8
+      },
+
+      "pointsPerOpportunity": 3.3,
+      "totalOpportunies": 36,
+
+      "openFieldYardsTotal": 210,
+      "openFieldYards": 1.3,
+
+      "secondLevelYardsTotal": 190,
+      "secondLevelYards": 1.2,
+
+      "lineYardsTotal": 440,
+      "lineYards": 2.6,
+
+      "stuffRate": 0.21,
+      "powerSuccess": 0.72,
+
+      "drives": 165,
+      "plays": 900
+    }
+  },
+
+  "statRankings": {
+    "teamId": 201,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 14, "percentile": 0.89 },
+      "successRate": { "rank": 15, "percentile": 0.88 },
+      "explosiveness": { "rank": 10, "percentile": 0.92 },
+      "standardDowns.successRate": { "rank": 13, "percentile": 0.90 },
+      "passingDowns.successRate": { "rank": 18, "percentile": 0.86 },
+      "passingPlays.ppa": { "rank": 12, "percentile": 0.90 },
+      "rushingPlays.ppa": { "rank": 20, "percentile": 0.85 },
+      "lineYards": { "rank": 22, "percentile": 0.84 },
+      "secondLevelYards": { "rank": 24, "percentile": 0.83 },
+      "openFieldYards": { "rank": 26, "percentile": 0.81 },
+      "stuffRate": { "rank": 32, "percentile": 0.76 },
+      "powerSuccess": { "rank": 16, "percentile": 0.87 },
+      "havoc.total": { "rank": 40, "percentile": 0.70 },
+      "pointsPerOpportunity": { "rank": 18, "percentile": 0.86 },
+      "fieldPosition.averageStart": { "rank": 20, "percentile": 0.85 },
+      "fieldPosition.averagePredictedPoints": { "rank": 18, "percentile": 0.86 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 28, "percentile": 0.79 },
+      "successRate": { "rank": 30, "percentile": 0.78 },
+      "explosiveness": { "rank": 32, "percentile": 0.76 },
+      "standardDowns.successRate": { "rank": 34, "percentile": 0.75 },
+      "passingDowns.successRate": { "rank": 36, "percentile": 0.73 },
+      "passingPlays.ppa": { "rank": 30, "percentile": 0.78 },
+      "rushingPlays.ppa": { "rank": 32, "percentile": 0.76 },
+      "lineYards": { "rank": 34, "percentile": 0.75 },
+      "secondLevelYards": { "rank": 36, "percentile": 0.73 },
+      "openFieldYards": { "rank": 38, "percentile": 0.72 },
+      "stuffRate": { "rank": 40, "percentile": 0.70 },
+      "powerSuccess": { "rank": 42, "percentile": 0.68 },
+      "havoc.total": { "rank": 30, "percentile": 0.78 },
+      "pointsPerOpportunity": { "rank": 32, "percentile": 0.76 },
+      "fieldPosition.averageStart": { "rank": 34, "percentile": 0.75 },
+      "fieldPosition.averagePredictedPoints": { "rank": 30, "percentile": 0.78 }
+    }
+  }
+},
+{
+  "teamId": 228,
+  "team": "Clemson",
+  "season": 2023,
+  "conference": "ACC",
+
+  "record": {
+    "wins": 9,
+    "losses": 4,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 32.0, "rank": 28 },
+      "defense": { "rating": 26.5, "rank": 12 },
+      "specialTeams": { "rating": 0.7, "rank": 48 },
+      "overall": { "rating": 58.5, "rank": 20 }
+    },
+    "srs": { "rating": 14.2, "rank": 25 },
+    "elo": 1580,
+    "core": {
+      "offense": { "rating": 30.8, "rank": 30 },
+      "defense": { "rating": 26.3, "rank": 14 },
+      "overall": { "rating": 57.1, "rank": 22 }
+    },
+    "fpi": {
+      "offense": { "rating": 1.8, "rank": 40 },
+      "defense": { "rating": 2.3, "rank": 15 },
+      "specialTeams": { "rating": 0.2, "rank": 60 },
+      "overall": { "rating": 4.1, "rank": 22 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Clemson",
+    "conference": "ACC",
+
+    "offense": {
+      "ppa": 0.19,
+      "totalPPA": 130.4,
+      "successRate": 0.44,
+      "explosiveness": 1.05,
+      "drives": 160,
+      "plays": 880,
+
+      "passingPlays": {
+        "explosiveness": 1.25,
+        "successRate": 0.46,
+        "totalPPA": 72.1,
+        "ppa": 0.22,
+        "rate": 0.50
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.90,
+        "successRate": 0.42,
+        "totalPPA": 58.3,
+        "ppa": 0.16,
+        "rate": 0.50
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.40,
+        "successRate": 0.38,
+        "ppa": 0.20,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.92,
+        "successRate": 0.48,
+        "ppa": 0.17,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.07,
+        "frontSeven": 0.12,
+        "total": 0.19
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.85,
+        "averageStart": 30.8
+      },
+
+      "pointsPerOpportunity": 3.7,
+      "totalOpportunies": 36,
+
+      "openFieldYardsTotal": 260,
+      "openFieldYards": 1.6,
+
+      "secondLevelYardsTotal": 230,
+      "secondLevelYards": 1.4,
+
+      "lineYardsTotal": 460,
+      "lineYards": 2.6,
+
+      "stuffRate": 0.20,
+      "powerSuccess": 0.74,
+
+      "drives": 160,
+      "plays": 880
+    },
+
+    "defense": {
+      "ppa": -0.11,
+      "totalPPA": -85.2,
+      "successRate": 0.37,
+      "explosiveness": 0.85,
+      "drives": 155,
+      "plays": 860,
+
+      "passingPlays": {
+        "explosiveness": 0.90,
+        "successRate": 0.35,
+        "totalPPA": -48.0,
+        "ppa": -0.14,
+        "rate": 0.49
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.80,
+        "successRate": 0.39,
+        "totalPPA": -37.2,
+        "ppa": -0.10,
+        "rate": 0.51
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.30,
+        "ppa": -0.16,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.78,
+        "successRate": 0.41,
+        "ppa": -0.12,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.10,
+        "frontSeven": 0.15,
+        "total": 0.25
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.45,
+        "averageStart": 28.1
+      },
+
+      "pointsPerOpportunity": 3.0,
+      "totalOpportunies": 34,
+
+      "openFieldYardsTotal": 190,
+      "openFieldYards": 1.2,
+
+      "secondLevelYardsTotal": 170,
+      "secondLevelYards": 1.1,
+
+      "lineYardsTotal": 420,
+      "lineYards": 2.4,
+
+      "stuffRate": 0.23,
+      "powerSuccess": 0.70,
+
+      "drives": 155,
+      "plays": 860
+    }
+  },
+
+  "statRankings": {
+    "teamId": 228,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 32, "percentile": 0.76 },
+      "successRate": { "rank": 30, "percentile": 0.78 },
+      "explosiveness": { "rank": 28, "percentile": 0.79 },
+      "standardDowns.successRate": { "rank": 26, "percentile": 0.81 },
+      "passingDowns.successRate": { "rank": 34, "percentile": 0.75 },
+      "passingPlays.ppa": { "rank": 30, "percentile": 0.78 },
+      "rushingPlays.ppa": { "rank": 35, "percentile": 0.74 },
+      "lineYards": { "rank": 38, "percentile": 0.72 },
+      "secondLevelYards": { "rank": 40, "percentile": 0.70 },
+      "openFieldYards": { "rank": 42, "percentile": 0.69 },
+      "stuffRate": { "rank": 45, "percentile": 0.66 },
+      "powerSuccess": { "rank": 30, "percentile": 0.78 },
+      "havoc.total": { "rank": 50, "percentile": 0.62 },
+      "pointsPerOpportunity": { "rank": 32, "percentile": 0.76 },
+      "fieldPosition.averageStart": { "rank": 34, "percentile": 0.75 },
+      "fieldPosition.averagePredictedPoints": { "rank": 32, "percentile": 0.76 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 20, "percentile": 0.85 },
+      "successRate": { "rank": 22, "percentile": 0.84 },
+      "explosiveness": { "rank": 24, "percentile": 0.83 },
+      "standardDowns.successRate": { "rank": 26, "percentile": 0.81 },
+      "passingDowns.successRate": { "rank": 28, "percentile": 0.79 },
+      "passingPlays.ppa": { "rank": 22, "percentile": 0.84 },
+      "rushingPlays.ppa": { "rank": 24, "percentile": 0.83 },
+      "lineYards": { "rank": 26, "percentile": 0.81 },
+      "secondLevelYards": { "rank": 28, "percentile": 0.79 },
+      "openFieldYards": { "rank": 30, "percentile": 0.78 },
+      "stuffRate": { "rank": 32, "percentile": 0.76 },
+      "powerSuccess": { "rank": 34, "percentile": 0.75 },
+      "havoc.total": { "rank": 20, "percentile": 0.85 },
+      "pointsPerOpportunity": { "rank": 22, "percentile": 0.84 },
+      "fieldPosition.averageStart": { "rank": 24, "percentile": 0.82 },
+      "fieldPosition.averagePredictedPoints": { "rank": 22, "percentile": 0.84 }
+    }
+  }
+},
+
+{
+  "teamId": 87,
+  "team": "Notre Dame",
+  "season": 2023,
+  "conference": "Independent",
+
+  "record": {
+    "wins": 10,
+    "losses": 3,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 34.0, "rank": 18 },
+      "defense": { "rating": 27.2, "rank": 10 },
+      "specialTeams": { "rating": 0.9, "rank": 40 },
+      "overall": { "rating": 61.2, "rank": 14 }
+    },
+    "srs": { "rating": 16.5, "rank": 18 },
+    "elo": 1622,
+    "core": {
+      "offense": { "rating": 33.1, "rank": 20 },
+      "defense": { "rating": 27.0, "rank": 11 },
+      "overall": { "rating": 60.1, "rank": 16 }
+    },
+    "fpi": {
+      "offense": { "rating": 2.5, "rank": 22 },
+      "defense": { "rating": 2.6, "rank": 12 },
+      "specialTeams": { "rating": 0.3, "rank": 42 },
+      "overall": { "rating": 5.0, "rank": 12 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Notre Dame",
+    "conference": "Independent",
+
+    "offense": {
+      "ppa": 0.22,
+      "totalPPA": 145.2,
+      "successRate": 0.46,
+      "explosiveness": 1.10,
+      "drives": 165,
+      "plays": 900,
+
+      "passingPlays": {
+        "explosiveness": 1.32,
+        "successRate": 0.48,
+        "totalPPA": 85.4,
+        "ppa": 0.27,
+        "rate": 0.52
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.92,
+        "successRate": 0.44,
+        "totalPPA": 59.8,
+        "ppa": 0.17,
+        "rate": 0.48
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.45,
+        "successRate": 0.40,
+        "ppa": 0.25,
+        "rate": 0.31
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.95,
+        "successRate": 0.50,
+        "ppa": 0.20,
+        "rate": 0.69
+      },
+
+      "havoc": {
+        "db": 0.07,
+        "frontSeven": 0.11,
+        "total": 0.18
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.92,
+        "averageStart": 31.4
+      },
+
+      "pointsPerOpportunity": 4.0,
+      "totalOpportunies": 38,
+
+      "openFieldYardsTotal": 280,
+      "openFieldYards": 1.7,
+
+      "secondLevelYardsTotal": 250,
+      "secondLevelYards": 1.5,
+
+      "lineYardsTotal": 480,
+      "lineYards": 2.7,
+
+      "stuffRate": 0.18,
+      "powerSuccess": 0.76,
+
+      "drives": 165,
+      "plays": 900
+    },
+
+    "defense": {
+      "ppa": -0.12,
+      "totalPPA": -95.1,
+      "successRate": 0.36,
+      "explosiveness": 0.84,
+      "drives": 160,
+      "plays": 870,
+
+      "passingPlays": {
+        "explosiveness": 0.88,
+        "successRate": 0.34,
+        "totalPPA": -55.2,
+        "ppa": -0.16,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.78,
+        "successRate": 0.38,
+        "totalPPA": -39.9,
+        "ppa": -0.11,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 0.92,
+        "successRate": 0.29,
+        "ppa": -0.18,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.78,
+        "successRate": 0.40,
+        "ppa": -0.13,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.11,
+        "frontSeven": 0.15,
+        "total": 0.26
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.48,
+        "averageStart": 28.7
+      },
+
+      "pointsPerOpportunity": 3.1,
+      "totalOpportunies": 36,
+
+      "openFieldYardsTotal": 190,
+      "openFieldYards": 1.2,
+
+      "secondLevelYardsTotal": 170,
+      "secondLevelYards": 1.1,
+
+      "lineYardsTotal": 430,
+      "lineYards": 2.5,
+
+      "stuffRate": 0.23,
+      "powerSuccess": 0.71,
+
+      "drives": 160,
+      "plays": 870
+    }
+  },
+
+  "statRankings": {
+    "teamId": 87,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 20, "percentile": 0.84 },
+      "successRate": { "rank": 18, "percentile": 0.86 },
+      "explosiveness": { "rank": 16, "percentile": 0.88 },
+      "standardDowns.successRate": { "rank": 17, "percentile": 0.87 },
+      "passingDowns.successRate": { "rank": 22, "percentile": 0.83 },
+      "passingPlays.ppa": { "rank": 18, "percentile": 0.86 },
+      "rushingPlays.ppa": { "rank": 22, "percentile": 0.83 },
+      "lineYards": { "rank": 24, "percentile": 0.82 },
+      "secondLevelYards": { "rank": 26, "percentile": 0.81 },
+      "openFieldYards": { "rank": 28, "percentile": 0.79 },
+      "stuffRate": { "rank": 32, "percentile": 0.76 },
+      "powerSuccess": { "rank": 20, "percentile": 0.84 },
+      "havoc.total": { "rank": 45, "percentile": 0.66 },
+      "pointsPerOpportunity": { "rank": 20, "percentile": 0.84 },
+      "fieldPosition.averageStart": { "rank": 22, "percentile": 0.84 },
+      "fieldPosition.averagePredictedPoints": { "rank": 20, "percentile": 0.85 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 10, "percentile": 0.92 },
+      "successRate": { "rank": 12, "percentile": 0.90 },
+      "explosiveness": { "rank": 14, "percentile": 0.89 },
+      "standardDowns.successRate": { "rank": 16, "percentile": 0.88 },
+      "passingDowns.successRate": { "rank": 18, "percentile": 0.86 },
+      "passingPlays.ppa": { "rank": 12, "percentile": 0.90 },
+      "rushingPlays.ppa": { "rank": 14, "percentile": 0.89 },
+      "lineYards": { "rank": 16, "percentile": 0.88 },
+      "secondLevelYards": { "rank": 18, "percentile": 0.86 },
+      "openFieldYards": { "rank": 20, "percentile": 0.85 },
+      "stuffRate": { "rank": 22, "percentile": 0.84 },
+      "powerSuccess": { "rank": 20, "percentile": 0.84 },
+      "havoc.total": { "rank": 14, "percentile": 0.89 },
+      "pointsPerOpportunity": { "rank": 16, "percentile": 0.88 },
+      "fieldPosition.averageStart": { "rank": 18, "percentile": 0.86 },
+      "fieldPosition.averagePredictedPoints": { "rank": 16, "percentile": 0.88 }
+    }
+  }
+}, 
+{
+  "teamId": 2,
+  "team": "Auburn",
+  "season": 2023,
+  "conference": "SEC",
+
+  "record": {
+    "wins": 6,
+    "losses": 7,
+    "ties": 0,
+    "games": 13
+  },
+
+  "ratings": {
+    "sp": {
+      "offense": { "rating": 28.0, "rank": 55 },
+      "defense": { "rating": 23.0, "rank": 40 },
+      "specialTeams": { "rating": 0.5, "rank": 60 },
+      "overall": { "rating": 51.0, "rank": 45 }
+    },
+    "srs": { "rating": 6.8, "rank": 55 },
+    "elo": 1502,
+    "core": {
+      "offense": { "rating": 27.1, "rank": 58 },
+      "defense": { "rating": 22.8, "rank": 42 },
+      "overall": { "rating": 49.9, "rank": 48 }
+    },
+    "fpi": {
+      "offense": { "rating": 0.5, "rank": 70 },
+      "defense": { "rating": 1.3, "rank": 45 },
+      "specialTeams": { "rating": 0.1, "rank": 75 },
+      "overall": { "rating": 1.8, "rank": 55 }
+    }
+  },
+
+  "advanced": {
+    "season": 2023,
+    "team": "Auburn",
+    "conference": "SEC",
+
+    "offense": {
+      "ppa": 0.15,
+      "totalPPA": 98.4,
+      "successRate": 0.41,
+      "explosiveness": 1.00,
+      "drives": 150,
+      "plays": 850,
+
+      "passingPlays": {
+        "explosiveness": 1.20,
+        "successRate": 0.43,
+        "totalPPA": 52.1,
+        "ppa": 0.18,
+        "rate": 0.47
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.85,
+        "successRate": 0.39,
+        "totalPPA": 46.3,
+        "ppa": 0.13,
+        "rate": 0.53
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.35,
+        "successRate": 0.34,
+        "ppa": 0.16,
+        "rate": 0.32
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.85,
+        "successRate": 0.45,
+        "ppa": 0.13,
+        "rate": 0.68
+      },
+
+      "havoc": {
+        "db": 0.06,
+        "frontSeven": 0.10,
+        "total": 0.16
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.70,
+        "averageStart": 30.2
+      },
+
+      "pointsPerOpportunity": 3.4,
+      "totalOpportunies": 33,
+
+      "openFieldYardsTotal": 220,
+      "openFieldYards": 1.4,
+
+      "secondLevelYardsTotal": 200,
+      "secondLevelYards": 1.3,
+
+      "lineYardsTotal": 420,
+      "lineYards": 2.5,
+
+      "stuffRate": 0.22,
+      "powerSuccess": 0.70,
+
+      "drives": 150,
+      "plays": 850
+    },
+
+    "defense": {
+      "ppa": -0.08,
+      "totalPPA": -65.1,
+      "successRate": 0.40,
+      "explosiveness": 0.90,
+      "drives": 155,
+      "plays": 880,
+
+      "passingPlays": {
+        "explosiveness": 0.95,
+        "successRate": 0.38,
+        "totalPPA": -35.2,
+        "ppa": -0.10,
+        "rate": 0.48
+      },
+
+      "rushingPlays": {
+        "explosiveness": 0.82,
+        "successRate": 0.42,
+        "totalPPA": -29.9,
+        "ppa": -0.08,
+        "rate": 0.52
+      },
+
+      "passingDowns": {
+        "explosiveness": 1.00,
+        "successRate": 0.32,
+        "ppa": -0.12,
+        "rate": 0.30
+      },
+
+      "standardDowns": {
+        "explosiveness": 0.80,
+        "successRate": 0.43,
+        "ppa": -0.09,
+        "rate": 0.70
+      },
+
+      "havoc": {
+        "db": 0.09,
+        "frontSeven": 0.13,
+        "total": 0.22
+      },
+
+      "fieldPosition": {
+        "averagePredictedPoints": 1.60,
+        "averageStart": 29.0
+      },
+
+      "pointsPerOpportunity": 3.5,
+      "totalOpportunies": 35,
+
+      "openFieldYardsTotal": 210,
+      "openFieldYards": 1.3,
+
+      "secondLevelYardsTotal": 180,
+      "secondLevelYards": 1.1,
+
+      "lineYardsTotal": 410,
+      "lineYards": 2.4,
+
+      "stuffRate": 0.24,
+      "powerSuccess": 0.69,
+
+      "drives": 155,
+      "plays": 880
+    }
+  },
+
+  "statRankings": {
+    "teamId": 2,
+    "season": 2023,
+    "division": "fbs",
+    "divisionTeamCount": 133,
+    "calculatedAt": "2023-12-15T12:00:00Z",
+    "expiresAt": "2023-12-16T12:00:00Z",
+    "sourceUpdatedAt": "2023-12-15T11:00:00Z",
+
+    "offense": {
+      "ppa": { "rank": 60, "percentile": 0.55 },
+      "successRate": { "rank": 58, "percentile": 0.56 },
+      "explosiveness": { "rank": 52, "percentile": 0.61 },
+      "standardDowns.successRate": { "rank": 55, "percentile": 0.58 },
+      "passingDowns.successRate": { "rank": 62, "percentile": 0.53 },
+      "passingPlays.ppa": { "rank": 58, "percentile": 0.56 },
+      "rushingPlays.ppa": { "rank": 60, "percentile": 0.55 },
+      "lineYards": { "rank": 62, "percentile": 0.53 },
+      "secondLevelYards": { "rank": 64, "percentile": 0.52 },
+      "openFieldYards": { "rank": 66, "percentile": 0.50 },
+      "stuffRate": { "rank": 70, "percentile": 0.47 },
+      "powerSuccess": { "rank": 58, "percentile": 0.56 },
+      "havoc.total": { "rank": 75, "percentile": 0.43 },
+      "pointsPerOpportunity": { "rank": 62, "percentile": 0.53 },
+      "fieldPosition.averageStart": { "rank": 60, "percentile": 0.55 },
+      "fieldPosition.averagePredictedPoints": { "rank": 58, "percentile": 0.56 }
+    },
+
+    "defense": {
+      "ppa": { "rank": 45, "percentile": 0.66 },
+      "successRate": { "rank": 48, "percentile": 0.64 },
+      "explosiveness": { "rank": 50, "percentile": 0.63 },
+      "standardDowns.successRate": { "rank": 52, "percentile": 0.61 },
+      "passingDowns.successRate": { "rank": 55, "percentile": 0.58 },
+      "passingPlays.ppa": { "rank": 48, "percentile": 0.64 },
+      "rushingPlays.ppa": { "rank": 50, "percentile": 0.63 },
+      "lineYards": { "rank": 52, "percentile": 0.61 },
+      "secondLevelYards": { "rank": 55, "percentile": 0.58 },
+      "openFieldYards": { "rank": 58, "percentile": 0.56 },
+      "stuffRate": { "rank": 60, "percentile": 0.55 },
+      "powerSuccess": { "rank": 62, "percentile": 0.53 },
+      "havoc.total": { "rank": 48, "percentile": 0.64 },
+      "pointsPerOpportunity": { "rank": 52, "percentile": 0.61 },
+      "fieldPosition.averageStart": { "rank": 55, "percentile": 0.58 },
+      "fieldPosition.averagePredictedPoints": { "rank": 52, "percentile": 0.61 }
+    }
+  }
+}
+
+
+]

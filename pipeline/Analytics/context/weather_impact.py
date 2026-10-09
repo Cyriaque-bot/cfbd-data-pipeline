@@ -46,7 +46,7 @@ def compute_weather_features(df_weather, df_style, df_team_stats):
 
         0.30 * df["wind_impact"] + 
         0.30 * df["rain_impact"] + 
-        0.10 *  df["snow_impact"]+
+        0.10 * df["snow_impact"] +
         0.20 * df["temperature_impact"] + 
         0.10 * df["humidity_impact"]
 

@@ -1,0 +1,146 @@
+[
+  {
+    "teamId": 333,
+    "team": "Alabama",
+    "conferenceId": 8,
+    "conference": "Southeastern Conference",
+    "conferenceAbbreviation": "SEC",
+    "classification": "fbs",
+    "conferenceDivision": "West",
+    "startYear": 1933,
+    "endYear": null
+  },
+  {
+    "teamId": 61,
+    "team": "Georgia",
+    "conferenceId": 8,
+    "conference": "Southeastern Conference",
+    "conferenceAbbreviation": "SEC",
+    "classification": "fbs",
+    "conferenceDivision": "East",
+    "conference_division": 1933,
+    "startYear": 1933,
+    "endYear": null
+  },
+  {
+    "teamId": 2,
+    "team": "Auburn",
+    "conferenceId": 8,
+    "conference": "Southeastern Conference",
+    "conferenceAbbreviation": "SEC",
+    "classification": "fbs",
+    "conferenceDivision": "West",
+    "startYear": 1933,
+    "endYear": null
+  },
+  {
+    "teamId": 194,
+    "team": "Ohio State",
+    "conferenceId": 5,
+    "conference": "Big Ten Conference",
+    "conferenceAbbreviation": "B1G",
+    "classification": "fbs",
+    "conferenceDivision": "East",
+    "startYear": 1912,
+    "endYear": null
+  },
+  {
+    "teamId": 130,
+    "team": "Michigan",
+    "conferenceId": 5,
+    "conference": "Big Ten Conference",
+    "conferenceAbbreviation": "B1G",
+    "classification": "fbs",
+    "conferenceDivision": "East",
+    "startYear": 1912,
+    "endYear": null
+  },
+  {
+    "teamId": 30,
+    "team": "USC",
+    "conferenceId": 18,
+    "conference": "Pac-12 Conference",
+    "conferenceAbbreviation": "Pac-12",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 1922,
+    "endYear": 2023
+  },
+  {
+    "teamId": 30,
+    "team": "USC",
+    "conferenceId": 5,
+    "conference": "Big Ten Conference",
+    "conferenceAbbreviation": "B1G",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 2024,
+    "endYear": null
+  },
+  {
+    "teamId": 251,
+    "team": "Texas",
+    "conferenceId": 4,
+    "conference": "Big 12 Conference",
+    "conferenceAbbreviation": "Big 12",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 1996,
+    "endYear": 2023
+  },
+  {
+    "teamId": 251,
+    "team": "Texas",
+    "conferenceId": 8,
+    "conference": "Southeastern Conference",
+    "conferenceAbbreviation": "SEC",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 2024,
+    "endYear": null
+  },
+  {
+    "teamId": 201,
+    "team": "Oklahoma",
+    "conferenceId": 4,
+    "conference": "Big 12 Conference",
+    "conferenceAbbreviation": "Big 12",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 1996,
+    "endYear": 2023
+  },
+  {
+    "teamId": 201,
+    "team": "Oklahoma",
+    "conferenceId": 8,
+    "conference": "Southeastern Conference",
+    "conferenceAbbreviation": "SEC",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 2024,
+    "endYear": null
+  },
+  {
+    "teamId": 228,
+    "team": "Clemson",
+    "conferenceId": 1,
+    "conference": "Atlantic Coast Conference",
+    "conferenceAbbreviation": "ACC",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 1953,
+    "endYear": null
+  },
+  {
+    "teamId": 87,
+    "team": "Notre Dame",
+    "conferenceId": 32,
+    "conference": "Independent",
+    "conferenceAbbreviation": "IND",
+    "classification": "fbs",
+    "conferenceDivision": null,
+    "startYear": 1887,
+    "endYear": null
+  }
+]

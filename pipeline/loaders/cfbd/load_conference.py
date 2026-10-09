@@ -1,11 +1,10 @@
 import json 
-import os 
 import sys 
+from pathlib import Path
 
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path: 
-    sys.path.insert(0, project_root)
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
 
 
@@ -13,3 +12,5 @@ def load_conference():
     with open("data/raw/cfbd/conference_sample.json") as jsonconference: 
         vallconference = json.load(jsonconference)
     return vallconference
+
+# print(load_conference())

@@ -2,27 +2,29 @@ import pandas as pd
 
 
 def compute_streaks(df): 
-    df = df.sort_values(["team_id", "start_date"]).reset_index(drop = True)
+    df = df.sort_values(["team_id", "date"]).reset_index(drop = True)
 
-    # Win streak
+    # Win streak (T, and L reset the streak)
     df["win_streak"] = (
         df.groupby("team_id")["result"]
           .transform(lambda x: x.eq("W").astype(int).groupby((x != "W").cumsum()).cumsum())
     )
 
-    # Loss streak 
+    # Loss streak (T and W reset the streak)
 
     df["loss_streak"] = (
         df.groupby("team_id")["result"]
           .transform(lambda x: x.eq("L").astype(int).groupby((x != "L").cumsum()).cumsum())
     )
 
+    # 
+
     return df
 
 
 
 def compute_recent_margin(df, window = 3): 
-    df = df.sort_values(["team_id", "start_date"]).reset_index(drop = True)
+    df = df.sort_values(["team_id", "date"]).reset_index(drop = True)
 
 # gross margin 
 
@@ -73,7 +75,7 @@ def compute_momentum_differential(df):
     # We create a df avec team -> momentum_score 
     opp = df[["team_id", "season", "week", "momentum_score"]].copy()
     opp = opp.rename(columns = {
-        "team": "opponent", 
+        "team_id": "opponent_id", 
         "momentum_score": "opponent_momentum_score"
     })
 
@@ -90,7 +92,7 @@ def compute_momentum_differential(df):
     return df
 
 
-# Nouvelle version de notre momentum avec le facteur météo 
+# new version of momentum with weathers
 
 def adjust_momentum_with_wpi(df): 
     df["momentum_weather_adj"] =  df["momentum_score"] * (0.5 + 0.5 * df["WPI"].fillna(0))

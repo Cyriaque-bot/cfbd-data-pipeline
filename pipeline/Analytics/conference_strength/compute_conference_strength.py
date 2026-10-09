@@ -55,8 +55,8 @@ def load_conference_data():
     df_interconference = pd.read_csv(load_interconference[0])
 
     # make a join with my module conference 
-    load_conference_value = load_conference
-    val_conf_value = fetch_conference(load_conference_value)
+    # load_conference_value = load_conference
+    val_conf_value = fetch_conference()
     df_conference = pd.DataFrame(val_conf_value[0].items(), columns = ["team", "conference"])
 
     # join my df_interconference with my df_conference in order to retrieve the column team 
@@ -131,6 +131,6 @@ def load_conference_data():
   
 
 
-print(load_conference_data())
+# print(load_conference_data())
 
 
