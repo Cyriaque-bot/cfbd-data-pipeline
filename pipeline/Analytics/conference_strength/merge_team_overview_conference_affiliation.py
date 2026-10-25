@@ -9,7 +9,7 @@ sys.path.append(str(project_root))
 
 from pipeline.scrapers.cfbd.team_season_overview import fetch_team_season_overview
 from pipeline.scrapers.cfbd.conferences import fetch_conference
-from pipeline.scrapers.cfbd.conference_resilisation import fetch_conference_affiliation
+from pipeline.scrapers.cfbd.conference_affiliation import fetch_conference_affiliation
 
 from pipeline.transformation.cfbd.parse_team_season_overview import parse_team_season_overview
 from pipeline.transformation.cfbd.parse_conference_affiliation import parse_conference_affiliation

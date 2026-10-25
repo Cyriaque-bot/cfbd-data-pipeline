@@ -3,9 +3,13 @@
 def compute_schedule_difficulty(df):
     # Score coming from the strenght of the opponent conference 
     # opponent_conference_strength_win_rate ->  C’est le taux de victoire moyen des équipes de la conférence de l’adversaire
-    # opponent_conference_strength_margin -> C’est la marge moyenne de victoire/défaite des équipes de la conférence de l’adversaire.
+    # opponent_conference_strength_margin -> C’est la marge moyenne de victoire/défaite des équipes de la conférence de l’adversaire.En gros,
+               #  c'est la domination  totale exercé par l'équipe 
+    # opponent_conference_strength_cfbd_norm ->force réelle CFBD de le conference de l'adversaire 
     df["schedule_difficulty"] = (
-        0.5 * df["opponent_conference_strength_win_rate"] + 0.5 * df["opponent_conference_strength_margin"]
+                    0.4 * df["opponent_conference_avg_win_rate"] + 
+                    0.4 * df["opponent_conference_avg_opponent_margin_norm"] + 
+                    0.2 * df["opponent_conference_strength_norm"]
     )
 
     # Normalisation  min - max 

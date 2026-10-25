@@ -1,34 +1,74 @@
 [
   {
-    "id": 101,
+    "id": "10101",
     "firstName": "Carson",
     "lastName": "Beck",
     "team": "Georgia",
+    "height": 75,
+    "weight": 215,
+    "jersey": 15,
+    "year": 3,
     "position": "QB",
-    "year": 3
+    "homeCity": "Jacksonville",
+    "homeState": "FL",
+    "homeCountry": "USA",
+    "homeLatitude": 30.3322,
+    "homeLongitude": -81.6557,
+    "homeCountyFIPS": "12031",
+    "recruitIds": ["247_390182"]
   },
   {
-    "id": 102,
+    "id": "10102",
     "firstName": "Kendall",
     "lastName": "Milton",
     "team": "Georgia",
+    "height": 74,
+    "weight": 220,
+    "jersey": 2,
+    "year": 4,
     "position": "RB",
-    "year": 4
+    "homeCity": "Clovis",
+    "homeState": "CA",
+    "homeCountry": "USA",
+    "homeLatitude": 36.8252,
+    "homeLongitude": -119.7029,
+    "homeCountyFIPS": "06019",
+    "recruitIds": ["247_390183"]
   },
   {
-    "id": 103,
+    "id": "10103",
     "firstName": "Brock",
     "lastName": "Bowers",
     "team": "Georgia",
+    "height": 76,
+    "weight": 240,
+    "jersey": 19,
+    "year": 3,
     "position": "TE",
-    "year": 3
+    "homeCity": "Napa",
+    "homeState": "CA",
+    "homeCountry": "USA",
+    "homeLatitude": 38.2975,
+    "homeLongitude": -122.2869,
+    "homeCountyFIPS": "06055",
+    "recruitIds": ["247_390184"]
   },
   {
-    "id": 104,
+    "id": "10104",
     "firstName": "Malaki",
     "lastName": "Starks",
     "team": "Georgia",
+    "height": 74,
+    "weight": 205,
+    "jersey": 24,
+    "year": 2,
     "position": "DB",
-    "year": 2
+    "homeCity": "Jefferson",
+    "homeState": "GA",
+    "homeCountry": "USA",
+    "homeLatitude": 34.1179,
+    "homeLongitude": -83.5724,
+    "homeCountyFIPS": "13157",
+    "recruitIds": ["247_390185"]
   }
 ]

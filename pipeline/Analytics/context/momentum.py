@@ -28,7 +28,8 @@ def compute_recent_margin(df, window = 3):
 
 # gross margin 
 
-    df["margin"] = df["points_for"] - df["points_against"]
+    # df["margin"] = df["points_for"] - df["points_against"]
+    df["margin"] = df["team_points"] - df["opponent_points"]
 
 # Average over the last N matches
 

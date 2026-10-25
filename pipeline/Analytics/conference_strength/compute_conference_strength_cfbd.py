@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
 import pandas as pd 
+import json
 import math
 
 
@@ -30,6 +31,9 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
 
        list_avg_off_explosiveness = []
        list_avg_def_explosiveness = []
+
+       # game 
+       list_team_win_rate = []
 
        # mean 
        list_mean_sp = []
@@ -68,9 +72,12 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                 "conference_classification": i_compute_conference_strenght_cfbd["conference_classification"], 
 
                 # team_count
-                "team_count": i_compute_conference_strenght_cfbd["conference_member_count"]
-             
-         
+                "team_count": i_compute_conference_strenght_cfbd["conference_member_count"], 
+                "games": i_compute_conference_strenght_cfbd["games"], 
+                "wins": i_compute_conference_strenght_cfbd["wins"], 
+                "losses": i_compute_conference_strenght_cfbd["losses"], 
+                "ties": i_compute_conference_strenght_cfbd["ties"]
+
               }
 
               for j_compute_conference_strenght_cfbd in raw_merge_team_conference_affiliation: 
@@ -93,10 +100,14 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                             list_avg_off_explosiveness.append(j_compute_conference_strenght_cfbd["off_explosiveness"])
                             list_avg_def_explosiveness.append(j_compute_conference_strenght_cfbd["def_explosiveness"])
 
-           
+                            # win_rate 
+                            list_team_win_rate.append((j_compute_conference_strenght_cfbd["wins"] + 0.5 * j_compute_conference_strenght_cfbd["ties"])
+                                  / j_compute_conference_strenght_cfbd["games"])
+
+              
        # add everything in dict_compute_conference_strenght_cfbd
               
-               # SP, FPI, SRS, ELO
+                     # SP, FPI, SRS, ELO
               dict_compute_conference_strenght_cfbd["avg_sp_overall"] = round(sum(list_avg_sp_overall)/ len(list_avg_sp_overall), 2)
               dict_compute_conference_strenght_cfbd["avg_fpi_overall"] = round(sum(list_avg_fpi_overall)/ len(list_avg_fpi_overall), 2)
               dict_compute_conference_strenght_cfbd["avg_srs"] = round(sum(list_avg_srs)/ len(list_avg_srs), 2)
@@ -108,11 +119,15 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
 
                      # off_success, def_success
               dict_compute_conference_strenght_cfbd["avg_off_success"] = round(sum(list_avg_off_success)/ len(list_avg_off_success), 2)
-              dict_compute_conference_strenght_cfbd["avg_def_success"] = round(sum(list_avg_def_success)/ len(list_avg_off_success), 2)
+              dict_compute_conference_strenght_cfbd["avg_def_success"] = round(sum(list_avg_def_success)/ len(list_avg_def_success), 2)
 
                      # off_explosiveness, def_explosiveness
               dict_compute_conference_strenght_cfbd["avg_off_explosiveness"] = round(sum(list_avg_off_explosiveness)/ len(list_avg_off_explosiveness), 2)
               dict_compute_conference_strenght_cfbd["avg_def_explosiveness"] = round(sum(list_avg_def_explosiveness)/ len(list_avg_def_explosiveness), 2)
+
+                     # games
+              dict_compute_conference_strenght_cfbd["conference_avg_win_rate"] = round(sum(list_team_win_rate)/len(list_team_win_rate), 2)
+
 
               # clear all the list in order to set it free again
 
@@ -133,13 +148,16 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                     # off_explosiveness, def_explosiveness
               list_avg_off_explosiveness.clear()
               list_avg_def_explosiveness.clear()
-           
+
+                    # win_rate
+              list_team_win_rate.clear()
+              
               list_compute_conference_strenght_cfbd_start.append(dict_compute_conference_strenght_cfbd)
 
               # empty the list
        
        
-     
+  
        view_compute_conference_strenght_cfbd_int = set()
        for dict_compute_conference_strenght_cfbd in list_compute_conference_strenght_cfbd_start: 
               if dict_compute_conference_strenght_cfbd["conference_id"] not in view_compute_conference_strenght_cfbd_int: 
@@ -215,7 +233,7 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
        std_def_ppa = round(sum(list_def_ppa)** 0.5, 2)
 
      
-     
+      
        # return std_def_ppa
        for i_list_compute in  list_compute_conference_strenght_cfbd_int: 
 
@@ -240,8 +258,10 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                 "avg_def_ppa": i_list_compute["avg_def_ppa"], 
 
                 "avg_off_success": i_list_compute["avg_off_success"], 
-                "avg_def_success": i_list_compute["avg_def_success"], 
+                "avg_def_success": i_list_compute["avg_def_success"],  
 
+                "conference_avg_win_rate": i_list_compute["conference_avg_win_rate"], 
+              
                 "avg_off_explosiveness": i_list_compute["avg_off_explosiveness"], 
                 "avg_def_explosiveness": i_list_compute["avg_def_explosiveness"],
                 "conference_strength_raw": round(
@@ -252,7 +272,8 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                                          + 0.15 * ((i_list_compute["avg_srs"] - mean_srs)/std_srs)
                                          + 0.10 * ((i_list_compute["avg_elo"] - mean_elo)/std_elo)
                                          + 0.10 * ((i_list_compute["avg_off_ppa"] - mean_off_ppa)/std_off_ppa)
-                                         + 0.05 * ((i_list_compute["avg_def_ppa"] - mean_def_ppa)/std_def_ppa)
+                                         #(-i_list_compute["avg_def_ppa"] - (-mean_def_ppa)) / std_def_ppa
+                                         + 0.05 * ((-i_list_compute["avg_def_ppa"] - (- mean_def_ppa))/std_def_ppa)
                                    
                                     ), 2
 
@@ -263,7 +284,7 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
               list_compute_conference_strenght_cfbd_final.append(dict_i_list_compute)
 
        # normalization
-              
+         
        for i_list_compute_conference_strenght_cfbd_final in list_compute_conference_strenght_cfbd_final: 
               list_compute_conference_raw_strenght_cfbd.append(i_list_compute_conference_strenght_cfbd_final["conference_strength_raw"])
      
@@ -300,6 +321,9 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
        
                        "avg_off_explosiveness": i_list_compute_final["avg_off_explosiveness"], 
                        "avg_def_explosiveness": i_list_compute_final["avg_def_explosiveness"],
+ 
+                       "conference_avg_win_rate" : i_list_compute_final["conference_avg_win_rate"],
+
                        "conference_strength_raw": i_list_compute_final["conference_strength_raw"], 
                        "conference_strength_norm": round( 
                                                   (i_list_compute_final["conference_strength_raw"] - min_conference_strength_raw) /
@@ -310,8 +334,13 @@ def compute_conference_strength_cfbd(raw_merge_team_conference_affiliation):
                      }
                      list_compute_conference_strenght_cfbd_final_total.append(dict_i_list_compute_final)
 
+       
+       # transform list to json
+       list_compute_conference_strenght_cfbd_final_total = json.dumps(list_compute_conference_strenght_cfbd_final_total, indent = 4)
 
-       return list_compute_conference_strenght_cfbd_final_total
+       with open("data/raw/derived/conference_strength_cfbd_sample.json", "w") as conference_strength_cfbd: 
+            conference_strength_cfbd.write(list_compute_conference_strenght_cfbd_final_total)
+       return "🤸 your file has been copied successfully"
 
 # val = fetch_merge_team_conference_affiliation()
 # valparse = parse_merge_team_conference_affiliation(val)

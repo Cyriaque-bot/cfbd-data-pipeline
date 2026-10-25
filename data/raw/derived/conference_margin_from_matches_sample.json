@@ -1,0 +1,14 @@
+[
+    {
+        "team_conference_id":4,
+        "opponent_margin":10.0
+    },
+    {
+        "team_conference_id":8,
+        "opponent_margin":-8.5
+    },
+    {
+        "team_conference_id":32,
+        "opponent_margin":7.0
+    }
+]

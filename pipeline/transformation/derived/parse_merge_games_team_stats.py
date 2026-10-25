@@ -32,7 +32,7 @@ def parse_games_team_stats(raw_parse_games_team_stats):
                result_fourth_down_eff_left = round(int(fourth_down_eff[:fourth_down_eff.find("-")]) / int(fourth_down_eff[fourth_down_eff.find("-") + 1:]), 2) 
                return result_fourth_down_eff_left              
             except:
-                return None 
+               return None 
         
 
         dict_fetch_merge_game_team = {

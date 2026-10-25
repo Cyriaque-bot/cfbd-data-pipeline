@@ -5,7 +5,7 @@ project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
 
 
-from pipeline.scrapers.cfbd.conference_resilisation import fetch_conference_affiliation
+from pipeline.scrapers.cfbd.conference_affiliation import fetch_conference_affiliation
 
 def parse_conference_affiliation(raw_conference_affiliation): 
     
@@ -23,6 +23,7 @@ def parse_conference_affiliation(raw_conference_affiliation):
         dict_conference_affiliation = {
             "team_id" : int(i_conference_affiliation["teamId"]), 
             "team_name": i_conference_affiliation["team"], 
+            "conference_name": i_conference_affiliation["conference"], 
             "conference_id": int(i_conference_affiliation["conferenceId"]), 
             "conference_short": i_conference_affiliation["conferenceAbbreviation"], 
             "conference_classification": i_conference_affiliation["classification"], 

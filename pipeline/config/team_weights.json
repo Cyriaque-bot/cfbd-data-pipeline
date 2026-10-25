@@ -24,7 +24,7 @@
 
     "conference_strength_score": 0.10, 
 
-     "injury_score":  0.05,
+    "injury_score":  0.05,
     "returning_production":  0.05
 
 }

@@ -21,17 +21,15 @@ from pipeline.analytics.context.schedule_difficulty import compute_schedule_diff
 
 def build_context_features(
         df_team_stats, 
-        # df_games, 
         df_weather, 
-        # df_style, 
         df_rivalries, 
         df_media, 
-        df_rankings
+        df_rankings,
+        df_conf_strength
 ): 
     # before transform our games in dataframe
-    # df_games = pd.DataFrame(df_games)
-    # tri initial 
-    df = df_team_stats.sort_values(["team", "season", "week"]).reset_index(drop = True)
+
+    df = df_team_stats.sort_values(["team_id", "season", "week"]).reset_index(drop = True)
 
     # style de jeu (run/pass/balanced + 3rd/4th  down)
     df_style = compute_style_of_play(df_team_stats)
@@ -78,6 +76,19 @@ def build_context_features(
     df = compute_momentum_score(df)
     df = compute_momentum_differential(df)
     df = adjust_momentum_with_wpi(df)
+
+    # integration of my  add_opponent_conference_strenght
+
+    df = df.merge(
+        df_conf_strength[
+            [
+                "game_id", "team_id", "opponent_id", "team_conference_avg_win_rate", "team_conference_avg_opponent_margin_norm", "team_conference_strength_norm", 
+                "opponent_conference_avg_win_rate", "opponent_conference_avg_opponent_margin_norm", "opponent_conference_strength_norm"
+            ]
+        ], 
+        on = ["game_id", "team_id", "opponent_id"], 
+        how = "left"
+    )
     
     # schedule difficulty
     df = compute_schedule_difficulty(df)
@@ -91,6 +102,7 @@ from pipeline.scrapers.cfbd.weathers import fetch_weather
 from pipeline.scrapers.cfbd.rivalries import fetch_rivalries
 from pipeline.scrapers.cfbd.media import fetch_media
 from pipeline.scrapers.cfbd.rankings import fetch_rankings
+from pipeline.scrapers.derived.add_opponent_conference_strength import fetch_add_opponent_conference_strength
 
 
 
@@ -101,6 +113,7 @@ from pipeline.transformation.cfbd.parse_weathers import parse_weathers
 from pipeline.transformation.cfbd.parse_rivalries import parse_rivalries
 from pipeline.transformation.cfbd.parse_rankings import parse_rankings
 from pipeline.transformation.cfbd.parse_media import parse_media
+from pipeline.transformation.derived.parse_add_opponent_conference_strength import parse_add_opponent_conference_strength
 
 
 
@@ -120,6 +133,9 @@ df_prime_games =  pd.DataFrame(parse_media(vallprime_games))
 vall_rankings = fetch_rankings()
 df_rankings =  pd.DataFrame(parse_rankings(vall_rankings))
 
+vallconf = fetch_add_opponent_conference_strength()
+df_conf_strength = pd.DataFrame(parse_add_opponent_conference_strength(vallconf))
+
 
 
 df_context = build_context_features(
@@ -127,7 +143,8 @@ df_context = build_context_features(
         df_weather, 
         df_rivalries, 
         df_prime_games,
-        df_rankings
+        df_rankings, 
+        df_conf_strength
 
 )
 print(df_context)

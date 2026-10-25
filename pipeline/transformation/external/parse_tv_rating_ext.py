@@ -7,13 +7,13 @@ project_root = Path(__file__).resolve().parents[3]
 sys.path.append(str(project_root))
 
 
-from pipeline.loaders.external.load_tv_rating import load_tv_rating
+from pipeline.loaders.external.load_tv_rating_ext import load_tv_rating_ext
 
-def parse_tv_rating(): 
+def parse_tv_rating_ext(): 
     path_tv_rating = "data/processed/external/tv_rating_processed.csv"
     list_tv_rating = []
 
-    result_tv_rating = load_tv_rating()
+    result_tv_rating = load_tv_rating_ext()
 
     for i in result_tv_rating: 
         dict_tv_rating = {
@@ -48,4 +48,4 @@ def parse_tv_rating():
             write_tv_rating.writerows(list_tv_rating)
     return f"🤸félicitation le fichier a été compié dans {path_tv_rating}"
 
-print(parse_tv_rating())
+# print(parse_tv_rating_ext())
