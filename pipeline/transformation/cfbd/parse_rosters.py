@@ -10,14 +10,14 @@ def parse_rosters(rawsroster):
     valrosterliste = []
     for i_roster in rawsroster: 
         valdictroster = { 
-            "player_id": i_roster["id"], 
+            "player_id": int(i_roster["id"]), 
             "first_name": i_roster["firstName"], 
             "last_name": i_roster["lastName"], 
             "team": i_roster["team"], 
-            "year": i_roster["year"],   
-            "height": i_roster["height"], 
-            "weight": i_roster["weight"], 
-            "jersey": i_roster["jersey"],
+            "year": int(i_roster["year"]),   
+            "height": int(i_roster["height"]), 
+            "weight": int(i_roster["weight"]), 
+            "jersey": int(i_roster["jersey"]),
             "position": i_roster["position"], 
             "home_city": i_roster["homeCity"],
             "home_state": i_roster["homeState"],

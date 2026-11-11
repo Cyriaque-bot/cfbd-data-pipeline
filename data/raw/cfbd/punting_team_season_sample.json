@@ -1,0 +1,32 @@
+[
+  {
+    "season": 2023,
+    "team": "Georgia",
+    "conference": "SEC",
+
+    "punting": {
+      "punts": 52,
+      "puntYards": 2280,
+      "yardsPerPunt": 43.8,
+      "longestPunt": 67,
+      "punts50Plus": 14,
+      "netPuntYards": 2010,
+      "netYardsPerPunt": 38.7,
+      "touchbacks": 3,
+      "fairCatches": 15,
+      "outOfBounds": 11,
+      "inside20": 18,
+      "blocked": 0
+    },
+
+    "returning": {
+      "returns": 14,
+      "returnYards": 180,
+      "yardsPerReturn": 12.9,
+      "longestReturn": 41,
+      "returns20Plus": 2,
+      "returnTouchdowns": 1,
+      "muffs": 1
+    }
+  }
+]

@@ -9,7 +9,7 @@ sys.path.append(str(project_root))
 # from cfbd_client import get_teams
 from pipeline.loaders.cfbd.load_team import loads_teams
 
-def fetch_teams(year):
+def fetch_teams():
     """ Récupère les équipes d'une saison via le client CFBD"""
     # return get_teams(year)
     return loads_teams()

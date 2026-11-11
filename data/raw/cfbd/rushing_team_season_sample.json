@@ -1,0 +1,32 @@
+[
+  {
+    "season": 2023,
+    "team": "Georgia",
+    "conference": "SEC",
+    "offense": {
+      "attempts": 480,
+      "totalRushingYards": 2340,
+      "yardsPerCarry": 4.9,
+      "sacks": 18,
+      "lineYards": 3.1,
+      "lineYardsTotal": 1488,
+      "secondLevelYards": 2.2,
+      "secondLevelYardsTotal": 1056,
+      "openFieldYards": 1.1,
+      "openFieldYardsTotal": 528,
+      "stuffRate": 0.16,
+      "powerSuccess": 0.71,
+      "explosiveness": 1.22,
+      "rushingTouchdowns": 24
+    },
+    "defense": {
+      "attempts": 395,
+      "totalRushingYards": 1410,
+      "yardsPerCarry": 3.6,
+      "stuffRate": 0.28,
+      "powerSuccess": 0.43,
+      "explosiveness": 0.87,
+      "rushingTouchdowns": 12
+    }
+  }
+]

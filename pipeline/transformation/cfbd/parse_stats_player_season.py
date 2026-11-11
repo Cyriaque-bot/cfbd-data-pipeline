@@ -14,15 +14,15 @@ def parse_stats_player_season(raw_stats_player_season):
 
     for i_stats_player_season in raw_stats_player_season: 
         dict_stats_player_season = {
-            "season": i_stats_player_season["season"], 
-            "player_id": i_stats_player_season["playerId"], 
+            "season": int(i_stats_player_season["season"]), 
+            "player_id": int(i_stats_player_season["playerId"]), 
             "player": i_stats_player_season["player"], 
             "position": i_stats_player_season["position"], 
             "team": i_stats_player_season["team"], 
             "conference": i_stats_player_season["conference"], 
             "category": i_stats_player_season["category"], 
             "stat_type": i_stats_player_season["statType"], 
-            "stat": i_stats_player_season["stat"]
+            "stat": int(i_stats_player_season["stat"])
         }
         list_stats_player_season.append(dict_stats_player_season)
 

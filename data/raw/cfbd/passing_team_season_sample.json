@@ -1,0 +1,39 @@
+[
+  {
+    "season": 2023,
+    "team": "Georgia",
+    "conference": "SEC",
+    "offense": {
+      "attempts": 402,
+      "completions": 291,
+      "incompletions": 111,
+      "interceptions": 6,
+      "completionRate": 72.4,
+      "totalAirYards": 1780,
+      "totalYards": 3250,
+      "totalYardsAfterCatch": 1470,
+      "successRate": 0.52,
+      "ppa": 0.48,
+      "totalPpa": 193.0,
+      "explosiveness": 1.32,
+      "successfulAttempts": 209,
+      "cpoe": 4.7
+    },
+    "defense": {
+      "attempts": 350,
+      "completions": 215,
+      "incompletions": 135,
+      "interceptions": 12,
+      "completionRate": 61.4,
+      "totalAirYards": 1410,
+      "totalYards": 2410,
+      "totalYardsAfterCatch": 1000,
+      "successRate": 0.39,
+      "ppa": 0.22,
+      "totalPpa": 77,
+      "explosiveness": 0.94,
+      "successfulAttempts": 137,
+      "cpoe": -5.1
+    }
+  }
+]

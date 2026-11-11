@@ -12,6 +12,51 @@
   },
   {
     "season": 2023,
+    "playerId": "10101",
+    "player": "Carson Beck",
+    "position": "QB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "passing",
+    "statType": "touchdowns",
+    "stat": 28
+  },
+  {
+    "season": 2023,
+    "playerId": "10101",
+    "player": "Carson Beck",
+    "position": "QB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "passing",
+    "statType": "attempts",
+    "stat": 402
+  },
+  {
+    "season": 2023,
+    "playerId": "10101",
+    "player": "Carson Beck",
+    "position": "QB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "passing",
+    "statType": "completions",
+    "stat": 291
+  },
+  {
+    "season": 2023,
+    "playerId": "10101",
+    "player": "Carson Beck",
+    "position": "QB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "passing",
+    "statType": "interceptions",
+    "stat": 6
+  },
+
+  {
+    "season": 2023,
     "playerId": "10102",
     "player": "Kendall Milton",
     "position": "RB",
@@ -21,6 +66,29 @@
     "statType": "yards",
     "stat": 780
   },
+  {
+    "season": 2023,
+    "playerId": "10102",
+    "player": "Kendall Milton",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "rushing",
+    "statType": "touchdowns",
+    "stat": 11
+  },
+  {
+    "season": 2023,
+    "playerId": "10102",
+    "player": "Kendall Milton",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "rushing",
+    "statType": "attempts",
+    "stat": 155
+  },
+
   {
     "season": 2023,
     "playerId": "10103",
@@ -34,13 +102,315 @@
   },
   {
     "season": 2023,
+    "playerId": "10103",
+    "player": "Brock Bowers",
+    "position": "TE",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "receiving",
+    "statType": "receptions",
+    "stat": 63
+  },
+  {
+    "season": 2023,
+    "playerId": "10103",
+    "player": "Brock Bowers",
+    "position": "TE",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "receiving",
+    "statType": "touchdowns",
+    "stat": 9
+  },
+
+  {
+    "season": 2023,
     "playerId": "10104",
     "player": "Malaki Starks",
     "position": "DB",
     "team": "Georgia",
     "conference": "SEC",
     "category": "defense",
+    "statType": "soloTackles",
+    "stat": 52
+  },
+  {
+    "season": 2023,
+    "playerId": "10104",
+    "player": "Malaki Starks",
+    "position": "DB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "assistedTackles",
+    "stat": 16
+  },
+  {
+    "season": 2023,
+    "playerId": "10104",
+    "player": "Malaki Starks",
+    "position": "DB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "passesDefended",
+    "stat": 8
+  },
+
+  {
+    "season": 2023,
+    "playerId": "10105",
+    "player": "Peyton Woodring",
+    "position": "K",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kicking",
+    "statType": "fgMade",
+    "stat": 17
+  },
+  {
+    "season": 2023,
+    "playerId": "10105",
+    "player": "Peyton Woodring",
+    "position": "K",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kicking",
+    "statType": "fgAttempted",
+    "stat": 22
+  },
+  {
+    "season": 2023,
+    "playerId": "10105",
+    "player": "Peyton Woodring",
+    "position": "K",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kicking",
+    "statType": "xpMade",
+    "stat": 48
+  },
+  {
+    "season": 2023,
+    "playerId": "10105",
+    "player": "Peyton Woodring",
+    "position": "K",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kicking",
+    "statType": "xpAttempted",
+    "stat": 49
+  },
+
+  {
+    "season": 2023,
+    "playerId": "10106",
+    "player": "Brett Thorson",
+    "position": "P",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "punting",
+    "statType": "yards",
+    "stat": 2100
+  },
+  {
+    "season": 2023,
+    "playerId": "10106",
+    "player": "Brett Thorson",
+    "position": "P",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "punting",
+    "statType": "long",
+    "stat": 63
+  },
+
+  {
+    "season": 2023,
+    "playerId": "10107",
+    "player": "Anthony Evans",
+    "position": "WR",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kickReturns",
+    "statType": "yards",
+    "stat": 420
+  },
+  {
+    "season": 2023,
+    "playerId": "10107",
+    "player": "Anthony Evans",
+    "position": "WR",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "kickReturns",
+    "statType": "touchdowns",
+    "stat": 1
+  },
+
+  {
+    "season": 2023,
+    "playerId": "10108",
+    "player": "Cash Jones",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "puntReturns",
+    "statType": "yards",
+    "stat": 180
+  },
+  {
+    "season": 2023,
+    "playerId": "10108",
+    "player": "Cash Jones",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "puntReturns",
+    "statType": "touchdowns",
+    "stat": 1
+  }, 
+  {
+    "season": 2023,
+    "playerId": "10111",
+    "player": "Trevor Etienne",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "rushing",
+    "statType": "yards",
+    "stat": 985
+  },
+  {
+    "season": 2023,
+    "playerId": "10111",
+    "player": "Trevor Etienne",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "rushing",
+    "statType": "touchdowns",
+    "stat": 12
+  },
+  {
+    "season": 2023,
+    "playerId": "10111",
+    "player": "Trevor Etienne",
+    "position": "RB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "rushing",
+    "statType": "attempts",
+    "stat": 173
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
     "statType": "tackles",
-    "stat": 68
+    "stat": 74
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "soloTackles",
+    "stat": 51
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "assistedTackles",
+    "stat": 23
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "sacks",
+    "stat": 8
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "qbHurries",
+    "stat": 14
+  },
+  {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "passesDefended",
+    "stat": 4
+  },
+  {
+    "season": 2023,
+    "playerId": "10113",
+    "player": "Ryan Montgomery",
+    "position": "P",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "punting",
+    "statType": "punts",
+    "stat": 52
+  },
+  {
+    "season": 2023,
+    "playerId": "10113",
+    "player": "Ryan Montgomery",
+    "position": "P",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "punting",
+    "statType": "yards",
+    "stat": 2280
+  },
+  {
+    "season": 2023,
+    "playerId": "10113",
+    "player": "Ryan Montgomery",
+    "position": "P",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "punting",
+    "statType": "long",
+    "stat": 67
+  }, 
+    {
+    "season": 2023,
+    "playerId": "10112",
+    "player": "Chris Cole",
+    "position": "LB",
+    "team": "Georgia",
+    "conference": "SEC",
+    "category": "defense",
+    "statType": "tfl",
+    "stat": 11
   }
 ]

@@ -1,14 +1,11 @@
 import sys 
-import os 
+from pathlib import Path
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if project_root not in sys.path: 
-    sys.path.insert(0, project_root)
+project_root = Path(__file__).resolve().parents[3]
+sys.path.append(str(project_root))
 
-# from cfbd_client import get_rosters
 from pipeline.loaders.cfbd.load_roster import loads_rosters
-""" recupère les joueurs d'une saison via le client CFBD."""
-def fetch_players(year):  
+
+def fetch_roster():  
     return loads_rosters()
 
-# print(fetch_players(2023))
